@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+.Login_container {
+    width: 100vw;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
+    background-size: cover;
+    overflow-y: hidden;
+    font-family: 'Shadows Into Light', cursive;   
+}
+
+.username, .password{
+    width:300px;
+    height:40px; 
+    border: 1px solid black;
+    background: none;
+     
+ }
+
+
+.username_input, .password_input  {
+   margin: 35px;
+   font-size:15px;
+  
+
+}
+
+.login_button {
+    margin: 35px;
+    border: 1px solid black;
+    background: none;
+    font-size: 20px;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+    font-size:20px;
+    font-family: 'Abel', sans-serif;
+    
+}
+

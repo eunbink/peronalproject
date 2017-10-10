@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express')
 , bodyParser = require('body-parser')
 , cors = require('cors')
+, session = require('express-session')
+, massive = require('massive')
 , stripe = require('stripe')(process.env.SECRET_KEY)
 , app =  module.exports = express()
 , passport = require('passport')
@@ -32,37 +34,21 @@ passport.use(new Auth0Strategy({
 }, 
 function(accessToken, refreshToken, extraParams, profile, done) {
 
-  const db = app.get('db')
+done(null, profile);
 
   
-  db.find_user([ profile.identities[0].user_id ]).then( user => {
-      if (user[0]){
-          return done(null, user[0].id)
-      } else {
-          const user = profile._json
-          db.create_user([ user.name, user.email, user.picture, user.identities[0].user_id ])
-          .then( user => {
-          return done(null, user[0].id)
-          })
-      }
-      console.log(user)
-  })
 }))
-
-
-
-
 
 
 
 //----------------------ENDPOINTS-------------
 //-------------------AUTH0------------------
-app.get('/Login', passport.authenticate('auth0'));
-app.get('/Login/callback', passport.authenticate('auth0', {
+app.get('/auth', passport.authenticate('auth0'));  //backend endpoint
+app.get('/auth/callback', passport.authenticate('auth0', {
     successRedirect: 'http://localhost:3000/#/Admin',
-    failureRedirect: '/Login'
+    failureRedirect: '/auth'
 }));
-app.get('/auth/me', (req, res) => {
+app.get('/auth/me', (req, res) => {   //if users are authenticated.
     if(!req.user){
         return res.status(404).send('User Not Found')
     } 
@@ -82,27 +68,11 @@ passport.serializeUser( function( id, done ) {
 
 
 passport.deserializeUser( function( id, done ) {
-    app.get('db').find_current_user([ id ])
-    .then( user => {
-        done(null, user[0])
-    })
+    // app.get('db').find_current_user([ id ])
+    // .then( user => {
+        done(null, id)
+    // })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

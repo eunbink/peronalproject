@@ -38,4 +38,12 @@
   z-index: -1;
 }
 
+.Admin_button{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin: 30px;
+  font-size: 25px;
+  color: black;
+}
 
