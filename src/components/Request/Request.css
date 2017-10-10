@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+.req{
+    width: 100vw;
+    height: 100vh;
+    background: url("https://static.pexels.com/photos/269063/pexels-photo-269063.jpeg");
+    background-size: cover;
+    overflow-y: hidden;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.button1,{
+    background-color: none;
+    border: black solid 1px;
+    color: none;
+    font-size: 20px;
+    padding:15px;
+    cursor: pointer;  
+    font-family: 'Shadows Into Light', cursive;
+}
+.button1_container{
+    padding:80px;
+}

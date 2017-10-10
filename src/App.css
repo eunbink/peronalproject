@@ -1,0 +1,38 @@
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+.Navicon{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30px;
+  width: 35px;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  
+}
+.Naviconbox {
+  position: fixed;
+  padding: 40px;
+  z-index: 3;
+}
+
+.Navbar1 {
+  background-color:black;
+  border-radius: 5px;
+  width:100%;
+  height:20%;
+}
+
+
+#fire{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+

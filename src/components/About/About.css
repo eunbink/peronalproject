@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+.about_container {
+    width: 100vw;
+    height: 100vh;
+    background: url("https://static.pexels.com/photos/269063/pexels-photo-269063.jpeg");
+    background-size: cover;
+    overflow-y: hidden;
+    font-family: 'Shadows Into Light', cursive;
+   
+}
+
+.about_title{
+    font-size: 50px;
+    padding: 35px;
+}
+
+.about_explanation {
+    font-size: 30px;
+    padding: 330px 120px 130px 130px;
+}

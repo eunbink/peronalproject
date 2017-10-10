@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+body {
+    background: url("https://static.pexels.com/photos/269063/pexels-photo-269063.jpeg");
+}
+
+.image {
+    margin: 0 auto;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image:none !important;
+    filter:none !important;
+ }
+
+.project {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    font-family: 'Shadows Into Light', cursive;
+    padding: 40px;
+    font-size: 40px;
+}
+.image4-contanier{
+    padding: 60px;
+}
+
+
+.apparel, .signs, .tickets, .backdrop {
+    display: inline-block;
+    border: white solid 1px;
+    color: white;
+    font-size: 20px;
+    padding:20px;
+    cursor: pointer;
+    transition:0.3s;
+    font-family: 'Shadows Into Light', cursive;
+}
+.apparelcontainer, .signcontainer, ticketcontainer, .backdropcontainer{
+    padding:70px;
+}
+.apparel:hover, .signs:hover, .tickets:hover, .backdrop:hover {
+    transform: translate(0,-7px) ;
+    
+
+}

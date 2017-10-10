@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+html{
+    font-family: 'Geo', sans-serif;
+  }
+  
+
+ul {
+    list-style: none;
+       
+}
+.navHome {
+    margin-top: 80px;
+}
+
+li {
+    padding: 0 15px;
+    padding: 20px;
+    color:black;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration:none;
+}
+
+#nav.slidemenu{
+    left:0px;
+    position: fixed;
+    z-index: 1;
+   
+}
+#nav {
+    left:-200px;
+    position: fixed;
+    transition: 0.2s;
+    height:100vh;
+    width:auto;
+    
+}

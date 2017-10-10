@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+.contact {
+    width: 100vw;
+    height: 100vh;
+    background: url("https://static.pexels.com/photos/269063/pexels-photo-269063.jpeg");
+    background-size: cover;
+    overflow-y: hidden;
+    font-family: 'Shadows Into Light', cursive;
+}
+.logos {
+    
+    padding: 50px;
+}
+
+.facebook{
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+}
+.linkedin{
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+}
+
+
+.instagram{
+    width: 100px;
+    height:100px;
+}
+.contact_container{
+    padding:20px;
+    background: url("https://static.pexels.com/photos/6368/art-wall-brush-painting.jpg");
+}
+.contact_form {
+    width:100vw;
+    height:50vh;
+    padding:50px;
+}
+
+.input1, .input2 {
+    padding:20px;
+    border:black solid 1px;
+}
+.input1_container, .input2_container {
+    padding:30px;
+}
+
+.submit_button {
+    display: inline-block;
+    border: black solid 1px;
+    color: none;
+    font-size: 20px;
+    padding:10px;
+    cursor: pointer;  
+    font-family: 'Shadows Into Light', cursive;
+    
+}
+
+.message {
+    
+    display: inline-block;
+    border: white solid 1px;
+    color: white;
+    font-size: 20px;
+    padding:20px;
+    cursor: pointer;  
+    transition:0.3s;
+    font-family: 'Shadows Into Light', cursive;
+}
+.message:hover {
+    transform:  translate(0,-6px) ;
+}
+
+
+.mapboxgl-map {
+   position: absolute !important;
+   overflow:visible !important;
+}
+

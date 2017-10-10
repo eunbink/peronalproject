@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+.home_container {
+    width: 100vw;
+    height: 100vh;
+    background: url("https://static.pexels.com/photos/269063/pexels-photo-269063.jpeg");
+    background-size: cover;
+    overflow-y: hidden;
+    font-family: 'Shadows Into Light', cursive;
+}
+.img {
+    width:50px;
+    height:50px;
+}
+.title {
+    font-size: 50px;
+    padding:30px;
+}
+.home_quote {
+    padding: 200px;
+    font-size: 60px;
+}
