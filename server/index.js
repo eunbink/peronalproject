@@ -7,7 +7,8 @@ const express = require('express')
 , stripe = require('stripe')(process.env.SECRET_KEY)
 , app =  module.exports = express()
 , passport = require('passport')
-, Auth0Strategy = require('passport-auth0');
+, Auth0Strategy = require('passport-auth0')
+, nodemailer = require("nodemailer");
 
 
 //------------------MIDDLEWARES----------------
@@ -44,6 +45,16 @@ done(null, profile);
 
 
 //----------------------ENDPOINTS-------------
+
+
+
+
+
+
+
+
+
+
 //-------------------AUTH0------------------
 app.get('/auth', passport.authenticate('auth0'));  //backend endpoint
 app.get('/auth/callback', passport.authenticate('auth0', {
