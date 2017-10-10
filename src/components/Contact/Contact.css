@@ -2,7 +2,7 @@
 
 .contact {
     width: 100vw;
-    height: 100vh;
+    height: 130vh;
     background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
     background-size: cover;
     overflow-y: hidden;
@@ -86,5 +86,33 @@
 .mapboxgl-map {
    position: absolute !important;
    overflow:visible !important;
+}
+
+.contact_form {
+    font-size: 22px;
+    margin-right: 90px;
+}
+
+#map {
+    width:100vw;
+
+} 
+
+#formHorizontalName, #formHorizontalEmail {
+    width: 400px;
+    background: none;
+    border: 1px solid black;
+}
+
+#formHorizontalMessage{
+    width: 400px;
+    height: 200px;
+    background: none;
+    border: 1px solid black;
+}
+.message_button {
+    background: none;
+    border: 1px solid black;
+    padding:15px;
 }
 

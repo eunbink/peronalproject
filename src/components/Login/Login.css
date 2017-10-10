@@ -9,28 +9,15 @@
     overflow-y: hidden;
     font-family: 'Shadows Into Light', cursive;   
 }
-
-.username, .password{
-    width:300px;
-    height:40px; 
-    border: 1px solid black;
-    background: none;
-     
- }
-
-
-.username_input, .password_input  {
-   margin: 35px;
-   font-size:15px;
-  
-
+.bluelogo {
+    width: 500px;
+    height: 500px;
 }
 
 .login_button {
-    margin: 35px;
-    border: 1px solid black;
+    border: none;
     background: none;
-    font-size: 20px;
+    font-size: 50px;
 }
 
 ::-webkit-input-placeholder { /* Chrome */

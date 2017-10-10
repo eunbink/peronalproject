@@ -8,6 +8,8 @@ const express = require('express')
 , app =  module.exports = express()
 , passport = require('passport')
 , Auth0Strategy = require('passport-auth0');
+
+
 //------------------MIDDLEWARES----------------
 app.use(bodyParser.json());
 
