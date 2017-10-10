@@ -7,10 +7,12 @@ html{
 
 ul {
     list-style: none;
+   
        
 }
 .navHome {
     margin-top: 80px;
+
 }
 
 li {
@@ -19,6 +21,7 @@ li {
     color:black;
     font-family: 'Shadows Into Light', cursive;
     font-size: 25px;
+    
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -38,4 +41,9 @@ a:link, a:visited, a:hover, a:active {
     height:100vh;
     width:auto;
     
+}
+
+.Admin {
+    margin-top: 200px;
+
 }

@@ -26,17 +26,20 @@ componentDidMount (){
             <img className="instagram" src="https://cdn4.iconfinder.com/data/icons/miu/24/circle_social-instagram-outline-stroke-512.png" />
           </div>
           <div>
-            <div onClick={this.showMessage} className="message">LEAVE US A MESSEAGE</div>
+            <div className="message_button">LEAVE US A MESSEAGE</div>
           </div>
         </div>
         <div className="contact_container">
           
         <Form inline className="contact_form" >
          <div className="input1_container">
-          <FormControl className="input1" type="text"/>
+          <FormControl className="input1" type="text" placeholder="Full Name"/>
          </div>
          <div className="input2_container">
-          <FormControl className="input2" type='text'/>
+          <FormControl className="input2" type='text' placeholder="Email"/>
+          </div>
+          <div className="input3_container">
+          <FormControl className="input3" type='text' placeholder="Leave your messeges here..."/>
           </div>
          <Button className="submit_button">SUBMIT</Button>
         </Form> 

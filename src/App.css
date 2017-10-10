@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 
 .App {
   text-align: center;
   height: 100vh;
+  font-family: 'Shadows Into Light', cursive;
 }
 .Navicon{
   display: flex;
@@ -20,11 +22,11 @@
   z-index: 3;
 }
 
-.Navbar1 {
+.Navbar {
   background-color:black;
   border-radius: 5px;
   width:100%;
-  height:20%;
+  height:8%;
 }
 
 
@@ -35,4 +37,5 @@
   left: 0;
   z-index: -1;
 }
+
 

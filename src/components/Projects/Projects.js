@@ -6,7 +6,7 @@ import { Carousel } from 'react-bootstrap';
 class Projects extends Component {
   render() {
     return (
-      <div className="project">
+      <div className="project_container">
         <h1>Projects</h1>
         <div className="apparelcontainer"><p className="apparel" >APPAREL</p></div>
         <Carousel>

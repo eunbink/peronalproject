@@ -24,10 +24,12 @@ class Request extends Component {
   }
   render() {
     return (
-      <div className='req'>
+      <div className='request_container'>
         <h1>Request</h1>
-       <div className="button1_container"> 
-         <Button className= "button1" >GET A QUOTE</Button> 
+       <div className="input_container"> 
+         <div className="invoice_input"><input className="invoice" placeholder="Invoice#"/></div>
+         <div classNAme="email_input"><input className="email" placeholder="Email"/></div>
+         <Button className= "quote_button" >GET A QUOTE</Button> 
        </div>
         <StripeCheckout
           token={this.onToken}

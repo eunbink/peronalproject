@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 
-.home_container {
+.home_Container {
     width: 100vw;
     height: 100vh;
-    background: url("https://static.pexels.com/photos/269063/pexels-photo-269063.jpeg");
+    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
     background-size: cover;
     overflow-y: hidden;
     font-family: 'Shadows Into Light', cursive;

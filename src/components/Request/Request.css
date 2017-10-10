@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 
-.req{
+.request_container{
     width: 100vw;
     height: 100vh;
-    background: url("https://static.pexels.com/photos/269063/pexels-photo-269063.jpeg");
+    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
     background-size: cover;
     overflow-y: hidden;
     font-family: 'Shadows Into Light', cursive;
 }
 
-.button1,{
-    background-color: none;
+.quote_button {
+    background: none;
     border: black solid 1px;
     color: none;
     font-size: 20px;
@@ -18,6 +18,27 @@
     cursor: pointer;  
     font-family: 'Shadows Into Light', cursive;
 }
-.button1_container{
+.input_container{
     padding:80px;
+}
+.invoice, .email {
+    width:300px;
+    height:40px; 
+    border: 1px solid black;
+    background: none;
+     
+ }
+
+
+.invoice_input, .email_input, .quote_button{
+   margin: 35px;
+   font-size:15px;
+    
+}
+
+::-webkit-input-placeholder { /* Chrome */
+    font-size:20px;
+    color:black;
+    font-family: 'Abel', sans-serif;
+    
 }

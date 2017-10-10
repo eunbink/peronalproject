@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 
-body {
-    background: url("https://static.pexels.com/photos/269063/pexels-photo-269063.jpeg");
+.project_container{
+    width: 100vw;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .image {

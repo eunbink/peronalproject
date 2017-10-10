@@ -6,7 +6,7 @@ class Nav extends Component {
   
   render() {
     return (
-        <div id="nav" className={this.props.ShowingNavbar}>
+        <div id="nav" className={this.props.showingNavbar}>
         <ul>
            <div className="navHome"> <li><NavLink onClick={this.props.disappearNavbar} activeClassName='active' exact to='/'>HOME</NavLink></li></div>
             <li><NavLink onClick={this.props.disappearNavbar} activeClassName='active' to='/About'>ABOUT US</NavLink></li>
