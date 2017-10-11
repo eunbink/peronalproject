@@ -21,19 +21,17 @@
 .input_container{
     padding:80px;
 }
-.invoice, .email {
-    width:300px;
-    height:40px; 
-    border: 1px solid black;
+#formHorizontalInvoice, #formHorizontalEmail2, #formHorizontalPay {
+    margin: 5px;
+    width: 400px;
     background: none;
-     
- }
+    border: 1px solid black;
+}
 
-
-.invoice_input, .email_input, .quote_button{
-   margin: 35px;
-   font-size:15px;
-    
+.pay_button {
+    background: none;
+    border: 1px solid black;
+    padding:15px;
 }
 
 ::-webkit-input-placeholder { /* Chrome */
@@ -41,4 +39,8 @@
     color:black;
     font-family: 'Abel', sans-serif;
     
+}
+.pay_form {
+    position: absolute;
+    font-size: 25px;
 }

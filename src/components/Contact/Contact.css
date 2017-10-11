@@ -90,7 +90,8 @@
 
 .contact_form {
     font-size: 22px;
-    margin-right: 90px;
+    display: ceneter;
+    padding: 0px;
 }
 
 #map {
@@ -99,20 +100,44 @@
 } 
 
 #formHorizontalName, #formHorizontalEmail {
-    width: 400px;
+    width: 450px;
     background: none;
     border: 1px solid black;
 }
 
 #formHorizontalMessage{
-    width: 400px;
+    width: 450px;
     height: 200px;
     background: none;
     border: 1px solid black;
 }
+.messageSubmitbutton {
+    background: none;
+    border: 1px solid black;
+    padding:9.3px;
+    margin-top: -8px;
+    font-size: 18px;
+   
+}
+.custom-modal {
+    font-family: 'Shadows Into Light', cursive;
+    width: 50vw;
+    height:auto;
+}
 .message_button {
     background: none;
     border: 1px solid black;
-    padding:15px;
+    padding:10px;
+    font-size: 25px;
+    color:black;
+    
+}
+.message_button_container{
+    margin-left:600px;
 }
 
+.message_button:hover {
+    background:none;
+    color:black;
+    
+}

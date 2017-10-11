@@ -19,6 +19,9 @@
     background: none;
     font-size: 50px;
 }
+login_button:hover {
+    background-color:none;
+}
 
 ::-webkit-input-placeholder { /* Chrome */
     font-size:20px;

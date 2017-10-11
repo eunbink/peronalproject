@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Contact.css'
-import { Form, FormControl, FormGroup, Col, ControlLabel, Checkbox, Button, ButtonToolbar } from 'react-bootstrap'
+import { Modal, Form, FormControl, FormGroup, Col, ControlLabel, Checkbox, Button, ButtonToolbar } from 'react-bootstrap'
 import mapboxgl from 'mapbox-gl';
 
 
@@ -13,7 +13,16 @@ class Contact extends Component {
      show: false
    
  }
+ this.showModal = this.showModal.bind(this);
+ this.hideModal = this.hideModal.bind(this);
+}
 
+showModal() {
+  this.setState({show: true});
+}
+
+hideModal() {
+  this.setState({show: false});
 }
   
 componentDidMount (){
@@ -23,7 +32,6 @@ componentDidMount (){
       style: 'mapbox://styles/mapbox/streets-v10'
   })
 }
-
 
   render() {
     return (
@@ -35,14 +43,25 @@ componentDidMount (){
             <img className="linkedin" src="https://www.shareicon.net/download/2015/09/28/108616_media_512x512.png" />
             <img className="instagram" src="https://cdn4.iconfinder.com/data/icons/miu/24/circle_social-instagram-outline-stroke-512.png" />
           </div>
-          <div>
-            <div className="message_button">LEAVE US A MESSEAGE</div>
-          </div>
-          
+          <ButtonToolbar>
+            <div className="message_button_container">
+        <Button className="message_button" bsStyle="primary" onClick={this.showModal}>
+          Leave us a Message
+        </Button>
+        </div>
+          <Modal   
+          {...this.props}
+          show={this.state.show}
+          onHide={this.hideModal}
+          dialogClassName="custom-modal" >
+          <Modal.Header className= "modal_header"closeButton>
+            <Modal.Title id="contained-modal-title-lg">CONTACT US</Modal.Title>
+          </Modal.Header>
           <div className="contact_form">
-          <Form horizontal>
-    <FormGroup controlId="formHorizontalName">
-      <Col componentClass={ControlLabel} sm={2}>
+          <Form horizontal className>
+          <Modal.Body>
+    <FormGroup controlId="formHorizontalName" >
+      <Col componentClass={ControlLabel} sm={1}>
         Name
       </Col>
       <Col sm={10}>
@@ -51,7 +70,7 @@ componentDidMount (){
     </FormGroup>
 
     <FormGroup controlId="formHorizontalEmail">
-      <Col componentClass={ControlLabel} sm={2}>
+      <Col componentClass={ControlLabel} sm={1}>
         Email
       </Col>
       <Col sm={10}>
@@ -60,24 +79,31 @@ componentDidMount (){
     </FormGroup>
 
     <FormGroup controlId="formHorizontalMessage">
-      <Col componentClass={ControlLabel} sm={2}>
+      <Col componentClass={ControlLabel} sm={1}>
         Message
       </Col>
       <Col sm={10}>
-        <FormControl type="password" placeholder="Message" />
+        <FormControl type="message" placeholder="Message" />
       </Col>
     </FormGroup>
-
-
+    </Modal.Body>
+    <Modal.Footer>
     <FormGroup >
-      <Col smOffset={2} sm={10}>
-        <Button className="message_button" type="submit">
+      <Col smOffset={1} sm={4}>
+        <Button className="messageSubmitbutton" type="submit">
           SUBMIT
         </Button>
       </Col>
     </FormGroup>
+    </Modal.Footer>
+
   </Form>
           </div>
+    </Modal>
+    </ButtonToolbar>
+
+
+
         </div>
 
         <div id="map">

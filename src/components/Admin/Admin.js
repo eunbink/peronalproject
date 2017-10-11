@@ -7,7 +7,7 @@ class Admin extends Component {
     render() {
       return (
         <div className="Admin_container">
-        <a href={process.env.REACT_APP_LOGOUT}> <Button className="logout_button">Logout</Button></a>
+        <a href={process.env.REACT_APP_LOGOUT}> <Button className="logout_button">LOGOUT</Button></a>
         </div>
       );
     }
