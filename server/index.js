@@ -10,6 +10,7 @@ const express = require('express')
 , Auth0Strategy = require('passport-auth0')
 , nodemailer = require("nodemailer")
 , mail_controller = require("./controllers/mail_controller.js")
+, request_controller = require("./controllers/request_controller.js")
 
 
 //------------------MIDDLEWARES----------------
@@ -50,6 +51,8 @@ done(null, profile);
 
 
 app.post('/api/send_email', mail_controller.sendEmail);
+app.post('/api/send_quote', request_controller.sendQuote);
+
 
 
 

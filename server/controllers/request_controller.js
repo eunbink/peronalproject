@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer')
 , config = require('./../../config');
 
 module.exports ={
-    sendEmail(req, res) {
+    sendQuote(req, res) {
         console.log('req.body', req.body)
 
 
@@ -21,7 +21,18 @@ module.exports ={
             to: req.body.to, // list of receivers
             subject: req.body.subject, // Subject line
             text: 'Making breadsticks', // plain text body
-            html: `<p>${ req.body.message }</p>` // html body
+            html: `<ul><b>name:</b>${ req.body.name}</ul>
+                    <ul><b>email:</b>${ req.body.email }</ul>
+                    <ul><b>phoneNumber:</b>${ req.body.phoneNumber }</ul>
+                    <ul><b>design type:</b>${ req.body.designType }</ul>
+                    <ul><b>size:</b>${ req.body.size }</ul> 
+                    <ul><b>color:</b>${ req.body.color }</ul>
+                    <ul><b>sides:</b>${ req.body.sides }</ul>
+                    <ul><b>single/double:</b>${ req.body.singleDouble }</ul>
+                    <ul><b>quantity:</b>${ req.body.quantity }</ul>
+                    <ul><b>due date:</b>${ req.body.dueDate }</ul>
+                    <ul><b>comments:</b>${ req.body.comments }</ul>`
+
         };
 
         // send mail with defined transport object

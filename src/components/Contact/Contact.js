@@ -6,8 +6,6 @@ import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 
 
-
-
 class Contact extends Component {
  constructor() {
    super ();
@@ -24,14 +22,22 @@ class Contact extends Component {
  this.showModal = this.showModal.bind(this);
  this.hideModal = this.hideModal.bind(this);
  this.send = this.send.bind(this);
+ this.close = this.close.bind(this);
 }
 
-send (email) {
-  axios.post ('/api/send_email', {
-    to: this.state.email.email,//body
-    subject: this.state.email.name,
-    body:this.state.email.message
-  })
+send () {
+  const body = {
+    message:this.state.email.message,
+    email: this.state.email.email,
+    name: this.state.email.name,
+    to: "kangeb1992@gmail.com",
+    subject: "Message"
+  }
+  axios.post ('/api/send_email', body)
+}
+
+close () {
+  this.setState({ show: false});
 }
 
 showModal() {
@@ -89,7 +95,7 @@ componentDidMount (){
       <Col sm={10}>
         <FormControl onChange={(e)=>{this.setState({
           email:{...this.state.email, name:e.target.value}
-          })}} type="email" placeholder="Name" />
+          })}} type="text" placeholder="Name" />
       </Col> 
     </FormGroup>
 
@@ -111,14 +117,14 @@ componentDidMount (){
       <Col sm={10}>
         <FormControl onChange={(e)=>{this.setState({
           email:{...this.state.email, message:e.target.value}
-          })}} type="message" placeholder="Message" />
+          })}} type="text" placeholder="Message" />
       </Col>
     </FormGroup>
     
    
     <FormGroup >
       <Col smOffset={1} sm={4}>
-        <Button onClick= {()=> this.send(this.state.email)} className="messageSubmitbutton" type="submit">
+        <Button  onClick = {()=>{this.send(this.state.email); this.close()}} className="messageSubmitbutton" type="submit">
           SUBMIT
         </Button>
       </Col>

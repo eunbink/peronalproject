@@ -22,7 +22,7 @@ class Request extends Component {
         color:"",
         sides:"",
         singleDouble:"",
-        quantitiy:"",
+        quantity:"",
         dueDate:"",
         comments:"",
       }
@@ -30,12 +30,31 @@ class Request extends Component {
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
     this.send = this.send.bind(this);
+    this.close = this.close.bind(this);
   }
 
-  send (email) {
-    axios.post ('/api/send_email', {
-      data: email //body
-    })
+  send () {
+    const body = {
+      phoneNumber:this.state.quote.phoneNumber,
+      designType:this.state.quote.designType,
+      size:this.state.quote.size,
+      color:this.state.quote.color,
+      sides:this.state.quote.sides,
+      singleDouble:this.state.quote.singleDouble,
+      dueDate:this.state.quote.dueDate,
+      phoneNumber:this.state.quote.phoneNumber,
+      quantity:this.state.quote.quantity,
+      comments:this.state.quote.comments,
+      email: this.state.quote.email,
+      name: this.state.quote.name,
+      to: "kangeb1992@gmail.com",
+      subject: "Quote"
+    }
+    axios.post ('/api/send_quote', body )
+  }
+
+  close () {
+    this.setState({ show: false});
   }
 
   showModal() {
@@ -54,6 +73,8 @@ class Request extends Component {
     });
   }
   render() {
+
+
     return (
       <div className='request_container'>
         <h1>Request</h1>
@@ -90,7 +111,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl onChange={(e)=>{this.setState({
           quote:{...this.state.quote, name:e.target.value}
-          })}} placeholder="Name" />
+          })}} type="text" placeholder="Name" />
       </Col>
     </FormGroup>
 
@@ -102,7 +123,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, phoneNumber:e.target.value}
-          })}}placeholder="Phone #" />
+          })}} type="tel" placeholder="Phone #" />
       </Col>
     </FormGroup>
 {/* email */}
@@ -113,7 +134,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, email:e.target.value}
-          })}}placeholder="Email" />
+          })}} type="email" placeholder="Email" />
       </Col>
     </FormGroup>
 
@@ -125,7 +146,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, designType:e.target.value}
-          })}}placeholder="Design Type" />
+          })}} type="text" placeholder="Design Type" />
       </Col>
     </FormGroup>
 
@@ -137,7 +158,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, size:e.target.value}
-          })}}placeholder="Size" />
+          })}} type="text" placeholder="Size" />
       </Col>
     </FormGroup>
 
@@ -149,7 +170,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, color:e.target.value}
-          })}} placeholder="Color" />
+          })}} type="color" placeholder="Color" />
       </Col>
     </FormGroup>
 
@@ -161,7 +182,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, sides:e.target.value}
-          })}} placeholder="Front/Back/Both (Shirts)" />
+          })}} type="text"  placeholder="Front/Back/Both (Shirts)" />
       </Col>
     </FormGroup>        
 
@@ -173,7 +194,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, singleDouble:e.target.value}
-          })}}placeholder="Single/Double" />
+          })}} type="text" placeholder="Single/Double" />
       </Col>
     </FormGroup>
 
@@ -185,7 +206,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, quantitiy:e.target.value}
-          })}} placeholder="Quantity" />
+          })}} type="number" placeholder="Quantity" />
       </Col>
     </FormGroup>
 
@@ -197,7 +218,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, dueDate:e.target.value}
-          })}} placeholder="Due Date (Rushed job costs extra)" />
+          })}} type="date" placeholder="Due Date (Rushed job costs extra)" />
       </Col>
     </FormGroup>
 
@@ -209,7 +230,7 @@ class Request extends Component {
       <Col sm={10}>
         <FormControl className="comments" onChange={(e)=>{this.setState({
           quote:{...this.state.quote, comments:e.target.value}
-          })}}placeholder="Write any comments here.." />
+          })}} type="text" placeholder="Write any comments here.." />
       </Col>
     </FormGroup>
 
@@ -217,7 +238,7 @@ class Request extends Component {
    
     <FormGroup >
       <Col smOffset={1} sm={4}>
-        <Button onClick= {()=> this.send(this.state.quote)} className="messageSubmitbutton" type="submit">
+        <Button onClick = {()=>{this.send(this.state.email); this.close()}} className="messageSubmitbutton" type="submit">
           SUBMIT
         </Button>
       </Col>
