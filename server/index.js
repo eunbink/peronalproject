@@ -8,7 +8,8 @@ const express = require('express')
 , app =  module.exports = express()
 , passport = require('passport')
 , Auth0Strategy = require('passport-auth0')
-, nodemailer = require("nodemailer");
+, nodemailer = require("nodemailer")
+, mail_controller = require("./controllers/mail_controller.js")
 
 
 //------------------MIDDLEWARES----------------
@@ -48,7 +49,7 @@ done(null, profile);
 //----------------------ENDPOINTS-------------
 
 
-
+app.post('/api/send_email', mail_controller.sendEmail);
 
 
 

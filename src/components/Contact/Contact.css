@@ -84,10 +84,12 @@
 
 
 .mapboxgl-map {
-   position: absolute !important;
+   
    overflow:visible !important;
 }
-
+.mapboxgl-canvas{
+    position: static !important;
+}
 .contact_form {
     font-size: 22px;
     display: ceneter;
@@ -95,9 +97,11 @@
 }
 
 
-.mapboxgl-canvas {
-    position:relative !important;
+
     
+
+#map {
+ width:100%;
 }
 
 #formHorizontalName, #formHorizontalEmail, #formHorizontal {

@@ -28,7 +28,9 @@ class Contact extends Component {
 
 send (email) {
   axios.post ('/api/send_email', {
-    data: email //body
+    to: this.state.email.email,//body
+    subject: this.state.email.name,
+    body:this.state.email.message
   })
 }
 
@@ -44,9 +46,13 @@ componentDidMount (){
   mapboxgl.accessToken = 'pk.eyJ1Ijoia2FuZ3AxODMiLCJhIjoiY2o4a25wdnB4MGZjaTJ3bXZrZ3lqanl4ZyJ9.15XvXGwFuUbl5uhPOEW2QA';
   const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/kangp183/cj8n92kxw7j0u2rpqpr3iy7pu',
+      center: [-74.50, 40],
+      zoom: 9
   })
+
 }
+
 
   render() {
     console.log(this.state.email)
