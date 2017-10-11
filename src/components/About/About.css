@@ -5,7 +5,7 @@
     height: 100vh;
     background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
     background-size: cover;
-    overflow-y: hidden;
+    overflow-y: scroll;
     font-family: 'Shadows Into Light', cursive;
    
 }

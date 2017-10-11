@@ -5,7 +5,7 @@
     height: 130vh;
     background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=") no-repeat;
     background-size: cover;
-    overflow-y: hidden;
+    overflow-y: scroll;
     font-family: 'Shadows Into Light', cursive;
 }
 .logos {
@@ -94,13 +94,10 @@
     padding: 0px;
 }
 
-#map {
-    width:100vw;
-  
 
-} 
 .mapboxgl-canvas {
-    /* position: none; */
+    position:relative !important;
+    
 }
 
 #formHorizontalName, #formHorizontalEmail, #formHorizontal {
@@ -155,5 +152,11 @@
 .Contact_input_title_message{
     font-size: 20px;
     margin-top: -8px;
+}
+
+.custom-modal-contact .modal-content {
+    height:480px;  
+    font-family: 'Shadows Into Light', cursive;
+    background: url("https://images.unsplash.com/photo-1498230870289-7561110a6e69?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
 }
 

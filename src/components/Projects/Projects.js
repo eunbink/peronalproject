@@ -11,21 +11,21 @@ class Projects extends Component {
         <div className="apparelcontainer"><p className="apparel" >APPAREL</p></div>
         <Carousel>
           <Carousel.Item >
-            <img className="image" width={900} height={500} alt="900x500" src="http://www.sepeb.com/pretty-backgrounds/pretty-backgrounds-016.jpg" />
+            <img className="image" width={700} height={250} alt="900x500" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>First slide label</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={900} height={500} alt="900x500" src="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" />
+            <img className="image" width={700} height={250} alt="900x500" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={900} height={500} alt="900x500" src="https://i.ytimg.com/vi/A7ZkZazfvao/maxresdefault.jpg" />
+            <img className="image" width={700} height={250} alt="900x500" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>Third slide label</h3>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -36,21 +36,21 @@ class Projects extends Component {
         <div className="signcontainer"><p className="signs" >SIGNS</p></div>
         <Carousel>
           <Carousel.Item >
-            <img className="image" width={900} height={500} alt="900x500" src="http://www.sepeb.com/pretty-backgrounds/pretty-backgrounds-016.jpg" />
+            <img className="image" width={700} height={250} alt="700x250" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>First slide label</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={900} height={500} alt="900x500" src="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" />
+            <img className="image" width={700} height={250} alt="700x250" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={900} height={500} alt="900x500" src="https://i.ytimg.com/vi/A7ZkZazfvao/maxresdefault.jpg" />
+            <img className="image" width={700} height={250} alt="700x250" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>Third slide label</h3>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -61,21 +61,21 @@ class Projects extends Component {
         <div className="ticketcontainer"><p className="tickets">TICKETS</p></div>
         <Carousel>
           <Carousel.Item >
-            <img className="image" width={900} height={400} alt="900x500" src="http://www.sepeb.com/pretty-backgrounds/pretty-backgrounds-016.jpg" />
+            <img className="image" width={700} height={250} alt="700x250" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>First slide label</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={900} height={400} alt="900x500" src="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" />
+            <img className="image" width={700} height={250} alt="700x250" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={900} height={400} alt="900x500" src="https://i.ytimg.com/vi/A7ZkZazfvao/maxresdefault.jpg" />
+            <img className="image" width={700} height={250} alt="700x250" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>Third slide label</h3>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -86,21 +86,21 @@ class Projects extends Component {
         <div className="backdropcontainer"><p className="backdrop">BACKDROP</p></div>
         <Carousel>
           <Carousel.Item >
-            <img className="image" width={900} height={400} alt="900x500" src="http://www.sepeb.com/pretty-backgrounds/pretty-backgrounds-016.jpg" />
+            <img className="image" width={700} height={250} alt="700x250" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>First slide label</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={900} height={500} alt="900x500" src="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" />
+            <img className="image" width={700} height={250} alt="700x250" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={900} height={500} alt="900x500" src="https://i.ytimg.com/vi/A7ZkZazfvao/maxresdefault.jpg" />
+            <img className="image" width={700} height={250} alt="700x250" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>Third slide label</h3>
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>

@@ -36,46 +36,15 @@ class Request extends Component {
     return (
       <div className='request_container'>
         <h1>Request</h1>
-       <div className="input_container"> 
-        
-       </div>
-       <div className="pay_form">
-       <Form horizontal>
-    <FormGroup controlId="formHorizontalInvoice">
-      <Col componentClass={ControlLabel} sm={5}>
-        Invoice
-      </Col>
-      <Col sm={5}>
-        <FormControl placeholder="Invoice #" />
-      </Col>
-    </FormGroup>
-
-    <FormGroup controlId="formHorizontalEmail2">
-      <Col componentClass={ControlLabel} sm={5}>
-        Email
-      </Col>
-      <Col sm={5}>
-        <FormControl placeholder="Email" />
-      </Col>
-    </FormGroup>
-    <FormGroup controlId="formHorizontalPay">
-      <Col componentClass={ControlLabel} sm={11}>
-      <StripeCheckout className="pay_button"
-          token={this.onToken}
-          stripeKey={ stripe.pub_key }
-          amount={this.state.paymentAmt}/>
-      </Col>
-    </FormGroup>
-        </Form>
-        </div>
-
-
-
 
       <div>
+
+
+        {     /* get a quote form */   }
+        
         <ButtonToolbar>
             <div className="message_button_container">
-        <Button className="message_button" bsStyle="primary" onClick={this.showModal}>
+        <Button className="quote_button" bsStyle="primary" onClick={this.showModal}>
           Get A Quote
         </Button>
         </div>
@@ -218,6 +187,42 @@ class Request extends Component {
     </Modal>
     </ButtonToolbar>
     </div>
+
+
+       {        /* paycard form */       }
+
+
+    <div className="payform_container"> 
+       <div className="pay_form">
+       <Form horizontal>
+    <FormGroup controlId="formHorizontalInvoice">
+      <Col componentClass={ControlLabel} sm={5}>
+        Invoice
+      </Col>
+      <Col sm={5}>
+        <FormControl placeholder="Invoice #" />
+      </Col>
+    </FormGroup>
+
+    <FormGroup controlId="formHorizontalEmail2">
+      <Col componentClass={ControlLabel} sm={5}>
+        Email
+      </Col>
+      <Col sm={5}>
+        <FormControl placeholder="Email" />
+      </Col>
+    </FormGroup>
+    <FormGroup controlId="formHorizontalPay">
+      <Col componentClass={ControlLabel} sm={11}>
+      <StripeCheckout className="pay_button"
+          token={this.onToken}
+          stripeKey={ stripe.pub_key }
+          amount={this.state.paymentAmt}/>
+      </Col>
+    </FormGroup>
+        </Form>
+        </div>
+       </div>
  
       </div>
     );

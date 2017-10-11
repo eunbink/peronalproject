@@ -53,7 +53,7 @@ componentDidMount (){
           {...this.props}
           show={this.state.show}
           onHide={this.hideModal}
-          dialogClassName="custom-modal" >
+          dialogClassName="custom-modal-contact" >
           <Modal.Header className= "modal_header" closeButton>
             <Modal.Title id="contained-modal-title">CONTACT US</Modal.Title>
           </Modal.Header>
