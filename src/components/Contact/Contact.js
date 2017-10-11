@@ -54,15 +54,15 @@ componentDidMount (){
           show={this.state.show}
           onHide={this.hideModal}
           dialogClassName="custom-modal" >
-          <Modal.Header className= "modal_header"closeButton>
-            <Modal.Title id="contained-modal-title-lg">CONTACT US</Modal.Title>
+          <Modal.Header className= "modal_header" closeButton>
+            <Modal.Title id="contained-modal-title">CONTACT US</Modal.Title>
           </Modal.Header>
           <div className="contact_form">
           <Form horizontal className>
           <Modal.Body>
     <FormGroup controlId="formHorizontalName" >
-      <Col componentClass={ControlLabel} sm={1}>
-        Name
+      <Col componentClass={ControlLabel} sm={1} >
+        <div className="Contact_input_title">Name</div>
       </Col>
       <Col sm={10}>
         <FormControl type="email" placeholder="Name" />
@@ -70,8 +70,8 @@ componentDidMount (){
     </FormGroup>
 
     <FormGroup controlId="formHorizontalEmail">
-      <Col componentClass={ControlLabel} sm={1}>
-        Email
+      <Col componentClass={ControlLabel} sm={1} >
+        <div className="Contact_input_title">Email </div>
       </Col>
       <Col sm={10}>
         <FormControl type="email" placeholder="Email" />
@@ -79,15 +79,15 @@ componentDidMount (){
     </FormGroup>
 
     <FormGroup controlId="formHorizontalMessage">
-      <Col componentClass={ControlLabel} sm={1}>
-        Message
+      <Col componentClass={ControlLabel} sm={1} >
+        <div className="Contact_input_title_message">Message</div>
       </Col>
       <Col sm={10}>
         <FormControl type="message" placeholder="Message" />
       </Col>
     </FormGroup>
-    </Modal.Body>
-    <Modal.Footer>
+    
+   
     <FormGroup >
       <Col smOffset={1} sm={4}>
         <Button className="messageSubmitbutton" type="submit">
@@ -95,21 +95,18 @@ componentDidMount (){
         </Button>
       </Col>
     </FormGroup>
-    </Modal.Footer>
+    </Modal.Body>
 
   </Form>
           </div>
     </Modal>
     </ButtonToolbar>
-
-
-
-        </div>
-
+    </div>
         <div id="map">
+          
           </div> 
         </div>
-
+       
         
        
   

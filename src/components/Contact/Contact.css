@@ -3,7 +3,7 @@
 .contact {
     width: 100vw;
     height: 130vh;
-    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
+    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=") no-repeat;
     background-size: cover;
     overflow-y: hidden;
     font-family: 'Shadows Into Light', cursive;
@@ -96,10 +96,14 @@
 
 #map {
     width:100vw;
+  
 
 } 
+.mapboxgl-canvas {
+    /* position: none; */
+}
 
-#formHorizontalName, #formHorizontalEmail {
+#formHorizontalName, #formHorizontalEmail, #formHorizontal {
     width: 450px;
     background: none;
     border: 1px solid black;
@@ -115,7 +119,7 @@
     background: none;
     border: 1px solid black;
     padding:9.3px;
-    margin-top: -8px;
+    float:right;
     font-size: 18px;
    
 }
@@ -123,6 +127,7 @@
     font-family: 'Shadows Into Light', cursive;
     width: 50vw;
     height:auto;
+  
 }
 .message_button {
     background: none;
@@ -141,3 +146,14 @@
     color:black;
     
 }
+
+.Contact_input_title {
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+.Contact_input_title_message{
+    font-size: 20px;
+    margin-top: -8px;
+}
+

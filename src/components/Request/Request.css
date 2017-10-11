@@ -28,6 +28,7 @@
     border: 1px solid black;
 }
 
+
 .pay_button {
     background: none;
     border: 1px solid black;
@@ -35,7 +36,7 @@
 }
 
 ::-webkit-input-placeholder { /* Chrome */
-    font-size:20px;
+    font-size:15px;
     color:black;
     font-family: 'Abel', sans-serif;
     
@@ -43,4 +44,36 @@
 .pay_form {
     position: absolute;
     font-size: 25px;
+}
+.custom-modal2 {
+    height:80%;
+    font-family:'Shadows Into Light', cursive;
+    overflow-y: 300px;
+    
+}
+
+.modal-dialog {
+    width: 670px;
+    height: auto;
+    margin: 100px auto;
+ 
+}
+
+.Quote_Form {
+    font-size: 16.5px;
+}
+.title_input {
+    padding: 0px;
+   
+}
+#contained-modal-title{
+    font-size: 30px;
+}
+
+.modal-container {
+    height: 200px;
+}
+.modal-content {
+    height:690px;
+    background: url("https://images.unsplash.com/photo-1494537176433-7a3c4ef2046f?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop="); 
 }
