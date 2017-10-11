@@ -90,8 +90,11 @@
     height: 200px;
 }
 .modal-content {
-    height:690px;
+    height:820px;
     background: url("https://images.unsplash.com/photo-1474377207190-a7d8b3334068?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop="); 
+    overflow-y: scroll;
 }
 
-
+.comments {
+    height:200px;
+}

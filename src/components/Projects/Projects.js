@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Projects.css';
 import { Carousel } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 
 class Projects extends Component {
@@ -108,6 +109,7 @@ class Projects extends Component {
           </Carousel.Item>
         </Carousel>
         </div>
+        <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
       </div>
     );
   }

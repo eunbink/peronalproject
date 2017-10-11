@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Contact.css'
 import { Modal, Form, FormControl, FormGroup, Col, ControlLabel, Checkbox, Button, ButtonToolbar } from 'react-bootstrap'
 import mapboxgl from 'mapbox-gl';
+import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 
 
 
@@ -10,11 +12,24 @@ class Contact extends Component {
  constructor() {
    super ();
    this.state = {
-     show: false
+     show: false,
+     email: {
+       name: "",
+       email:"",
+      message:""
+
+     }
    
  }
  this.showModal = this.showModal.bind(this);
  this.hideModal = this.hideModal.bind(this);
+ this.send = this.send.bind(this);
+}
+
+send (email) {
+  axios.post ('/api/send_email', {
+    data: email //body
+  })
 }
 
 showModal() {
@@ -34,6 +49,7 @@ componentDidMount (){
 }
 
   render() {
+    console.log(this.state.email)
     return (
       <div>
         <div className='contact'>
@@ -65,8 +81,10 @@ componentDidMount (){
         <div className="Contact_input_title">Name</div>
       </Col>
       <Col sm={10}>
-        <FormControl type="email" placeholder="Name" />
-      </Col>
+        <FormControl onChange={(e)=>{this.setState({
+          email:{...this.state.email, name:e.target.value}
+          })}} type="email" placeholder="Name" />
+      </Col> 
     </FormGroup>
 
     <FormGroup controlId="formHorizontalEmail">
@@ -74,7 +92,9 @@ componentDidMount (){
         <div className="Contact_input_title">Email </div>
       </Col>
       <Col sm={10}>
-        <FormControl type="email" placeholder="Email" />
+        <FormControl onChange={(e)=>{this.setState({
+          email:{...this.state.email, email:e.target.value}
+          })}} type="email" placeholder="Email" />
       </Col>
     </FormGroup>
 
@@ -83,14 +103,16 @@ componentDidMount (){
         <div className="Contact_input_title_message">Message</div>
       </Col>
       <Col sm={10}>
-        <FormControl type="message" placeholder="Message" />
+        <FormControl onChange={(e)=>{this.setState({
+          email:{...this.state.email, message:e.target.value}
+          })}} type="message" placeholder="Message" />
       </Col>
     </FormGroup>
     
    
     <FormGroup >
       <Col smOffset={1} sm={4}>
-        <Button className="messageSubmitbutton" type="submit">
+        <Button onClick= {()=> this.send(this.state.email)} className="messageSubmitbutton" type="submit">
           SUBMIT
         </Button>
       </Col>
@@ -105,6 +127,7 @@ componentDidMount (){
         <div id="map">
           
           </div> 
+          <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
         </div>
        
         

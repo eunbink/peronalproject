@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './About.css';
+import { NavLink } from 'react-router-dom';
 
 
 class About extends Component {
@@ -14,6 +15,7 @@ class About extends Component {
              produce it and ship it for you. Because we do it all, you’ll have personalized attention and competitive pricing on the the highest quality design and production anywhere.
              </p></div>
         </div>
+        <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
 
       </div>
     );

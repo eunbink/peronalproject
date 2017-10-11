@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from './components/Nav/Nav.js'
 import router from './router.js'
-import { NavLink } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 
@@ -35,7 +34,7 @@ class App extends Component {
             <div className="Navbar"></div>
 
           </span>
-          <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
+          
           
         </div>
         
