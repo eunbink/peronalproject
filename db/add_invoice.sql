@@ -1,2 +1,2 @@
 insert into quotes(invoice)
-value($1) 
+values($1) 

@@ -7,6 +7,9 @@
     background-size: cover;
     overflow-y: scroll;
     font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+   
+    
    
 }
 .logout_button {
@@ -20,5 +23,25 @@
 
 .Quote_Table {
     margin: 200px;
+    
 
+}
+
+.invoiceinput {
+    border: none;
+    background: none;
+   
+}
+.admin_button {
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+.text {
+    text-align: center;
+    font-size:25px;
+}
+
+.table {
+    margin-top: -55px;
 }

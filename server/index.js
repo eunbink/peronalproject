@@ -55,7 +55,7 @@ app.post('/api/send_email', mail_controller.sendEmail);
 app.post('/api/send_quote', request_controller.sendQuote);
 
 //----admin--------//
-app.get('/api/quote/:getquote', admin_controller.get_quote );
+app.get('/api/quote/getquote', admin_controller.get_quote );
 app.get('/api/quote/:emailinvoice', admin_controller.get_email_invoice );
 app.post('/api/quote/addimage', admin_controller.add_image);
 app.post('/api/quote/addquote', admin_controller.add_quote); //done

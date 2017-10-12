@@ -4,8 +4,10 @@ module.exports = {
     
     get_quote: (req, res, next) => {    //this happens in admin page where data renders as table
         const db = req.app.get("db")
-        db.get_quote(req.params.getquote)
-            .then(response => res.status(200).send(response))
+        db.get_quote()
+            .then(response => {
+                console.log(response);
+                res.status(200).send(response)})
     },
     
     get_email_invoice: (req, res, next) => { //this happens when paying with email and invoice data.
