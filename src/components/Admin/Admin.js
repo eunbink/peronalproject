@@ -8,25 +8,42 @@ class Admin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quotes:[]
+      quotes:[],
+      id:0,
+      invoice:"",
     }
+    this.addInvoice = this.addInvoice.bind(this);
+    // this.keepInvoice = this.keepInvoice.bind(this);
   }
 
+  // keepInvoice(i){
+  //   const quotes = this.state.quotes
+  //   quotes[i].invoice = this.state.invoice
+  //   return quotes;
+  // }
+
+  addInvoice (){
+    axios.patch('api/quote/addinvoice', {invoice: this.state.invoice, invoiceid:this.state.id})
+    .then(response => { 
+      this.setState({quotes:response.data})
+      alert('Your invoice has been saved!')
+    })
+  }
 
   componentDidMount (){
     axios.get('/api/quote/getquote').then(response=>{
       console.log(response)
       this.setState({
-        quotes: response.data
+        quotes: response.data,
+       invoice:response.data
       })
-    })
-    
+    })   
   }
 
   render() {
     const quotesDisplayed=this.state.quotes.map((quote, i) =>{ 
       return ( 
-        <tbody>
+        <tbody className="datacolumn">
             <tr>
             <td>{quote.id}</td>
             <td>{quote.name}i</td>
@@ -35,9 +52,8 @@ class Admin extends Component {
             <td>{quote.designtype}</td>
             <td>{quote.duedate}</td>
             <td>{quote.image}</td>
-            <td><FormControl className="invoiceinput" onChange={(e)=>{this.setState({
-      quote:{...this.state.quote, invoice:e.target.value}
-      })}} type="text"/></td>
+            <td><FormControl className="invoiceinput" onChange={(e)=>
+              {this.setState({invoice:e.target.value, id:quote.id})}} type="text"/></td>
           </tr>
         </tbody>
       )
@@ -64,7 +80,7 @@ class Admin extends Component {
             </thead>
             {quotesDisplayed}
             <tr>
-                <th  className="text" colSpan="4"><Button className="admin_button">SAVE</Button></th>
+                <th  className="text" colSpan="4"><Button onClick = {()=>{this.addInvoice()}}className="admin_button">SAVE</Button></th>
                 <th  className="text" colSpan="4"><Button className="admin_button">DELETE</Button></th>
               </tr>
           </Table>
@@ -77,3 +93,6 @@ class Admin extends Component {
 }
 
 export default Admin;
+
+// quotes: this.keepInvoice(i)
+// value={quote.invoice} 
