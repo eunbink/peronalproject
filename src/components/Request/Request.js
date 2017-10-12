@@ -5,6 +5,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import stripe from './Stripekey'; 
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import VueCoreImageUpload from 'vue-core-image-upload';
 
 
 class Request extends Component {
@@ -48,7 +49,7 @@ class Request extends Component {
       email: this.state.quote.email,
       name: this.state.quote.name,
       to: "kangeb1992@gmail.com",
-      subject: "Quote"
+      subject: "Request Quote"
     }
     axios.post ('/api/send_quote', body )
   }
@@ -249,6 +250,9 @@ class Request extends Component {
           </div>
     </Modal>
     </ButtonToolbar>
+
+   
+       
     </div>
 
 

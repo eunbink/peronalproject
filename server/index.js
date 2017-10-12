@@ -11,6 +11,7 @@ const express = require('express')
 , nodemailer = require("nodemailer")
 , mail_controller = require("./controllers/mail_controller.js")
 , request_controller = require("./controllers/request_controller.js")
+, admin_controller = require("./controllers/admin_controller.js")
 
 
 //------------------MIDDLEWARES----------------
@@ -47,14 +48,19 @@ done(null, profile);
 
 
 
-//----------------------ENDPOINTS-------------
+//----------------------ENDPOINTS-----------------//
 
-
+//----nodemailer----//
 app.post('/api/send_email', mail_controller.sendEmail);
 app.post('/api/send_quote', request_controller.sendQuote);
 
-
-
+//----admin--------//
+// app.get('/api/quote/:quote', admin_controller.get_quote );
+// app.get('/api/quote/:value', admin_controller.get_email_invoice );
+// app.post('/api/quote/:image', admin_controller.add_image);
+// app.post('/api/quote/', admin_controller.add_quote);
+// app.post('/api/quote/:invoice', admin_controller.update_invoice);
+// app.delete('/api/quote/:id', admin_controller.delete_quote);
 
 
 
