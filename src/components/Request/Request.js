@@ -32,6 +32,27 @@ class Request extends Component {
     this.hideModal = this.hideModal.bind(this);
     this.send = this.send.bind(this);
     this.close = this.close.bind(this);
+    this.submitQuotesToDatabase = this.submitQuotesToDatabase.bind(this);
+  }
+
+  submitQuotesToDatabase () {
+    const body = {
+      name: this.state.quote.name,
+      email: this.state.quote.email,
+      phonenumber:this.state.quote.phoneNumber,
+      designtype:this.state.quote.designType,
+      size:this.state.quote.size,
+      color:this.state.quote.color,
+      sides:this.state.quote.sides,
+      sides2:this.state.quote.singleDouble,
+      duedate:this.state.quote.dueDate,
+      quantity:this.state.quote.quantity,
+      comments:this.state.quote.comments,
+      
+    }
+    axios.post('api/quote/addquote', body).then(response => {
+      alert('Your quote has been submitted')
+    })
   }
 
   send () {
@@ -239,7 +260,7 @@ class Request extends Component {
    
     <FormGroup >
       <Col smOffset={1} sm={4}>
-        <Button onClick = {()=>{this.send(this.state.email); this.close()}} className="messageSubmitbutton" type="submit">
+        <Button onClick = {()=>{this.send(this.state.email); this.close(); this.submitQuotesToDatabase()}} className="messageSubmitbutton" type="submit">
           SUBMIT
         </Button>
       </Col>
