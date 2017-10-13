@@ -256,7 +256,15 @@ class Request extends Component {
       </Col>
     </FormGroup>
 
-   
+   {/* image */}
+   <FormGroup controlId="formHorizontal">
+    <Col componentClass={ControlLabel} sm={1}className="title_input">
+        Image
+      </Col>
+      <Col sm={10}>
+      <FormControl type="file" id="fileInput"/>
+      </Col> 
+   </FormGroup>
    
     <FormGroup >
       <Col smOffset={1} sm={4}>
