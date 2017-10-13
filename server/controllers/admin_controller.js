@@ -17,18 +17,25 @@ module.exports = {
     },
    //--------post-----//
     add_quote: (req, res, next) => {         //this happens when submitting modal form.
-    const { name, email, phonenumber, designtype, size, color, sides, sides2, quantity, duedate, comments, invoice } = req.body
+    const { name, email, phonenumber, designtype, size, color, sides, sides2, quantity, duedate, comments, invoice, image } = req.body
     const db = req.app.get("db")
     db.add_quote([name, email, phonenumber, designtype, size, color, sides, sides2, quantity, duedate, comments, invoice])
-    .then(response => res.status(200).send(response))
+    .then(response => {
+        db.add_image([ image, response[0].id ])
+      .then(response => res.status(200).send(response))
+        
+        // res.status(200).send(response)
+    
+    })
+    
     },
     
-    add_image: (req, res, next) => {          //this happens in request page within modal submiting modal. (using uploading library)
-    const { image } = req.body
-    const db = req.app.get("db")
-    db.add_image([ image ])
-    .then(response => res.status(200).send(response))
-    },
+    // add_image: (req, res, next) => {          //this happens in request page within modal submiting modal. (using uploading library)
+    // const { image } = req.body
+    // const db = req.app.get("db")
+    // db.add_image([ image ])
+    // .then(response => res.status(200).send(response))
+    // },
 
     add_invoice: (req, res, next) => {         //this happens in admin page with save button. 
     const { invoice, invoiceid } = req.body

@@ -26,6 +26,7 @@ class Request extends Component {
         quantity:"",
         dueDate:"",
         comments:"",
+        image:""
       }
     }
     this.showModal = this.showModal.bind(this);
@@ -36,6 +37,7 @@ class Request extends Component {
   }
 
   submitQuotesToDatabase () {
+    console.log(this.state.quote.image)
     const body = {
       name: this.state.quote.name,
       email: this.state.quote.email,
@@ -48,8 +50,10 @@ class Request extends Component {
       duedate:this.state.quote.dueDate,
       quantity:this.state.quote.quantity,
       comments:this.state.quote.comments,
+      image:this.state.quote.image,
       
     }
+    console.log(body)
     axios.post('api/quote/addquote', body).then(response => {
       alert('Your quote has been submitted')
     })
@@ -69,6 +73,7 @@ class Request extends Component {
       comments:this.state.quote.comments,
       email: this.state.quote.email,
       name: this.state.quote.name,
+      image: this.state.quote.image,
       to: "kangeb1992@gmail.com",
       subject: "Request Quote"
     }
@@ -262,7 +267,9 @@ class Request extends Component {
         Image
       </Col>
       <Col sm={10}>
-      <FormControl type="file" id="fileInput"/>
+      <FormControl type="file" id="fileInput" onChange={(e)=>{this.setState({
+          quote:{...this.state.quote, image:e.target.value}
+          })}}/>
       </Col> 
    </FormGroup>
    

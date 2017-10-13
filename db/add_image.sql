@@ -1,2 +1,2 @@
-insert into images (image)
-values($1)
+insert into images (image, quoteid)
+values($1, $2)

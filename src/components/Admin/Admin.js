@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Admin.css';
-import { Button, Table, FormControl } from 'react-bootstrap';
+import { Button, Table, FormControl, Checkbox } from 'react-bootstrap';
 import axios from 'axios';
 
 
@@ -11,9 +11,12 @@ class Admin extends Component {
       quotes:[],
       id:0,
       invoice:"",
+      isChecked:false,
     }
+      
+    this.deleteQuote = this.deleteQuote.bind(this);
     this.addInvoice = this.addInvoice.bind(this);
-    // this.keepInvoice = this.keepInvoice.bind(this);
+  
   }
 
   // keepInvoice(i){
@@ -21,6 +24,13 @@ class Admin extends Component {
   //   quotes[i].invoice = this.state.invoice
   //   return quotes;
   // }
+
+
+deleteQuote (id) {
+  axios.delete(`/api/quote/${id}`).then(response =>{
+    alert('Your invoice has been deleted!')
+  })
+}
 
   addInvoice (){
     axios.patch('api/quote/addinvoice', {invoice: this.state.invoice, invoiceid:this.state.id})
@@ -41,6 +51,7 @@ class Admin extends Component {
   }
 
   render() {
+   
     const quotesDisplayed=this.state.quotes.map((quote, i) =>{ 
       return ( 
         <tbody className="datacolumn">
@@ -52,8 +63,12 @@ class Admin extends Component {
             <td>{quote.designtype}</td>
             <td>{quote.duedate}</td>
             <td>{quote.image}</td>
-            <td><FormControl className="invoiceinput" onChange={(e)=>
+            <td ><FormControl className="invoiceinput" onChange={(e)=>
               {this.setState({invoice:e.target.value, id:quote.id})}} type="text"/></td>
+              {quote.invoice}
+            <td><th  className="text" colSpan="5"><Button onClick = {()=>{this.deleteQuote(quote.id)}} className="admin_button">DELETE</Button></th></td>  
+              
+           
           </tr>
         </tbody>
       )
@@ -65,7 +80,7 @@ class Admin extends Component {
           <Table className="table" striped bordered condensed hover>
             <thead>
               <tr>
-                <th colSpan="8" className="text">Quote Table</th>
+                <th colSpan="10" className="text">Quote Table</th>
               </tr>
               <tr>
                 <th>#</th>
@@ -75,13 +90,16 @@ class Admin extends Component {
                 <th>Design Type</th>
                 <th>Due Date</th>
                 <th>image</th>
-                <th>invoice</th>
+                <th>Add Invoice</th>
+                <th>Invoice #</th>
+                <th>Delete</th>
+                
               </tr>
             </thead>
             {quotesDisplayed}
             <tr>
-                <th  className="text" colSpan="4"><Button onClick = {()=>{this.addInvoice()}}className="admin_button">SAVE</Button></th>
-                <th  className="text" colSpan="4"><Button className="admin_button">DELETE</Button></th>
+                <th  className="text" colSpan="10"><Button onClick = {()=>{this.addInvoice()}}className="admin_button">SAVE</Button></th>
+                
               </tr>
           </Table>
         </div>

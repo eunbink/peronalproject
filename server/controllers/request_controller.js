@@ -31,7 +31,8 @@ module.exports ={
                     <ul><b>Single/Double: </b>${ req.body.singleDouble }</ul>
                     <ul><b>Quantity: </b>${ req.body.quantity }</ul>
                     <ul><b>Due Date: </b>${ req.body.dueDate }</ul>
-                    <ul><b>Comments: </b>${ req.body.comments }</ul>`
+                    <ul><b>Comments: </b>${ req.body.comments }</ul>
+                    <ul><b>Image: </b>${ req.body.image }</ul>`
 
         };
 
