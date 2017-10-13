@@ -267,9 +267,15 @@ class Request extends Component {
         Image
       </Col>
       <Col sm={10}>
-      <FormControl type="file" id="fileInput" onChange={(e)=>{this.setState({
-          quote:{...this.state.quote, image:e.target.value}
-          })}}/>
+      <FormControl type="file" id="fileInput" onChange={(e)=>{
+        let fileUpload = document.getElementById('fileInput');
+        console.log(this.state);
+        console.log(e.target);
+        console.log(fileUpload.value)
+        this.setState({
+          quote:{...this.state.quote, image:e.target.value}}
+          )}
+          }/>
       </Col> 
    </FormGroup>
    

@@ -30,7 +30,6 @@ module.exports = {
     
     },
     
-
     add_invoice: (req, res, next) => {         //this happens in admin page with save button. 
     const { invoice, invoiceid } = req.body
     const db = req.app.get("db")

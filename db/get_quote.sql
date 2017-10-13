@@ -2,3 +2,8 @@
 -- join images on quotes.id = images.quoteid
 
 select * from quotes
+join images on quotes.id = images.quoteid
+
+
+
+

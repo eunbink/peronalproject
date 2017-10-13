@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
 
 .App {
   text-align: center;
   height: 100vh;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Saira Extra Condensed', sans-serif;
 }
 .Navicon{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 30px;
+  height: 35px;
   width: 35px;
   position: absolute;
   left: 50%;
@@ -43,6 +43,7 @@
   top: 0px;
   right: 0px;
   margin: 30px;
+  margin-right:50px;
   font-size: 25px;
   color: black;
 }

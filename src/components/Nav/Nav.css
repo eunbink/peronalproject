@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+
 
 html{
     font-family: 'Geo', sans-serif;
@@ -19,7 +21,7 @@ li {
     padding: 0 15px;
     padding: 20px;
     color:black;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 25px;
     
 }
