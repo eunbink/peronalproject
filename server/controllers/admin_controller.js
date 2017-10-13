@@ -30,12 +30,6 @@ module.exports = {
     
     },
     
-    // add_image: (req, res, next) => {          //this happens in request page within modal submiting modal. (using uploading library)
-    // const { image } = req.body
-    // const db = req.app.get("db")
-    // db.add_image([ image ])
-    // .then(response => res.status(200).send(response))
-    // },
 
     add_invoice: (req, res, next) => {         //this happens in admin page with save button. 
     const { invoice, invoiceid } = req.body
