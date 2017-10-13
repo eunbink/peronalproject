@@ -65,7 +65,7 @@ deleteQuote (id) {
             <td>{quote.image}</td>
             <td ><FormControl className="invoiceinput" onChange={(e)=>
               {this.setState({invoice:e.target.value, id:quote.id})}} type="text"/></td>
-              {quote.invoice}
+            <td> {quote.invoice} </td>
             <td><th  className="text" colSpan="5"><Button onClick = {()=>{this.deleteQuote(quote.id)}} className="admin_button">DELETE</Button></th></td>  
               
            
