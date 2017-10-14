@@ -42,7 +42,6 @@ deleteQuote (id) {
 
   componentDidMount (){
     axios.get('/api/quote/getquote').then(response=>{
-      console.log(response)
       this.setState({
         quotes: response.data,
        invoice:response.data,
@@ -55,18 +54,19 @@ deleteQuote (id) {
     const quotesDisplayed=this.state.quotes.map((quote, i) =>{ 
       return ( 
         <tbody className="datacolumn">
-            <tr>
-            <td>{quote.id}</td>
-            <td>{quote.name}i</td>
-            <td>{quote.email}</td>
-            <td>{quote.phonenumber}</td>
-            <td>{quote.designtype}</td>
-            <td>{quote.duedate}</td>
-            <td ><FormControl className="invoiceinput" onChange={(e)=>
+            <tr className="table_contanier">
+            <td className="table_body">{quote.id}</td>
+            <td className="table_body">{quote.name}i</td>
+            <td className="table_body">{quote.email}</td>
+            <td className="table_body">{quote.phonenumber}</td>
+            <td className="table_body">{quote.designtype}</td>
+            <td className="table_body">{quote.image}</td>
+            <td className="table_body">{quote.duedate}</td>
+            <td className="table_body" ><FormControl className="invoiceinput" onChange={(e)=>
               {this.setState({invoice:e.target.value, id:quote.id});
-              }} type="text"/>{quote.invoice} </td>
-            <td>
-              <th  className="text" colSpan="5"><Button onClick = {()=>{this.deleteQuote(quote.id)}} className="admin_button">DELETE</Button></th></td>
+              }} type="text"/> </td>
+             <td className="table_body">{quote.invoice}</td> 
+            <td className="table_body"><Button onClick = {()=>{this.deleteQuote(quote.id)}} className="delete_button">DELETE</Button></td>
           </tr>
         </tbody>
       )
@@ -86,16 +86,17 @@ deleteQuote (id) {
                 <th className="column-text" >Email</th>
                 <th className="column-text" >Phone Number</th>
                 <th className="column-text" >Design Type</th>
+                <th className="column-text" >Image</th>
                 <th className="column-text" >Due Date</th>
                 <th className="column-text" >Add Invoice</th>
                 <th className="column-text" >Invoice #</th>
-                <th className="column-text" >Delete</th>
+                <th className="column-text" ></th>
                 
               </tr>
             </thead>
             {quotesDisplayed}
             <tr>
-                <th  className="text" colSpan="9"><Button onClick = {()=>{this.addInvoice()}}className="admin_button">SAVE</Button></th>
+                <th  className="text" colSpan="10"><Button onClick = {()=>{this.addInvoice()}}className="admin_button">SAVE</Button></th>
                 
               </tr>
           </Table>

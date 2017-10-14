@@ -22,6 +22,10 @@
     padding: 200px;
     font-size: 60px;
 }
+
+
+
+
 .aboutusButton {
     margin-top:-250px;
     padding:11px;
@@ -29,4 +33,22 @@
     color:white;
     background: none;
     border: white 1px solid;
+    cursor: pointer;  
+    transition:0.3s;
+
 }
+.aboutusButton:hover {
+    transform:  translate(0,-6px) ;
+    border: none !important;
+    background: none;
+    color: white;
+    box-shadow:
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
+transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
+
+  

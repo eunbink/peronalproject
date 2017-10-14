@@ -20,8 +20,11 @@
     margin-left: 1300px;
     margin-top: 32px;
     font-size: 26px;
+    transition: 0.3s;
 }
-
+.logout_button:hover {
+    transform: translate(0,-4px);
+}
 .Quote_Table {
     margin: 200px;
     
@@ -37,6 +40,7 @@
     background: none;
     border: none;
     font-size: 20px;
+    color:white;
 }
 .text {
     text-align: center;
@@ -52,3 +56,17 @@
     text-align: center;
 }
 
+
+.datacolumn {
+    background:none !important;
+    color: #232323 !important;
+}
+.delete_button {
+    border: #232323;
+    color:#232323;
+    transition:0.2s;
+}
+.delete_button:hover{
+    border: #232323 solid 0.5px;
+    background: none;
+}

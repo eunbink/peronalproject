@@ -82,6 +82,7 @@
 }
 .message_button:hover {
     transform:  translate(0,-6px) ;
+    border: none !important;
 }
 
 
@@ -133,7 +134,7 @@
    
 }
 .custom-modal {
-    font-family: 'Shadows Into Light', cursive;
+    
     width: 50vw;
     height:auto;
   
@@ -152,7 +153,12 @@
 
 .message_button:hover {
     background:none;
-    color:black;
+    box-shadow:
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
+transform: translateX(-3px);
+transform: translateX(-3px);
     
 }
 

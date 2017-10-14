@@ -5,13 +5,14 @@ import StripeCheckout from 'react-stripe-checkout';
 import stripe from './Stripekey'; 
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-import VueCoreImageUpload from 'vue-core-image-upload';
+
 
 
 class Request extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isChecked: false,
       paymentAmt: 2500,
       show: false,
       quote: {
@@ -26,18 +27,36 @@ class Request extends Component {
         quantity:"",
         dueDate:"",
         comments:"",
-        image:""
+        image:"",
+        invoice:""
       }
     }
+    this.checkEmailInvoice = this.checkEmailInvoice.bind(this);
+    this.changeIsChecked = this.changeIsChecked.bind(this);
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
     this.send = this.send.bind(this);
     this.close = this.close.bind(this);
     this.submitQuotesToDatabase = this.submitQuotesToDatabase.bind(this);
   }
+  changeIsChecked (){
+    this.setState({
+      isChecked : !this.state.isChecked
+    })
+  }
+
+  checkEmailInvoice () {
+      const body = {
+        email: this.state.quote.email,
+        invoice: this.state.quote.invoice
+      }
+    axios.post('/api/quote/emailinvoice', body ).then(response => {
+      console.log(response);
+        })
+  }
 
   submitQuotesToDatabase () {
-    console.log(this.state.quote.image)
+    
     const body = {
       name: this.state.quote.name,
       email: this.state.quote.email,
@@ -53,7 +72,6 @@ class Request extends Component {
       image:this.state.quote.image,
       
     }
-    console.log(body)
     axios.post('api/quote/addquote', body).then(response => {
       alert('Your quote has been submitted')
     })
@@ -268,10 +286,6 @@ class Request extends Component {
       </Col>
       <Col sm={10}>
       <FormControl type="file" id="fileInput" onChange={(e)=>{
-        let fileUpload = document.getElementById('fileInput');
-        console.log(this.state);
-        console.log(e.target);
-        console.log(fileUpload.value)
         this.setState({
           quote:{...this.state.quote, image:e.target.value}}
           )}
@@ -323,15 +337,21 @@ class Request extends Component {
     </FormGroup>
     <FormGroup controlId="formHorizontalPay">
       <Col componentClass={ControlLabel} sm={11}>
-      <StripeCheckout className="pay_button"
+      
+      
+     { this.state.isChecked ? <StripeCheckout className="pay_button"
           token={this.onToken}
           stripeKey={ stripe.pub_key }
-          amount={this.state.paymentAmt}/>
+          amount={this.state.paymentAmt}
+          /> : null }
+
+
+
       </Col>
     </FormGroup>
     <FormGroup>
-      <Col componentClass={ControlLabel} sm={11}>
-      <Button className="check_button">Proceed to Payment</Button>
+      <Col >
+     { this.state.isChecked ? null :<Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button> }
       </Col>
     </FormGroup>
         </Form>

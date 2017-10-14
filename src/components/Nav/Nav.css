@@ -9,9 +9,13 @@ html{
 
 ul {
     list-style: none;
-   
-       
+     
+     
 }
+
+
+
+
 .navHome {
     margin-top: 80px;
     color: white;
@@ -23,7 +27,14 @@ li {
     color:white;
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 25px;
+    transition: 0.5s; 
     
+}
+
+li:hover {
+    border-bottom: 1px solid white;
+    width:100%;
+  
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -39,11 +50,12 @@ a:link, a:visited, a:hover, a:active {
 #nav {
     left:-200px;
     position: fixed;
-    transition: 0.2s;
+    transition: 0.2s ;
     height:100vh;
     width:auto;
     
 }
+
 
 .Admin {
     margin-top: 200px;

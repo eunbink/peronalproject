@@ -1,2 +1,3 @@
 select email, invoice from quotes
-where email, invoice = ($1, $2)
+where email = $1
+and invoice = $2;

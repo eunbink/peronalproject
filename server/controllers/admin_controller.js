@@ -9,13 +9,15 @@ module.exports = {
                 console.log(response);
                 res.status(200).send(response)})
     },
-    
+     //--------post-----//
+     
     get_email_invoice: (req, res, next) => { //this happens when paying with email and invoice data.
+        const { invoice, email } = req.body
         const db = req.app.get("db")
-        db.get_email_invoice(req.params.emailinvoice)
+        db.get_email_invoice([invoice, email])
             .then(response => res.status(200).send(response))
     },
-   //--------post-----//
+  
     add_quote: (req, res, next) => {         //this happens when submitting modal form.
     const { name, email, phonenumber, designtype, size, color, sides, sides2, quantity, duedate, comments, invoice, image } = req.body
     const db = req.app.get("db")

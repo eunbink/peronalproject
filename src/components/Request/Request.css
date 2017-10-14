@@ -21,9 +21,15 @@
 } 
 .quote_button:hover, .check_button:hover{
     background:none;
-    transform: translate(0,-7px) ;
+    transform: translate(0,-6px) ;
     color:white;
     border:white;
+    box-shadow:
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
+transform: translateX(-3px);
+transform: translateX(-3px);
 }    
 
 .payform_container{
@@ -31,7 +37,7 @@
    margin-top:-30px;
 }
 #formHorizontalInvoice, #formHorizontalEmail2, #formHorizontalPay {
-    margin: 5px;
+    margin: 6px;
     width: 400px;
     background: none;
     border: 1px solid white;
@@ -92,6 +98,7 @@
 .modal-content {
     height:910px;
     background: white;
+    color:black;
    
 }
 
@@ -100,7 +107,8 @@
 }
 
 .check_button {
-    margin-top:-40px !important;
+    margin-top:-10px !important;
+    margin-left:287px;
     background: none;
     border: white solid 1px;
     color: white;
