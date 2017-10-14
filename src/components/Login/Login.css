@@ -4,20 +4,18 @@
 .Login_container {
     width: 100vw;
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
+    background: LIGHTSLATEGRAY;
     background-size: cover;
     overflow-y: scroll;
      
 }
-.bluelogo {
-    width: 500px;
-    height: 500px;
-}
+
 
 .login_button {
     border: none;
     background: none;
     font-size: 50px;
+    color: white;
 }
 login_button:hover {
     background-color:none;

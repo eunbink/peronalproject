@@ -3,11 +3,18 @@
 .about_container {
     width: 100vw;
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
+    background: #202020;
     background-size: cover;
     overflow-y: scroll;
-    font-family: 'Shadows Into Light', cursive;
+    color: white;
    
+}
+.companyimage {
+    border:10px white solid;
+    margin-top:25px;
+    width:800px;
+    height:400px;
+    
 }
 
 .about_title{
@@ -17,5 +24,5 @@
 
 .about_explanation {
     font-size: 30px;
-    padding: 330px 120px 130px 130px;
+    padding: 80px 120px 150px 150px;
 }

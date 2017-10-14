@@ -74,7 +74,7 @@ componentDidMount (){
           </div>
           <ButtonToolbar>
             <div className="message_button_container">
-        <Button className="message_button" bsStyle="primary" onClick={this.showModal}>
+        <Button className="message_button"  onClick={this.showModal}>
           Leave us a Message
         </Button>
         </div>

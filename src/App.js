@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
 
 
 
+
 class App extends Component {
   constructor() {
     super();
@@ -32,13 +33,9 @@ class App extends Component {
             <div className="Navbar"></div>
             <div className="Navbar"></div>
             <div className="Navbar"></div>
-
-          </span>
-          
-          
+          </span> 
         </div>
         
-
         <Nav showingNavbar={this.state.showmenu ? "slidemenu" : null} disappearNavbar={this.disappearNavbar} />
        {router}
 

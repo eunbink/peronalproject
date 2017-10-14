@@ -312,7 +312,7 @@ class Request extends Component {
         <FormControl placeholder="Invoice #" />
       </Col>
     </FormGroup>
-
+   
     <FormGroup controlId="formHorizontalEmail2">
       <Col componentClass={ControlLabel} sm={5}>
         Email
@@ -327,6 +327,11 @@ class Request extends Component {
           token={this.onToken}
           stripeKey={ stripe.pub_key }
           amount={this.state.paymentAmt}/>
+      </Col>
+    </FormGroup>
+    <FormGroup>
+      <Col componentClass={ControlLabel} sm={11}>
+      <Button className="check_button">Proceed to Payment</Button>
       </Col>
     </FormGroup>
         </Form>

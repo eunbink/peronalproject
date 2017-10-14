@@ -1,13 +1,19 @@
-
-
-.project_container{
-    width: 100vw;
-    height: 100vh;
-    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
-    background-size: cover;
-    overflow-y: visible;
-
+body {
+    background: #202020;
+}
+.project_container{  
+ 
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #202020 repeat;
     
+}
+.projecttext {
+    font-size:40px;
 }
 
 .image {
@@ -33,19 +39,20 @@
 
 .apparel, .signs, .tickets, .backdrop {
     display: inline-block;
-    border: white solid 1px;
+    border: none;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     padding:20px;
     cursor: pointer;
     transition:0.3s;
-    font-family: 'Shadows Into Light', cursive;
-}
-.apparelcontainer, .signcontainer, ticketcontainer, .backdropcontainer{
-    padding:70px;
-}
-.apparel:hover, .signs:hover, .tickets:hover, .backdrop:hover {
-    transform: translate(0,-7px) ;
     
 
 }
+.apparelcontainer, .signcontainer, ticketcontainer, .backdropcontainer{
+    padding:70px;
+    
+}
+/* .apparel:hover, .signs:hover, .tickets:hover, .backdrop:hover {
+    transform: translate(0,-7px) ;
+    
+} */

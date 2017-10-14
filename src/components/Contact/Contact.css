@@ -3,9 +3,10 @@
 .contact {
     width: 100vw;
     height: 130vh;
-    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=") no-repeat;
+    background: #202020;
     background-size: cover;
     overflow-y: hidden;
+    color:white;
 
 }
 .logos {
@@ -31,7 +32,7 @@
 }
 .contact_container{
     padding:20px;
-    background: url("https://static.pexels.com/photos/6368/art-wall-brush-painting.jpg");
+    background: white;
 }
 .contact_form {
     width:100vw;
@@ -57,20 +58,21 @@
 
 .submit_button {
     display: inline-block;
-    border: black solid 1px;
+    border: white solid 1px;
     background: none;
     font-size: 20px;
     padding:10px;
     cursor: pointer;  
+    color:white;
     
     
 }
 
 .message_button {
-    
     display: inline-block;
     margin: 33px;
-    border: 1px solid black;
+    border: white 1px solid !important; 
+    color:white !important;
     background: none;
     font-size: 20px;
     padding: 18px;

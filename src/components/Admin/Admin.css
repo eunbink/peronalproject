@@ -3,20 +3,22 @@
 .Admin_container {
     width: 100vw;
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
+    background: #202020;
     background-size: cover;
     overflow-y: scroll;
     font-size: 20px;
+    color: white;
    
     
    
 }
 .logout_button {
+    color:white;
     background: none;
     border:none;
     position: absolute;
-    margin-left: 600px;
-    margin-top: 20px;
+    margin-left: 1300px;
+    margin-top: 32px;
     font-size: 26px;
 }
 

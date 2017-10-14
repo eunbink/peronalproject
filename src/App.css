@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
 
-.App {
+body {
+  background:#202020;
   text-align: center;
   height: 100vh;
   font-family: 'Saira Extra Condensed', sans-serif;
+  color: white;
 }
+
 .Navicon{
   display: flex;
   flex-direction: column;
@@ -16,6 +19,13 @@
   top:50%;
   
 }
+.bluelogo {
+  border:white solid 1px;
+  margin-right: 1165px;
+  margin-top:-195px;
+  width: 70px;
+  height: 70px;
+}
 .Naviconbox {
   position: fixed;
   padding: 40px;
@@ -23,7 +33,7 @@
 }
 
 .Navbar {
-  background-color:black;
+  background-color:white;;
   border-radius: 5px;
   width:100%;
   height:8%;
@@ -45,6 +55,11 @@
   margin: 30px;
   margin-right:50px;
   font-size: 25px;
-  color: black;
+  color: white;
+  transition:0.3s;
 }
 
+.Admin_button:hover{
+  transform: translate(0,-7px) ;
+  color:white !important;
+}

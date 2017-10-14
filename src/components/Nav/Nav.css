@@ -3,9 +3,9 @@
 
 
 html{
-    font-family: 'Geo', sans-serif;
-  }
-  
+    color:#DCDCDC
+}
+
 
 ul {
     list-style: none;
@@ -14,13 +14,13 @@ ul {
 }
 .navHome {
     margin-top: 80px;
-    color: black;
+    color: white;
 }
 
 li {
     padding: 0 15px;
     padding: 20px;
-    color:black;
+    color:white;
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 25px;
     

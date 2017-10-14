@@ -3,43 +3,44 @@
 .request_container{
     width: 100vw;
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
+    background: #202020;
     background-size: cover;
     overflow-y: scroll;
     font-family: 'Saira Extra Condensed', sans-serif;
+    color: white;
 }
 
 .quote_button {
     background: none;
-    border: black solid 1px;
+    border: white solid 1px;
     color: none;
     font-size: 20px;
-    padding:15px;
+    padding:15px ;
     cursor: pointer;  
-   
-    
-}
+    transition:0.3s;
+} 
+.quote_button:hover, .check_button:hover{
+    background:none;
+    transform: translate(0,-7px) ;
+    color:white;
+    border:white;
+}    
+
 .payform_container{
-   margin-left:300px;
+   margin-left:320px;
    margin-top:-30px;
 }
 #formHorizontalInvoice, #formHorizontalEmail2, #formHorizontalPay {
     margin: 5px;
     width: 400px;
     background: none;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
-
-.stripe-button-el {
-    background: none;
-    border: 1px solid black;
-    padding:15px;
-}
 
 ::-webkit-input-placeholder { /* Chrome */
     font-size:15px;
-    color:black;
+    color:white;
     font-family: 'Abel', sans-serif;
     
 }
@@ -66,9 +67,9 @@
 }
 .quote_button {
     display: inline-block;
-    color:black;
+    color:white;
     margin: 170px;
-    border: 1px solid black;
+    border: 1px solid white;
     background: none;
     font-size: 20px;
     padding: 18px;
@@ -96,4 +97,16 @@
 
 .comments {
     height:200px;
+}
+
+.check_button {
+    margin-top:-40px !important;
+    background: none;
+    border: white solid 1px;
+    color: white;
+    font-size: 20px;
+    padding:15px;
+    cursor: pointer;  
+    transition:0.3s;
+    
 }

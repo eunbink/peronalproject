@@ -3,9 +3,10 @@
 .home_Container {
     width: 100vw;
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1488885064048-f182e4985f98?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=");
+    background: #202020;
     background-size: cover;
     overflow-y: scroll;
+    color: white;
     
 }
 .img {
@@ -17,6 +18,15 @@
     padding:30px;
 }
 .home_quote {
+    margin-top:100px;
     padding: 200px;
     font-size: 60px;
+}
+.aboutusButton {
+    margin-top:-250px;
+    padding:11px;
+    font-size: 23px;
+    color:white;
+    background: none;
+    border: white 1px solid;
 }

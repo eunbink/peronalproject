@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css'
 
+
+
 class Nav extends Component {
   
   render() {
@@ -13,6 +15,7 @@ class Nav extends Component {
             <Link onClick={this.props.disappearNavbar} activeClassName='active' to='/Projects'><li>PROJECTS</li></Link>
             <Link onClick={this.props.disappearNavbar} activeClassName='active' to='/Request'><li>REQUESTS</li></Link>
             <Link onClick={this.props.disappearNavbar} activeClassName='active' to='/Contact'><li>CONTACT US</li></Link>
+            
         </ul>
         </div>
     );

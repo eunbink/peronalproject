@@ -73,7 +73,7 @@ deleteQuote (id) {
     })
     return (
       <div className="Admin_container">
-        <a href={process.env.REACT_APP_LOGOUT}> <Button className="logout_button">LOG OUT</Button></a>
+        <a href={process.env.REACT_APP_LOGOUT}> <div className="logout_button">LOG OUT</div></a>
         <div className="Quote_Table">
           <Table className="table" striped bordered condensed hover>
             <thead>

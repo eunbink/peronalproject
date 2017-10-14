@@ -8,7 +8,7 @@ class Projects extends Component {
   render() {
     return (
       <div className="project_container">
-        <h1>Projects</h1>
+        <h1 className="projecttext">Projects</h1>
         <div className="apparelcontainer"><p className="apparel" >APPAREL</p></div>
         <Carousel>
           <Carousel.Item >
@@ -22,7 +22,7 @@ class Projects extends Component {
             <img className="image" width={700} height={250} alt="900x500" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p> </p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
