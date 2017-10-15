@@ -45,13 +45,9 @@ class Request extends Component {
     })
   }
 
-  checkEmailInvoice () {
-      const body = {
-        email: this.state.quote.email,
-        invoice: this.state.quote.invoice
-      }
-    axios.post('/api/quote/emailinvoice', body ).then(response => {
-      console.log(response);
+  checkEmailInvoice (email, invoice) {
+    axios.get(`/api/quote?email=${email}&invoice=${invoice}`).then(response => {
+      response.data
         })
   }
 
@@ -318,21 +314,21 @@ class Request extends Component {
     <div className="payform_container"> 
        <div className="pay_form">
        <Form horizontal>
-    <FormGroup controlId="formHorizontalInvoice">
-      <Col componentClass={ControlLabel} sm={5}>
-        Invoice
-      </Col>
-      <Col sm={5}>
-        <FormControl placeholder="Invoice #" />
-      </Col>
-    </FormGroup>
-   
     <FormGroup controlId="formHorizontalEmail2">
       <Col componentClass={ControlLabel} sm={5}>
         Email
       </Col>
       <Col sm={5}>
-        <FormControl placeholder="Email" />
+      <FormControl placeholder="Email" >{this.state.email}</FormControl>
+      </Col>
+    </FormGroup>
+   
+    <FormGroup controlId="formHorizontalInvoice">
+      <Col componentClass={ControlLabel} sm={5}>
+        Invoice
+      </Col>
+      <Col sm={5}>
+        <FormControl placeholder="Invoice #" >{this.state.invoice}</FormControl>
       </Col>
     </FormGroup>
     <FormGroup controlId="formHorizontalPay">
@@ -351,7 +347,7 @@ class Request extends Component {
     </FormGroup>
     <FormGroup>
       <Col >
-     { this.state.isChecked ? null :<Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button> }
+     { this.state.isChecked ? null :<Button className="check_button" onClick={this.checkEmailInvoice(this.state.email, this.state.invoice)}>Proceed to Payment</Button> }
       </Col>
     </FormGroup>
         </Form>
@@ -363,6 +359,7 @@ class Request extends Component {
   }
 }
 
+// this.checkEmailInvoice(this.state.email, this.state.invoice)
 
 
 export default Request;

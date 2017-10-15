@@ -18,13 +18,11 @@
     padding:30px;
 }
 .home_quote {
+    
     margin-top:100px;
     padding: 200px;
-    font-size: 60px;
+    font-size: 60px;   
 }
-
-
-
 
 .aboutusButton {
     margin-top:-250px;
@@ -51,4 +49,30 @@ transform: translateX(-3px);
 }
 
 
+.home_quote{
+    color: white; 
+    font-size: 60px;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    animation: type 7s steps(47, start); 
+  }
   
+  
+  .cursor {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes type{ 
+    from { width: 0%; } 
+    to { width: 100% }
+  } 
+    
+  @keyframes blink{
+    to{opacity: .0;}
+  }
+  
+  ::selection{
+    background: black;
+  }

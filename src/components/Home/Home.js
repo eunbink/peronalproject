@@ -10,10 +10,11 @@ class Home extends Component {
   render() {
     return (
       <div className="home_Container">
-        <img className= "bluelogo" src={ bluelogo }/>
-        <p className="home_quote">Fulfilling Creative Job from ideas to delivery.</p>
+        <img className="bluelogo" src={bluelogo} />
+        <p className="home_quote">Fulfilling Creative Job from ideas to delivery.
+          <span className= "cursor">|</span></p>
         <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
-        <Link  activeClassName='active' to='/About'><Button className="aboutusButton">Discover About Us</Button></Link>
+        <Link activeClassName='active' to='/About'><Button className="aboutusButton">Discover About Us</Button></Link>
       </div>
     );
   }
