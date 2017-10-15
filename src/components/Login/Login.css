@@ -4,26 +4,34 @@
 .Login_container {
     width: 100vw;
     height: 100vh;
-    background: LIGHTSLATEGRAY;
+    background: #202020;
     background-size: cover;
-    overflow-y: scroll;
      
 }
 
 
 .login_button {
-    border: none;
+   
+    border: white solid 1px;
     background: none;
-    font-size: 50px;
+    font-size: 30px;
     color: white;
 }
-login_button:hover {
-    background-color:none;
+.login_button:hover {
+    background: none;
+    border:none;
+    color:white;
+    box-shadow: 
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
+transform: translateX(-3px);
+transform: translateX(-3px);
 }
 
 ::-webkit-input-placeholder { /* Chrome */
     font-size:20px;
-    
+       
     
 }
 

@@ -1,88 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
-.contact {
-    width: 100vw;
-    height: 130vh;
-    background: #202020;
-    background-size: cover;
-    overflow-y: hidden;
-    color:white;
-
+button:focus {outline:0 !important;}
+input:focus {
+    outline:none !important;
 }
-.logos {
-    
-    padding: 50px;
+.button_class:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.facebook{
-    margin-right: 30px;
-    width: 100px;
-    height: 100px;
+html {
+    font-family: 'Quicksand', sans-serif !important;    
 }
-.linkedin{
-    margin-right: 30px;
-    width: 100px;
-    height: 100px;
-}
+.input {
+    width: 500px;
+    height: 40px;
+    font-size:20px;
+    border: none;
+    border-bottom: 1px white solid;
+    background: none;
+    margin-top: 20px;
 
-
-.instagram{
-    width: 100px;
-    height:100px;
 }
-.contact_container{
-    padding:20px;
-    background: white;
+.form{
+    margin-top: 70px;
+   
 }
-.contact_form {
-    width:100vw;
-    height:50vh;
-    padding:50px;
-}
-
-.input1, .input2 {
-    padding:20px;
-    border:black solid 1px;
-}
-.input1_container, .input2_container {
-    padding:20px;
+.messageinput{
+    margin-top: 20px;
+    width: 500px;
+    height: 150px;
+    font-size:20px;
+    border: none;
+    border-bottom: 1px white solid;
     background: none;
 }
-.input3 {
-    width: 50vw;
-   padding: 130px;
-}
-.input3_container{
-    padding: 30px;
-}
 
-.submit_button {
-    display: inline-block;
+
+.messageSubmitbutton {
+    margin-top: 30px;
+    margin-left:370px;
     border: white solid 1px;
+    font-size:25px;
+    color: white;
     background: none;
-    font-size: 20px;
-    padding:10px;
-    cursor: pointer;  
+}
+
+.messageSubmitbutton:hover {
+
+    border: none;
+    background:none;
     color:white;
-    
-    
-}
-
-.message_button {
-    display: inline-block;
-    margin: 33px;
-    border: white 1px solid !important; 
-    color:white !important;
-    background: none;
-    font-size: 20px;
-    padding: 18px;
-    cursor: pointer;  
-    transition:0.3s;
-
-}
-.message_button:hover {
-    transform:  translate(0,-6px) ;
-    border: none !important;
+    box-shadow:
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
+    transform: translateX(-3px);
+    transform: translateX(-3px);
 }
 
 
@@ -99,82 +74,12 @@
     padding: 0px;
 }
 
-.modal-content {
-    overflow-y:hidden !important;
-    overflow-x:hidden;
-    font-family: 'Saira Extra Condensed', sans-serif;
-    
-}
 
     
 
 #map {
- height:400px;
+    margin-top: 40px;
+ height:300px;
  
-}
-
-#formHorizontalName, #formHorizontalEmail, #formHorizontal {
-    width: 450px;
-    background: none;
-    border: 1px solid black;
-}
-
-#formHorizontalMessage{
-    width: 450px;
-    height: 200px;
-    background: none;
-    border: 1px solid black;
-}
-.messageSubmitbutton {
-    background: none;
-    border: 1px solid black;
-    padding:9.3px;
-    float:right;
-    font-size: 18px;
-   
-}
-.custom-modal {
-    
-    width: 50vw;
-    height:auto;
-  
-}
-.message_button {
-    background: none;
-    border: 1px solid black;
-    padding:10px;
-    font-size: 25px;
-    color:black;
-    
-}
-.message_button_container{
-    margin-left:600px;
-}
-
-.message_button:hover {
-    background:none;
-    box-shadow:
-    1px 1px white,
-    2px 2px white,
-    3px 3px white;
-transform: translateX(-3px);
-transform: translateX(-3px);
-    
-}
-
-.Contact_input_title {
-    font-size: 20px;
-    margin-top: -5px;
-}
-
-.Contact_input_title_message{
-    font-size: 20px;
-    margin-top: -8px;
-}
-
-.custom-modal-contact .modal-content {
-    height:480px;  
-    
-    
 }
 

@@ -18,7 +18,7 @@ body {
   left: 50%;
   top:50%;
 
-  
+ 
 }
 
 .bluelogo {
@@ -68,4 +68,28 @@ body {
 .Admin_button:hover{
   transform: translate(0,-4px) ;
   color:white !important;
+}
+.facebook {
+  width:65x;
+  height:40px;
+  
+}
+.instagram {
+  
+  width: 21px;
+  height: 21px;
+  margin-top:25px;
+ 
+}
+.linkedin {
+  width:21px;
+  height:21px;
+  margin-top:35px;
+}
+
+.logos{
+  margin-left:620px;
+  margin-top:300px;
+  position: fixed;
+  float: right;
 }

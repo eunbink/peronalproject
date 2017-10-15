@@ -12,6 +12,9 @@ body {
     background: #202020 repeat;
     
 }
+.carousel-slide {
+    width:900px;
+}
 .projecttext {
     font-size:40px;
 }
@@ -32,24 +35,25 @@ body {
     padding: 40px;
     font-size: 40px;
 }
-.image4-contanier{
-    padding: 60px;
-}
+.carousel {
+    width:700px;
+    height:300px;
+    margin: auto;
+  }
 
 
 .apparel, .signs, .tickets, .backdrop {
     display: inline-block;
     border: none;
     color: white;
-    font-size: 30px;
-    padding:20px;
-    cursor: pointer;
-    transition:0.3s;
+    font-size: 20px;
+    padding:30px;
+    
     
 
 }
 .apparelcontainer, .signcontainer, ticketcontainer, .backdropcontainer{
-    padding:70px;
+    padding:40px;
     
 }
 /* .apparel:hover, .signs:hover, .tickets:hover, .backdrop:hover {

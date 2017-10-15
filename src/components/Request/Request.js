@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Request.css';
-import { Modal, Form, FormControl, FormGroup, Col, ControlLabel, Checkbox, Button, ButtonToolbar } from 'react-bootstrap'
+import { Modal, Form, FormControl, FormGroup, Col, ControlLabel, Button, ButtonToolbar } from 'react-bootstrap'
 import StripeCheckout from 'react-stripe-checkout';
 import stripe from './Stripekey'; 
 import axios from 'axios';
@@ -27,8 +27,8 @@ class Request extends Component {
         quantity:"",
         dueDate:"",
         comments:"",
-        image:"",
-        invoice:""
+        image:'',
+        invoice:''
       }
     }
     this.checkEmailInvoice = this.checkEmailInvoice.bind(this);
@@ -39,16 +39,20 @@ class Request extends Component {
     this.close = this.close.bind(this);
     this.submitQuotesToDatabase = this.submitQuotesToDatabase.bind(this);
   }
+  
   changeIsChecked (){
     this.setState({
       isChecked : !this.state.isChecked
     })
+    console.log('change is checked');
   }
 
-  checkEmailInvoice (email, invoice) {
-    axios.get(`/api/quote?email=${email}&invoice=${invoice}`).then(response => {
-      response.data
+  checkEmailInvoice () {
+    axios.get(`/api/quote?email=${this.state.quote.email}&invoice=${this.state.quote.invoice}`).then(response => {
+      console.log(response);
         })
+    this.changeIsChecked();
+    console.log('check email invoice is done');
   }
 
   submitQuotesToDatabase () {
@@ -75,7 +79,6 @@ class Request extends Component {
 
   send () {
     const body = {
-      phoneNumber:this.state.quote.phoneNumber,
       designType:this.state.quote.designType,
       size:this.state.quote.size,
       color:this.state.quote.color,
@@ -126,7 +129,7 @@ class Request extends Component {
         
         <ButtonToolbar>
             <div className="message_button_container">
-        <Button className="quote_button" bsStyle="primary" onClick={this.showModal}>
+        <Button className="quote_button" onClick={this.showModal}>
           Get A Quote
         </Button>
         </div>
@@ -319,7 +322,7 @@ class Request extends Component {
         Email
       </Col>
       <Col sm={5}>
-      <FormControl placeholder="Email" >{this.state.email}</FormControl>
+      <FormControl placeholder="Email" value={this.state.quote.email}/>
       </Col>
     </FormGroup>
    
@@ -328,26 +331,19 @@ class Request extends Component {
         Invoice
       </Col>
       <Col sm={5}>
-        <FormControl placeholder="Invoice #" >{this.state.invoice}</FormControl>
+        <FormControl placeholder="Invoice #" value={this.state.quote.invoice}/>
       </Col>
     </FormGroup>
-    <FormGroup controlId="formHorizontalPay">
-      <Col componentClass={ControlLabel} sm={11}>
-      
-      
+    <FormGroup className="pay" >     
      { this.state.isChecked ? <StripeCheckout className="pay_button"
           token={this.onToken}
           stripeKey={ stripe.pub_key }
           amount={this.state.paymentAmt}
           /> : null }
-
-
-
-      </Col>
     </FormGroup>
     <FormGroup>
       <Col >
-     { this.state.isChecked ? null :<Button className="check_button" onClick={this.checkEmailInvoice(this.state.email, this.state.invoice)}>Proceed to Payment</Button> }
+     { this.state.isChecked ? null :<Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button> }
       </Col>
     </FormGroup>
         </Form>

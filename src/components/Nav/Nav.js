@@ -17,6 +17,7 @@ class Nav extends Component {
             <Link onClick={this.props.disappearNavbar} activeClassName='active' to='/Contact'><li>CONTACT US</li></Link>
             
         </ul>
+       
         </div>
     );
   }
