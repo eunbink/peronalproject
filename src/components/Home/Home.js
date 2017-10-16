@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 import { NavLink } from 'react-router-dom';
 import { Button } from "react-bootstrap";
-import { Link } from 'react-router-dom';
+
 import Typist from 'react-typist';
 
 class Home extends Component {
@@ -19,7 +19,7 @@ class Home extends Component {
           Fulfilling Creative Jobs from Ideas to Delivery.
           </Typist>
         <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
-        <Link activeClassName='active' to='/About'><Button className="aboutusButton">Discover About Us</Button></Link>
+        <NavLink activeClassName='active' to='/About'><Button className="aboutusButton">Discover About Us</Button></NavLink>
         
       </div>
     );
