@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
 body {
     background: #202020;
 }
@@ -42,21 +44,32 @@ body {
   }
 
 
-.apparel, .signs, .tickets, .backdrop {
+#apparel, #logo, #ticket, #books {
     display: inline-block;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 35px;
     padding:30px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Cabin Sketch', cursive;    
+    margin-top: 100px; 
     
     
 
 }
-.apparelcontainer, .signcontainer, ticketcontainer, .backdropcontainer{
+.apparelcontainer, .signcontainer, .ticketcontainer, .backdropcontainer{
     padding:40px;
     
 }
-/* .apparel:hover, .signs:hover, .tickets:hover, .backdrop:hover {
+
+.wrap {
+    display:flex;
+    justify-content: center;
+    
+}
+
+#apparel:hover, #logo:hover, #ticket:hover, #books:hover {
     transform: translate(0,-7px) ;
     
-} */
+}

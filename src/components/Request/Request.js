@@ -149,10 +149,10 @@ class Request extends Component {
 
 {/* name */}
     <FormGroup controlId="formHorizontalName" >
-      <Col componentClass={ControlLabel} sm={1} className="title_input">
+      <Col componentClass={ControlLabel} sm={2} className="title_input">
         Name
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl onChange={(e)=>{this.setState({
           quote:{...this.state.quote, name:e.target.value}
           })}} type="text" placeholder="Name" />
@@ -161,10 +161,10 @@ class Request extends Component {
 
 {/* phonenumber */}
     <FormGroup controlId="formHorizontal" >
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
         Phone Number
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, phoneNumber:e.target.value}
           })}} type="tel" placeholder="Phone #" />
@@ -172,10 +172,10 @@ class Request extends Component {
     </FormGroup>
 {/* email */}
     <FormGroup controlId="formHorizontal">
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
         Email
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, email:e.target.value}
           })}} type="email" placeholder="Email" />
@@ -184,10 +184,10 @@ class Request extends Component {
 
 {/* design type */}
 <FormGroup controlId="formHorizontal">
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
       Design Type 
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, designType:e.target.value}
           })}} type="text" placeholder="Design Type" />
@@ -196,10 +196,10 @@ class Request extends Component {
 
 {/* size */}
 <FormGroup controlId="formHorizontal">
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
         Size
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, size:e.target.value}
           })}} type="text" placeholder="Size" />
@@ -208,10 +208,10 @@ class Request extends Component {
 
 {/* color */}
 <FormGroup controlId="formHorizontal">
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
         Color
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, color:e.target.value}
           })}} type="color" placeholder="Color" />
@@ -220,10 +220,10 @@ class Request extends Component {
 
 {/* printed shirts - front/back/both */}
 <FormGroup controlId="formHorizontal">
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
         Sides
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, sides:e.target.value}
           })}} type="text"  placeholder="Front/Back/Both (Shirts)" />
@@ -232,10 +232,10 @@ class Request extends Component {
 
 {/* single/double */}
 <FormGroup controlId="formHorizontal">
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
         Single/Double
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, singleDouble:e.target.value}
           })}} type="text" placeholder="Single/Double" />
@@ -244,10 +244,10 @@ class Request extends Component {
 
 {/* how many */}
 <FormGroup controlId="formHorizontal">
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
         Quantity
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, quantitiy:e.target.value}
           })}} type="number" placeholder="Quantity" />
@@ -256,10 +256,10 @@ class Request extends Component {
 
 {/* Due date */}
 <FormGroup controlId="formHorizontal">
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
         Due Date
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, dueDate:e.target.value}
           })}} type="date" placeholder="Due Date (Rushed job costs extra)" />
@@ -268,10 +268,10 @@ class Request extends Component {
 
 {/* Details */}
 <FormGroup controlId="formHorizontal">
-      <Col componentClass={ControlLabel} sm={1}className="title_input">
+      <Col componentClass={ControlLabel} sm={2}className="title_input">
         Comments
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
         <FormControl className="comments" onChange={(e)=>{this.setState({
           quote:{...this.state.quote, comments:e.target.value}
           })}} type="text" placeholder="Write any comments here.." />
@@ -280,10 +280,10 @@ class Request extends Component {
 
    {/* image */}
    <FormGroup controlId="formHorizontal">
-    <Col componentClass={ControlLabel} sm={1}className="title_input">
+    <Col componentClass={ControlLabel} sm={2}className="title_input">
         Image
       </Col>
-      <Col sm={10}>
+      <Col sm={8}>
       <FormControl type="file" id="fileInput" onChange={(e)=>{
         this.setState({
           quote:{...this.state.quote, image:e.target.value}}
@@ -294,7 +294,7 @@ class Request extends Component {
    
     <FormGroup >
       <Col smOffset={1} sm={4}>
-        <Button onClick = {()=>{this.send(this.state.email); this.close(); this.submitQuotesToDatabase()}} className="messageSubmitbutton" type="submit">
+        <Button onClick = {()=>{this.send(this.state.email); this.close(); this.submitQuotesToDatabase()}} className="requestsubmit" type="submit">
           SUBMIT
         </Button>
       </Col>

@@ -60,6 +60,10 @@ transform: translateX(-3px);
     font-family: 'Abel', sans-serif;
     
 }
+.pay_button {
+    margin-top:20px;
+    margin-left: 320px;
+}
 .pay_form {
     position: absolute;
     font-size: 25px;
@@ -94,12 +98,22 @@ transform: translateX(-3px);
     height: 200px;
 }
 .modal-content {
-    height:910px;
+    width: 600px;
+    height:900px;
     background: white;
     color:black;
-   
-}
+}  
 
+.form-control {
+    width:420px;
+    border: black solid  1px;
+    background: none;
+    margin-left:20px;
+}
+label {
+   
+    margin-top: -5px;
+}
 .comments {
     height:200px;
 }
@@ -114,5 +128,11 @@ transform: translateX(-3px);
     padding:15px;
     cursor: pointer;  
     transition:0.3s;
-    
+
+}
+.requestsubmit {
+    border: black solid 1px;
+    background: none;
+    margin-left:420px;
+    font-size: 20px;
 }

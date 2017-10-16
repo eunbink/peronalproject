@@ -27,13 +27,12 @@ li {
     color:white;
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 25px;
-    transition: 0.5s; 
+    transition: 0.3s; 
     
 }
 
 li:hover {
-    border-bottom: 1px solid white;
-    width:100%;
+    transform: translate(0,-5px);
   
 }
 
