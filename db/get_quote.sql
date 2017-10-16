@@ -7,3 +7,4 @@ join images on quotes.id = images.quoteid
 
 
 
+

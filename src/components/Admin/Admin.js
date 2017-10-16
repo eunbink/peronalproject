@@ -55,12 +55,26 @@ class Admin extends Component {
 
       const quotesDisplayed = response.data.map((quote, i) => { 
         return (
-          [quote.id, quote.name, quote.email, quote.phonenumber, quote.designtype, quote.image, quote.duedate, "", quote.invoice, ""]
+          [
+          quote.id, 
+          quote.name, 
+          quote.phonenumber, 
+          "", 
+          "",
+          quote.invoice, 
+          "",
+        
+          ]
         )
       })
 
       $('#table').DataTable({
         data: quotesDisplayed
+        // "columnDefs":[{
+        //   "render": function ( data, type, row, meta ) {
+        //     return '<Button onClick={() => { this.deleteQuote(quote.id) }} className="delete_button">DELETE</Button>';
+        //   }
+        // }]
       });
 
     })
@@ -75,13 +89,13 @@ class Admin extends Component {
           <Table id="table" className="table" striped bordered condensed hover>
             <thead>
               <tr>
+                <th className="tabletitle"colSpan={7}>QUOTES TABLE</th>
+              </tr>
+              <tr>
                 <th className="column-text">#</th>
                 <th className="column-text" >Full Name</th>
-                <th className="column-text" >Email</th>
                 <th className="column-text" >Phone Number</th>
-                <th className="column-text" >Design Type</th>
-                <th className="column-text" >Image</th>
-                <th className="column-text" >Due Date</th>
+                <th className="column-text" >Comments</th>
                 <th className="column-text" >Add Invoice</th>
                 <th className="column-text" >Invoice #</th>
                 <th className="column-text" ></th>
@@ -92,7 +106,7 @@ class Admin extends Component {
               </tbody>
               <tfoot>
               <tr>
-                <td className="text" colSpan={10}><Button onClick={() => { this.addInvoice() }} className="admin_button">SAVE</Button></td>
+                <td className="text" colSpan={7}><Button onClick={() => { this.addInvoice() }} className="admin_button">SAVE</Button></td>
               </tr>
             </tfoot>
 
@@ -117,9 +131,9 @@ export default Admin;
       //   <td className="table_body">{quote.designtype}</td>
       //   <td className="table_body">{quote.image}</td>
       //   <td className="table_body">{quote.duedate}</td>
-      //   <td className="table_body" ><FormControl className="invoiceinput" onChange={(e) => {
-      //     this.setState({ invoice: e.target.value, id: quote.id });
-      //   }} type="text" /> </td>
+        // <td className="table_body" ><FormControl className="invoiceinput" onChange={(e) => {
+        //   this.setState({ invoice: e.target.value, id: quote.id });
+        // }} type="text" /> </td>
       //   <td className="table_body">{quote.invoice}</td>
       //   <td className="table_body"><Button onClick={() => { this.deleteQuote(quote.id) }} className="delete_button">DELETE</Button></td>
       // </tr>

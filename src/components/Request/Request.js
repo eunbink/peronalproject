@@ -50,8 +50,11 @@ class Request extends Component {
   checkEmailInvoice () {
     axios.get(`/api/quote?email=${this.state.quote.email}&invoice=${this.state.quote.invoice}`).then(response => {
       console.log(response);
+      if (response.data.length > 0 ){
+        this.changeIsChecked();
+      }
         })
-    this.changeIsChecked();
+    
     console.log('check email invoice is done');
   }
 
@@ -322,7 +325,11 @@ class Request extends Component {
         Email
       </Col>
       <Col sm={5}>
-      <FormControl placeholder="Email" value={this.state.quote.email}/>
+      <FormControl input className="input" onChange={(e) => {
+              this.setState({
+                quote: { ...this.state.quote, email: e.target.value }
+              })
+            }}placeholder="Email" value={this.state.quote.email}/>
       </Col>
     </FormGroup>
    
@@ -331,7 +338,11 @@ class Request extends Component {
         Invoice
       </Col>
       <Col sm={5}>
-        <FormControl placeholder="Invoice #" value={this.state.quote.invoice}/>
+        <FormControl input className="input" onChange={(e) => {
+              this.setState({
+                quote: { ...this.state.quote, invoice: e.target.value }
+              })
+            }}placeholder="Invoice #" value={this.state.quote.invoice}/>
       </Col>
     </FormGroup>
     <FormGroup className="pay" >     

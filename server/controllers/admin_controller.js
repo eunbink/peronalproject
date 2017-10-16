@@ -13,8 +13,11 @@ module.exports = {
      
     get_email_invoice: (req, res, next) => { //this happens when paying with email and invoice data.
         const db = req.app.get("db")
+        console.log(req.query)
         db.get_email_invoice([req.query.email, req.query.invoice])
-            .then(response => res.status(200).send(response))
+            .then(response => {
+                console.log(response)
+                res.status(200).send(response)})
     },
   
     //--------post-----//
