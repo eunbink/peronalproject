@@ -14,9 +14,7 @@ body {
     background: #202020 repeat;
     
 }
-.carousel-slide {
-    width:900px;
-}
+
 .projecttext {
     font-size:40px;
 }
@@ -28,8 +26,13 @@ body {
 .carousel-control.left, .carousel-control.right {
     background-image:none !important;
     filter:none !important;
+    margin-top:500px !important;
+    height:30px;
+    
  }
-
+.carousel-control {
+    width:600px;
+}
 .project {
     width: 100vw;
     height: 100vh;
@@ -38,6 +41,7 @@ body {
     font-size: 40px;
 }
 .carousel {
+    position: static !important;
     width:700px;
     height:300px;
     margin: auto;
@@ -58,10 +62,7 @@ body {
     
 
 }
-.apparelcontainer, .signcontainer, .ticketcontainer, .backdropcontainer{
-    padding:40px;
-    
-}
+
 
 .wrap {
     display:flex;
@@ -73,3 +74,25 @@ body {
     transform: translate(0,-7px) ;
     
 }
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: white solid 1px;
+    border-radius: 30%;
+    background-color: none;
+    margin-top:30px;
+}
+.carousel-indicators .active {
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background-color: white;
+    opacity: 0.7;
+    margin-top:30px;
+}
+

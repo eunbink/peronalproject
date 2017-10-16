@@ -16,7 +16,7 @@ class Home extends Component {
           avgTypingSpeed={40}
           startDelay={1000}
           onTypingDone={this.onHeaderTyped}> 
-          Fulfilling Creative Jobs from ideas to delivery.
+          Fulfilling Creative Jobs from Ideas to Delivery.
           </Typist>
         <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
         <Link activeClassName='active' to='/About'><Button className="aboutusButton">Discover About Us</Button></Link>
