@@ -124,9 +124,9 @@ class Request extends Component {
 
     return (
       <div className='request_container'>
-        <h1>Request</h1>
+        
       <div>
-
+      <h1>Requests</h1>
 
         {     /* get a quote form */   }
         

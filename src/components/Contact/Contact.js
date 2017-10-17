@@ -16,9 +16,7 @@ class Contact extends Component {
         name: "",
         email: "",
         message: ""
-
       }
-
     }
     this.send = this.send.bind(this);
 
@@ -38,14 +36,20 @@ class Contact extends Component {
 
   componentDidMount() {
 
-    mapboxgl.accessToken = 'pk.eyJ1Ijoia2FuZ3AxODMiLCJhIjoiY2o4a25wdnB4MGZjaTJ3bXZrZ3lqanl4ZyJ9.15XvXGwFuUbl5uhPOEW2QA';
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/kangp183/cj8n92kxw7j0u2rpqpr3iy7pu',
-      center: [-74.50, 40],
-      zoom: 9
-    })
 
+
+    mapboxgl.accessToken = 'pk.eyJ1Ijoia2FuZ3AxODMiLCJhIjoiY2o4a25wdnB4MGZjaTJ3bXZrZ3lqanl4ZyJ9.15XvXGwFuUbl5uhPOEW2QA';
+    var map = new mapboxgl.Map({
+        container: 'map', 
+        style: 'mapbox://styles/kangp183/cj8n92kxw7j0u2rpqpr3iy7pu', 
+        center: [-111.728537, 40.310701], 
+        zoom: 17 
+    });
+    
+    map.on('load', () => {
+      var marker = new mapboxgl.Marker().setLngLat([-111.72867, 40.31081]).addTo(map);
+      
+    });
   }
 
 
@@ -54,8 +58,9 @@ class Contact extends Component {
     return (
       <div>
         <div className='contact'>
-          <h1>Contact Us</h1>
           
+          <h1>Contact Us</h1>
+
           <div className="form" >
             <input className="input" onChange={(e) => {
               this.setState({
@@ -79,11 +84,10 @@ class Contact extends Component {
               Send Message
         </Button></div>
 
-        <div id="map"> 
+          <div id="map"></div>
+          <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
         </div>
-        <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
-      </div>
-      
+
       </div>
 
 

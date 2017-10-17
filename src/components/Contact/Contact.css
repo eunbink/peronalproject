@@ -61,10 +61,6 @@ html {
 }
 
 
-.mapboxgl-map {
-   
-   overflow:visible !important;
-}
 .mapboxgl-canvas{
     position: static !important;
 }
@@ -78,8 +74,14 @@ html {
     
 
 #map {
-    margin-top: 40px;
- height:300px;
+    margin-top: 100px;
+    height:290px;
  
 }
-
+.mapboxgl-marker {
+    width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 40px solid dimgray;
+}
