@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
 button:focus {outline:0 !important;}
 input:focus {
@@ -71,7 +72,7 @@ html {
 }
 
 
-    
+  
 
 #map {
     margin-top: 100px;
@@ -84,4 +85,17 @@ html {
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
 	border-top: 40px solid dimgray;
+}
+
+.locationicon {
+    width:60px;
+    height:60px;
+}
+.phoneicon {
+    width:60px;
+    height:60px;
+}
+.hoursicon{
+    width:60px;
+    height:60px;
 }

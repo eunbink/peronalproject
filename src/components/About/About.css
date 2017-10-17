@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 .about_container {
     width: 100vw;
@@ -23,6 +24,8 @@
 }
 
 .about_explanation {
-    font-size: 25px;
+    font-size: 22px;
     padding: 80px 120px 150px 150px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: left;
 }

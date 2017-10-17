@@ -16,7 +16,6 @@ class Admin extends Component {
       isChecked: false,
 
     }
-    this.deleteQuote = this.deleteQuote.bind(this);
     this.addInvoice = this.addInvoice.bind(this);
 
   }
@@ -30,12 +29,6 @@ class Admin extends Component {
 
   shouldComponentUpdate() {
       return false;
-  }
-
-  deleteQuote(id) {
-    axios.delete(`/api/quote/${id}`).then(response => {
-      alert('Your Quote has been deleted!')
-    })
   }
 
   addInvoice(e) {
@@ -62,19 +55,23 @@ class Admin extends Component {
           "", 
           "",
           quote.invoice, 
-          "",
+          
         
           ]
         )
       })
 
       $('#table').DataTable({
-        data: quotesDisplayed
-        // "columnDefs":[{
-        //   "render": function ( data, type, row, meta ) {
-        //     return '<Button onClick={() => { this.deleteQuote(quote.id) }} className="delete_button">DELETE</Button>';
-        //   }
-        // }]
+        data: quotesDisplayed,
+        columns: [
+          { title: "#" },
+          { title: "Full Name" },
+          { title: "Phone Number" },
+          { title: "Comments" },
+          { title: "Add Invoice" },
+          { title: "Invoice #" },
+          
+        ]
       });
 
     })
@@ -89,7 +86,7 @@ class Admin extends Component {
           <Table id="table" className="table" striped bordered condensed hover>
             <thead>
               <tr>
-                <th className="tabletitle"colSpan={7}>QUOTES TABLE</th>
+                <th className="tabletitle"colSpan={6}>QUOTES TABLE</th>
               </tr>
               <tr>
                 <th className="column-text">#</th>
@@ -98,7 +95,7 @@ class Admin extends Component {
                 <th className="column-text" >Comments</th>
                 <th className="column-text" >Add Invoice</th>
                 <th className="column-text" >Invoice #</th>
-                <th className="column-text" ></th>
+                
               </tr>
             </thead>
             <tbody className="datacolumn">
@@ -106,7 +103,7 @@ class Admin extends Component {
               </tbody>
               <tfoot>
               <tr>
-                <td className="text" colSpan={7}><Button onClick={() => { this.addInvoice() }} className="admin_button">SAVE</Button></td>
+                <td className="text" colSpan={6}><Button onClick={() => { this.addInvoice() }} className="admin_button">SAVE</Button></td>
               </tr>
             </tfoot>
 

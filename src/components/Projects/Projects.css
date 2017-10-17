@@ -54,11 +54,11 @@ body {
     border: none;
     color: white;
     font-size: 35px;
-    padding:30px;
+    padding:50px;
     cursor: pointer;
     transition: 0.2s;
-    font-family: 'Cabin Sketch', cursive;    
-    margin-top: 100px; 
+    font-family: 'Open Sans Condensed', sans-serif;   
+    margin-top: 80px; 
     
     
 

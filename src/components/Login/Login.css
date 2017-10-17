@@ -11,10 +11,10 @@
 
 
 .login_button {
-   
+    margin-top:-20px;
     border: white solid 1px;
     background: none;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
 }
 .login_button:hover {
@@ -35,3 +35,16 @@ transform: translateX(-3px);
     
 }
 
+
+.logo_container {
+    margin-top:10%;
+    border: solid 1px white;
+    display: inline-block;
+    padding:2%;
+}
+
+.redlogo {
+    margin-top:-10%;
+    width:400px;
+    height:400px;
+}

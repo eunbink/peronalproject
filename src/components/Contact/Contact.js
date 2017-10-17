@@ -4,6 +4,9 @@ import { Button } from 'react-bootstrap'
 import mapboxgl from 'mapbox-gl';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
+// import phone from '../../Images/phoneIcon.png';
+// import hours from '../../Images/work-icon.png';
+// import location from '../../Images/placeicon.png'; 
 
 
 
@@ -83,7 +86,16 @@ class Contact extends Component {
             <Button onClick={() => { this.send(this.state.email) }} className="messageSubmitbutton" type="submit">
               Send Message
         </Button></div>
+      {/* --------Contacts-------- */}
+        <div className="contactlist">
+            {/* <img className="locationicon"src={ location }/>
+            <img className="phoneicon" src={ phone }/>
+            <img className="hoursicon" src={ hours }/> */}
+        </div> 
 
+
+
+      {/* --------MAP------------- */}
           <div id="map"></div>
           <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
         </div>
