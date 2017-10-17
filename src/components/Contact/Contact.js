@@ -9,7 +9,7 @@ import hours from '../../Images/workicon.png';
 import location from '../../Images/map icon.png';
 import arrow from '../../Images/arrow.png';
 import fax from '../../Images/faxicon.png';
-
+import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 
 class Contact extends Component {
   constructor() {
@@ -89,16 +89,19 @@ class Contact extends Component {
                 })
               }} type="text" placeholder="Message" /></div>
             <div>
-              <Button onClick={() => { this.send(this.state.email) }} className="messageSubmitbutton" type="submit">
+            <Flip x delay={500} duration={2000}><Button onClick={() => { this.send(this.state.email) }} className="messageSubmitbutton" type="submit">
                 Send Message
-        </Button></div>
+        </Button></Flip>
+        </div>
         
         <img onClick = {this.showContact}className="arrow" src={ arrow }/>
           </div>
 
 
           {/* --------Contacts-------- */}
-         { this.state.show ? <div className="CT">
+         { this.state.show ? 
+          <Fade bottom x duration={1000}>
+         <div className="CT">
           <div className="contactlist">
             <div className="location-container">
               <p className="location-text"><span>
@@ -121,7 +124,7 @@ class Contact extends Component {
             </div>
 
           </div>
-          </div> : null  }
+          </div></Fade> : null  }
 
           {/* --------MAP------------- */}
           <div id="map"></div>

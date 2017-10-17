@@ -5,6 +5,7 @@ import arrow from '../../Images/arrow.png';
 import facebook from '../../Images/facebookicon.png';
 import instagram from '../../Images/instagramicon.png';
 import linkedin from '../../Images/linkicon.png';
+import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 
 class Nav extends Component {
   constructor() {
@@ -33,11 +34,15 @@ class Nav extends Component {
           <img onClick = {this.showIcon} className="arrow2" src={ arrow }/>
         </ul>
         
-          {this.state.show ? <div className="logos">
-          <div><img className="facebook" src={ facebook } /></div>
+          {this.state.show ? 
+            <Fade bottom x duration={1000}>
+          <div className="logos">
+         <div>
+          <img className="facebook" src={ facebook } /></div>
           <div><img className="instagram" src={ instagram } /></div>
           <div><img className="linkedin"  src= { linkedin } /></div>
           </div>
+          </Fade>
           : null}
 
 

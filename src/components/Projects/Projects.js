@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Projects.css';
 import { Carousel } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 
 
 class Projects extends Component {
@@ -46,7 +47,7 @@ class Projects extends Component {
         </div>
         
         
-       { this.state.showApparel ? <Carousel>
+       { this.state.showApparel ? <Fade duration={3000}><Carousel>
           <Carousel.Item >
             <img className="image" width={800} height={350}  src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
@@ -65,10 +66,10 @@ class Projects extends Component {
              
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel> : null }
+        </Carousel></Fade> : null }
 
         
-         { this.state.showLogo ? <Carousel>
+         { this.state.showLogo ? <Fade duration={3000}><Carousel>
           <Carousel.Item >
             <img className="image" width={800} height={350} src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2013/02/QuietCreek-logo.png&w=630&h=378&zc=1" />
             <Carousel.Caption>
@@ -87,10 +88,10 @@ class Projects extends Component {
               
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel> : null }
+        </Carousel></Fade> : null }
 
         
-       { this.state.showTicket ? <Carousel>
+       { this.state.showTicket ? <Fade duration={3000}><Carousel>
           <Carousel.Item >
             <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/catalog-chic.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
@@ -109,10 +110,10 @@ class Projects extends Component {
               
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel> : null }
+        </Carousel></Fade> : null }
        
         
-       { this.state.showBook ? <Carousel>
+       { this.state.showBook ? <Fade duration={3000}><Carousel>
           <Carousel.Item >
             <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/book-findingyourself.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
@@ -131,7 +132,7 @@ class Projects extends Component {
               
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel> : null }
+        </Carousel></Fade> : null }
         
         <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
       </div>

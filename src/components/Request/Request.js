@@ -5,6 +5,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import stripe from './Stripekey'; 
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 
 
 
@@ -132,7 +133,7 @@ class Request extends Component {
         
         <ButtonToolbar>
             <div className="message_button_container">
-        <Button className="quote_button" onClick={this.showModal}>
+            <Button className="quote_button" onClick={this.showModal}>
           Get A Quote
         </Button>
         </div>
@@ -354,7 +355,7 @@ class Request extends Component {
     </FormGroup>
     <FormGroup>
       <Col >
-     { this.state.isChecked ? null :<Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button> }
+     { this.state.isChecked ? null :<Flip x delay={500} duration={2000}><Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button></Flip> }
       </Col>
     </FormGroup>
         </Form>
