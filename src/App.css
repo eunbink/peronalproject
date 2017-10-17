@@ -69,27 +69,4 @@ body {
   transform: translate(0,-4px) ;
   color:white !important;
 }
-.facebook {
-  width:65x;
-  height:40px;
-  
-}
-.instagram {
-  
-  width: 21px;
-  height: 21px;
-  margin-top:25px;
- 
-}
-.linkedin {
-  width:21px;
-  height:21px;
-  margin-top:31px;
-}
 
-.logos{
-  margin-left:43%;
-  margin-top:21%;
-  position: fixed;
-  float: right;
-}

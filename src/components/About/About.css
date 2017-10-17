@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 .about_container {
     width: 100vw;
@@ -26,6 +26,6 @@
 .about_explanation {
     font-size: 22px;
     padding: 80px 120px 150px 150px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     text-align: left;
 }

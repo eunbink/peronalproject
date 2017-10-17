@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Admin.css';
-import { Button, Table, FormControl } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import axios from 'axios';
 const $ = require('jquery');
 $.DataTable = require('datatables.net');

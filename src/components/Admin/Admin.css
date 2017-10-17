@@ -17,8 +17,8 @@
     background: none;
     border:none;
     position: absolute;
-    margin-left: 1300px;
-    margin-top: 32px;
+    margin-left: 90%;
+    margin-top: 3%;
     font-size: 26px;
     transition: 0.3s;
 }
@@ -26,9 +26,7 @@
     transform: translate(0,-4px);
 }
 .Quote_Table {
-    margin: 180px;
-    
-
+    margin: 12%;
 }
 
 .invoiceinput {
@@ -49,7 +47,7 @@
 }
 
 .table {
-    margin-top: 10px;
+    margin-top: 1%;
 
 }
 
@@ -62,15 +60,7 @@
     background:none !important;
     color: #232323 !important;
 }
-.delete_button {
-    border: #232323;
-    color:#232323;
-    transition:0.2s;
-}
-.delete_button:hover{
-    border: #232323 solid 0.5px;
-    background: none;
-}
+
 select{
     background: none;
 }
@@ -85,7 +75,7 @@ input{
     color: white;
 }
 #table_filter {
-    margin-left:78%;
+    margin-left:75%;
 }
 .tabletitle {
     text-align: center;

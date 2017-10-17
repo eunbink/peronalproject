@@ -48,19 +48,19 @@ class Projects extends Component {
         
        { this.state.showApparel ? <Carousel>
           <Carousel.Item >
-            <img className="image" width={800} height={350} alt="900x800" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
+            <img className="image" width={800} height={350}  src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={800} height={350} alt="900x800" src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
+            <img className="image" width={800} height={350}  src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={800} height={350} alt="900x800" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/sign-rre.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350} src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/sign-rre.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
              
             </Carousel.Caption>
@@ -70,19 +70,19 @@ class Projects extends Component {
         
          { this.state.showLogo ? <Carousel>
           <Carousel.Item >
-            <img className="image" width={800} height={350} alt="800x350" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2013/02/QuietCreek-logo.png&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350} src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2013/02/QuietCreek-logo.png&w=630&h=378&zc=1" />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={800} height={350} alt="800x350" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2011/08/Infinity Logo.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2011/08/Infinity Logo.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={800} height={350} alt="800x350" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/logo-psychotique.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/logo-psychotique.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
               
             </Carousel.Caption>
@@ -92,19 +92,19 @@ class Projects extends Component {
         
        { this.state.showTicket ? <Carousel>
           <Carousel.Item >
-            <img className="image" width={800} height={350} alt="800x350" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/catalog-chic.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/catalog-chic.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
              
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={800} height={350} alt="800x350" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/sign-rre.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/sign-rre.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={800} height={350} alt="800x350" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/business-card-eclipse.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/business-card-eclipse.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
               
             </Carousel.Caption>
@@ -114,19 +114,19 @@ class Projects extends Component {
         
        { this.state.showBook ? <Carousel>
           <Carousel.Item >
-            <img className="image" width={800} height={350} alt="800x350" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/book-findingyourself.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/book-findingyourself.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
              
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={800} height={350} alt="800x350" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2012/11/Alyth-book-jacket-design.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2012/11/Alyth-book-jacket-design.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image" width={800} height={350} alt="800x350" src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/book-richinsix.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={800} height={350}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/book-richinsix.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
               
             </Carousel.Caption>
