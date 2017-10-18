@@ -133,9 +133,9 @@ class Request extends Component {
         
         <ButtonToolbar>
             <div className="message_button_container">
-            <Button className="quote_button" onClick={this.showModal}>
+            <Flip y duration={3000}><Button className="quote_button" onClick={this.showModal}>
           Get A Quote
-        </Button>
+        </Button></Flip>
         </div>
           <Modal   
           {...this.props}
@@ -322,29 +322,25 @@ class Request extends Component {
        <div className="pay_form">
        <Form horizontal>
     <FormGroup controlId="formHorizontalEmail2">
-      <Col componentClass={ControlLabel} sm={5}>
-        Email
-      </Col>
-      <Col sm={5}>
+      
+      
       <FormControl input className="input" onChange={(e) => {
               this.setState({
                 quote: { ...this.state.quote, email: e.target.value }
               })
             }}placeholder="Email" value={this.state.quote.email}/>
-      </Col>
+     
     </FormGroup>
    
     <FormGroup controlId="formHorizontalInvoice">
-      <Col componentClass={ControlLabel} sm={5}>
-        Invoice
-      </Col>
-      <Col sm={5}>
+     
+      
         <FormControl input className="input" onChange={(e) => {
               this.setState({
                 quote: { ...this.state.quote, invoice: e.target.value }
               })
             }}placeholder="Invoice #" value={this.state.quote.invoice}/>
-      </Col>
+      
     </FormGroup>
     <FormGroup className="pay" >     
      { this.state.isChecked ? <StripeCheckout className="pay_button"
@@ -355,7 +351,7 @@ class Request extends Component {
     </FormGroup>
     <FormGroup>
       <Col >
-     { this.state.isChecked ? null :<Flip x delay={500} duration={2000}><Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button></Flip> }
+     { this.state.isChecked ? null :<Flip y duration={3000}><Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button></Flip> }
       </Col>
     </FormGroup>
         </Form>

@@ -12,43 +12,43 @@ input:focus {
     background-size: cover;
     overflow-y: scroll;
     font-family: 'Saira Extra Condensed', sans-serif;
-    color: white;
+    color: #ecf4f4;
 }
 
 .quote_button {
     background: none;
-    border: white solid 1px;
-    color: white;
+    border: #ecf4f4 solid 1px;
+    color: #ecf4f4;
     font-size: 20px;
-    padding:15px ;
+    padding:1.2%;
     cursor: pointer;  
     transition:0.3s;
-    margin-top: 150px;
-    margin-left: 670px;
+    margin-top: 10%;
+    margin-left: 47%;
     
 } 
 .quote_button:hover, .check_button:hover{
     background:none;
     transform: translate(0,-6px) ;
-    color:white;
-    border:white;
+    color:#ecf4f4;
+    border:#ecf4f4;
     box-shadow:
-    1px 1px white,
-    2px 2px white,
-    3px 3px white;
+    1px 1px #ecf4f4,
+    2px 2px #ecf4f4,
+    3px 3px #ecf4f4;
 transform: translateX(-3px);
 transform: translateX(-3px);
 }    
 
 .payform_container{
-   margin-left:320px;
-   margin-top:170px;
+   margin-left:35%;
+   margin-top:10%;
 }
 #formHorizontalInvoice, #formHorizontalEmail2 {
-    margin: 6px;
+    
     width: 400px;
     background: none;
-    border: 1px solid white;
+    border: 1px solid #ecf4f4;
 }
 .formHorizontalPay {
     margin-left:40px;
@@ -56,18 +56,19 @@ transform: translateX(-3px);
 
 ::-webkit-input-placeholder { /* Chrome */
     font-size:15px;
-    color:white;
+    color:#ecf4f4;
     font-family: 'Abel', sans-serif;
     
 }
 .pay_button {
-    margin-top:20px;
-    margin-left: 320px;
+    margin-top:5%;
+    margin-left: 10%;
 }
 .pay_form {
     position: absolute;
     font-size: 25px;
-    
+    border: #ecf4f4 1px solid;
+    padding: 2%;
 }
 .custom-modal2 {
     height:80%;
@@ -101,7 +102,7 @@ transform: translateX(-3px);
 .modal-content {
     width: 600px;
     height:900px;
-    background: white;
+    background: #ecf4f4;
     color:black;
 }  
 
@@ -109,10 +110,9 @@ transform: translateX(-3px);
     width:420px;
     border: black solid  1px;
     background: none;
-    margin-left:20px;
+    
 }
 label {
-   
     margin-top: -5px;
 }
 .comments {
@@ -120,11 +120,11 @@ label {
 }
 
 .check_button {
-    margin-top:-10px !important;
-    margin-left:317px;
+    margin-top:2%;
+    margin-left:6%;
     background: none;
-    border: white solid 1px;
-    color: white;
+    border: #ecf4f4 solid 1px;
+    color: #ecf4f4;
     font-size: 21px;
     padding:15px;
     cursor: pointer;  
@@ -138,3 +138,6 @@ label {
     font-size: 20px;
 }
 
+.form-horizontal .form-group {
+    margin-right: 0;
+}

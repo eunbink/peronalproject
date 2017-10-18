@@ -30,6 +30,7 @@ class Contact extends Component {
     this.setState({
       show: !this.state.show
     })
+    window.scrollTo(0,1300);
   }
 
   send() {
@@ -94,40 +95,40 @@ class Contact extends Component {
         </Button></Flip>
         </div>
         
-        <img onClick = {this.showContact}className="arrow" src={ arrow }/>
+        
           </div>
 
+          
+          {/* --------MAP------------- */}
+          <div id="map"></div>
 
+
+          <div onClick = {this.showContact}><img className="arrow" src={ arrow }/></div>
           {/* --------Contacts-------- */}
          { this.state.show ? 
           <Fade bottom x duration={1000}>
          <div className="CT">
           <div className="contactlist">
+         
             <div className="location-container">
               <p className="location-text"><span>
                 <img className="locationicon" src={location} /></span> 1349 West 760 North Orem, UT 84057</p>
             </div>
-
             <div className="hours-container">
               <p className="hours-text"> <span>
                 <img className="hoursicon" src={hours} /></span>M-F 9:00am - 5:30pm</p>
             </div>
-
             <div className="phone-container">
               <p className="phone-text"><span>
                 <img className="phoneicon" src={phone} /></span>801-221-2737</p>
             </div>
-
             <div className="fax-container">
-              <p className="fax-text"><span>
-                <img className="faxicon" src={ fax } /></span>801-221-2736</p>
+              <p className="fax-text"><span> <img className="faxicon" src={ fax } /></span>801-221-2736</p>
             </div>
 
           </div>
-          </div></Fade> : null  }
+          </div> </Fade>: null  }
 
-          {/* --------MAP------------- */}
-          <div id="map"></div>
           
           <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
         </div>

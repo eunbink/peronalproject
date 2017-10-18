@@ -31,7 +31,7 @@ class Nav extends Component {
           <NavLink onClick={this.props.disappearNavbar} activeClassName='active' to='/Request'><li>REQUESTS</li></NavLink>
           <NavLink onClick={this.props.disappearNavbar} activeClassName='active' to='/Contact'><li>CONTACT US</li></NavLink>
           
-          <img onClick = {this.showIcon} className="arrow2" src={ arrow }/>
+          <img onMouseOver = {this.showIcon} className="arrow2" src={ arrow }/>
         </ul>
         
           {this.state.show ? 

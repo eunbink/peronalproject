@@ -7,11 +7,11 @@
     background: #202020;
     background-size: cover;
     overflow-y: scroll;
-    color: white;
+    color: #ecf4f4;
    
 }
 .companyimage {
-    border:1px white solid;
+    border:1px #ecf4f4 solid;
     margin-top:25px;
     width:200x;
     height:300px;

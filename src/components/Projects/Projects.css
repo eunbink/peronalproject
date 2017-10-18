@@ -49,7 +49,7 @@ body {
 #apparel, #logo, #ticket, #books {
     display: inline-block;
     border: none;
-    color: white;
+    color: #ecf4f4;
     font-size: 180%;
     padding:50px;
     cursor: pointer;
@@ -80,7 +80,7 @@ body {
     margin-top:-5%;
     text-indent: 0;
     cursor: pointer;
-    border: white solid 1px;
+    border: #ecf4f4 solid 1px;
     border-radius: 30%;
     background-color: none;
     
@@ -90,7 +90,7 @@ body {
     height: 10px;
     margin-left:1%;
     margin-top:-5%;
-    background-color: white;
+    background-color: #ecf4f4;
     opacity: 0.7;
     
 }

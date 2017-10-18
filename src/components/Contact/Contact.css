@@ -20,16 +20,16 @@ html {
     height: 40px;
     font-size:20px;
     border: none;
-    border-bottom: 1px white solid;
+    border-bottom: 1px #ecf4f4 solid;
     background: none;
     margin-top: 20px;
 
 }
 .form{
     margin-top:8%;
-    border: white solid 1px;
+    border: #ecf4f4 solid 1px;
     display: inline-block;
-    padding: 3%
+    padding: 2%
     
    
 }
@@ -39,7 +39,7 @@ html {
     height: 150px;
     font-size:20px;
     border: none;
-    border-bottom: 1px white solid;
+    border-bottom: 1px #ecf4f4 solid;
     background: none;
 }
 
@@ -47,20 +47,20 @@ html {
 .messageSubmitbutton {
     margin-top: 5%;
     margin-left:74%;
-    border: white solid 1px;
+    border: #ecf4f4 solid 1px;
     font-size:25px;
-    color: white;
+    color: #ecf4f4;
     background: none;
 }
 
 .messageSubmitbutton:hover {
     border: none;
     background:none;
-    color:white;
+    color:#ecf4f4;
     box-shadow:
-    1px 1px white,
-    2px 2px white,
-    3px 3px white;
+    1px 1px #ecf4f4,
+    2px 2px #ecf4f4,
+    3px 3px #ecf4f4;
     transform: translateX(-3px);
     transform: translateX(-3px);
 }
@@ -68,6 +68,7 @@ html {
 
 .mapboxgl-canvas{
     position: static !important;
+    
     
 }
 .contact_form {
@@ -93,29 +94,29 @@ html {
 }
 
 .locationicon {
-    margin-right:3%;
+    margin-right:8%;
     width:20px;
     height:20px;
 }
 
 .phoneicon {
-    margin-right:3%;
+    margin-right:8%;
     width:23px;
     height:25px;
 }
 .faxicon {
-    margin-right:3%;
+    margin-right:8%;
     width:23px;
     height:25px;
 }
 
 .hoursicon{
-    margin-right:4%;
+    margin-right:9%;
     width:20px;
     height:20px;
 }
 .fax-container, .location-container, .phone-container, .hours-container {
-    margin-top:4%;
+    margin-top:6%;;
     text-align: left;
 }
 
@@ -133,10 +134,11 @@ html {
    
 }
 .arrow {
-    margin-top:1%;
-    width: 5%;
-    height: 5%;
+    margin-top:2%;
+    width: 2%;
+    height: 2%;
     cursor: pointer;
+    margin-bottom: 1%;
     transition:0.3s;
     
 }

@@ -5,7 +5,7 @@ body {
   text-align: center;
   height: 100vh;
   font-family: 'Saira Extra Condensed', sans-serif;
-  color: white;
+  color: #ecf4f4;
 }
 
 .Navicon{
@@ -22,7 +22,7 @@ body {
 }
 
 .bluelogo {
-  border:white solid 1px;
+  border:#ecf4f4 solid 1px;
   margin-right: 1165px;
   margin-top:-195px;
   width: 70px;
@@ -39,7 +39,7 @@ body {
 
 
 .Navbar {
-  background-color:white;;
+  background-color:#ecf4f4;;
   border-radius: 5px;
   width:100%;
   height:8%;
@@ -61,12 +61,12 @@ body {
   margin: 30px;
   margin-right:50px;
   font-size: 25px;
-  color: white;
+  color: #ecf4f4;
   transition:0.3s;
 }
 
 .Admin_button:hover{
   transform: translate(0,-4px) ;
-  color:white !important;
+  color:#ecf4f4 !important;
 }
 

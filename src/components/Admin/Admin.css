@@ -7,13 +7,13 @@
     background-size: cover;
     overflow-y: scroll;
     font-size: 20px;
-    color: white;
+    color: #ecf4f4;
    
     
    
 }
 .logout_button {
-    color:white;
+    color:#ecf4f4;
     background: none;
     border:none;
     position: absolute;
@@ -39,7 +39,7 @@
     background: none;
     border: none;
     font-size: 20px;
-    color:white;
+    color:#ecf4f4;
 }
 .text {
     text-align: center;
@@ -72,7 +72,7 @@ input{
     position: absolute;
 }
 .paginate_button  {
-    color: white;
+    color: #ecf4f4;
 }
 #table_filter {
     margin-left:75%;
