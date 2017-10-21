@@ -11,27 +11,21 @@ import arrow from '../../Images/arrow.png';
 import fax from '../../Images/faxicon.png';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 
+
 class Contact extends Component {
   constructor() {
     super();
     this.state = {
-      show: false,
       email: {
         name: "",
         email: "",
         message: ""
       }
     }
-    this.showContact = this.showContact.bind(this);
     this.send = this.send.bind(this);
 
   }
-  showContact () {
-    this.setState({
-      show: !this.state.show
-    })
-    window.scrollTo(0,1300);
-  }
+ 
 
   send() {
     const body = {
@@ -97,39 +91,40 @@ class Contact extends Component {
         
         
           </div>
-
-          
-          {/* --------MAP------------- */}
-          <div id="map"></div>
-
-
-          <div onClick = {this.showContact}><img className="arrow" src={ arrow }/></div>
-          {/* --------Contacts-------- */}
-         { this.state.show ? 
-          <Fade bottom x duration={1000}>
-         <div className="CT">
-          <div className="contactlist">
+          {/* <div ><img onClick = {this.showContact} className="arrow" src={ arrow }/></div> */}
          
-            <div className="location-container">
-              <p className="location-text"><span>
-                <img className="locationicon" src={location} /></span> 1349 West 760 North Orem, UT 84057</p>
+          
+
+   
+           {/* --------Contacts-------- */}
+         
+       
+         <div className="CT">
+           
+          <div className="contactlist">
+          
+            <div className="col">
+              <p className="hours-text"> 
+                <img className="hoursicon" src={hours} />M-F 9:00am - 5:30pm</p>
             </div>
-            <div className="hours-container">
-              <p className="hours-text"> <span>
-                <img className="hoursicon" src={hours} /></span>M-F 9:00am - 5:30pm</p>
+            <div className="col">
+              <p className="location-text">
+                <img className="locationicon" src={location} /> 1349 West 760 North Orem, UT 84057</p>
             </div>
-            <div className="phone-container">
-              <p className="phone-text"><span>
-                <img className="phoneicon" src={phone} /></span>801-221-2737</p>
+            <div className="third">
+              <p className="phone-text">
+                <img className="phoneicon" src={phone} />801-221-2737</p>
             </div>
-            <div className="fax-container">
-              <p className="fax-text"><span> <img className="faxicon" src={ fax } /></span>801-221-2736</p>
+            <div className="last">
+              <p className="fax-text"> <img className="faxicon" src={ fax } />801-221-2736</p>
             </div>
 
           </div>
-          </div> </Fade>: null  }
+          </div> 
+          {/* --------MAP------------- */}
+          <div id="map"></div>
 
-          
+       
           <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
         </div>
         

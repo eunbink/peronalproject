@@ -69,4 +69,26 @@ body {
   transform: translate(0,-4px) ;
   color:#ecf4f4 !important;
 }
+.facebook {
+  width: 65px;
+  height: 43px;
+  
+}
+.instagram {
+  width: 21px;
+  height:21px;
+  margin-top: 30%;
+  
+}
+.linkedin {
+  width:21px;
+  height:21px;
+  margin-top: 40%;
+  
+}
 
+.follow {
+  position: fixed;
+  margin-left:95%;
+  margin-top: 20%;
+} 

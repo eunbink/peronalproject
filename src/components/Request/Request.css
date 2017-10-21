@@ -69,6 +69,7 @@ transform: translateX(-3px);
     font-size: 25px;
     border: #ecf4f4 1px solid;
     padding: 2%;
+    margin-top:-2%;
 }
 .custom-modal2 {
     height:80%;
@@ -78,9 +79,9 @@ transform: translateX(-3px);
 }
 
 .modal-dialog {
-    width: 670px;
+    width: 43%;
     height: auto;
-    margin: 100px auto;
+    margin: 10% auto;
  
 }
 
@@ -113,7 +114,7 @@ transform: translateX(-3px);
     
 }
 label {
-    margin-top: -5px;
+    margin-top: 0;
 }
 .comments {
     height:200px;

@@ -7,28 +7,11 @@ html{
     
 }
 
-.arrow2 {
-    margin-top:5%;
-    width: 8%;
-    height: 8%;
-    cursor: pointer;
-    transition: 0.4s;
-}
-.arrow2:hover {
-    transform: translateY(4px)
-}
 
 ul {
     list-style: none;
    
 }
-.follow{
-    margin-top:10%;
-    font-size:10px;
-    font-family: 'Noto Sans', sans-serif;
-    
-}
-
 
 .navHome {
     margin-top: 80px;
@@ -54,13 +37,13 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #nav.slidemenu{
-    left:-2.5%;
+    left:1.2%;
     position: fixed;
     z-index: 1;
    
 }
 #nav {
-    left:-250px;
+    left:-210px;
     position: fixed;
     transition: 0.2s ;
     height:100vh;
@@ -74,24 +57,3 @@ a:link, a:visited, a:hover, a:active {
 
 }
 
-.facebook {
-  width:65px;
-  height:40px;
-  
-}
-.instagram {
-  
-  width: 21px;
-  height: 21px;
-  margin-top:8%;
-  margin-left:2%;
-}
-.linkedin {
-  width:21px;
-  height:21px;
-  margin-top:10%;
-  margin-left:2%;
-}
-.logos{
-  margin-left:11%;
-}

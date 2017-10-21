@@ -79,9 +79,10 @@ html {
 }
 
 #map {
-    margin-top:7%;
+    
     height:340px;
     opacity:0.8;
+    
  
 }
 .mapboxgl-marker {
@@ -94,60 +95,50 @@ html {
 }
 
 .locationicon {
-    margin-right:8%;
+    margin-right:3%;
     width:20px;
     height:20px;
 }
 
 .phoneicon {
-    margin-right:8%;
+    margin-right:3%;
     width:23px;
     height:25px;
 }
 .faxicon {
-    margin-right:8%;
+    margin-right:3%;
     width:23px;
     height:25px;
 }
 
 .hoursicon{
-    margin-right:9%;
+    margin-right:4%;
     width:20px;
     height:20px;
 }
-.fax-container, .location-container, .phone-container, .hours-container {
-    margin-top:6%;;
-    text-align: left;
+.col
+{
+    float: left;
+    width: 25%;
+    margin-right:3%;
+}
+.third {
+    float: left;
+    width: 25%;
+}
+.last{
+    float: right;
+    width: 25%;
 }
 
 .contactlist { 
-    text-align: left;
+    
+    padding: 0.5%;
+    margin-top:9%;
     font-family: 'Quicksand', sans-serif;
     font-size:16px;
-    background:none;
-    padding:2%;
-    text-align: center;
-    box-sizing: border-box;
-    width:42.6%;
-    height:40%;
-    margin-left:20%;
-   
-}
-.arrow {
-    margin-top:2%;
-    width: 2%;
-    height: 2%;
-    cursor: pointer;
-    margin-bottom: 1%;
-    transition:0.3s;
+    display: flex;
     
-}
-.arrow:hover {
-    transform: translateY(4px);
 }
 
-.CT {
-    display: flex;
-    justify-content: center;
-    
-}
+
