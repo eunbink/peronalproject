@@ -39,14 +39,11 @@ class App extends Component {
         </div>  
         
         <div className="follow">
-          <div><img className="facebook" src={ facebook } /></div>
+          <div><a href="https://www.facebook.com/BFDnSign/"><img className="facebook" src={ facebook } /></a></div>
           <div><img className="instagram" src={ instagram } /></div>
-          <div><img className="linkedin"  src= { linkedin } /></div>
+          <div><a href="https://www.linkedin.com/feed/"><img className="linkedin"  src= { linkedin } /></a></div>
           </div>
 
-          
-            
-        
         <Nav showingNavbar={this.state.showmenu ? "slidemenu" : null} disappearNavbar={this.disappearNavbar} />
        
            

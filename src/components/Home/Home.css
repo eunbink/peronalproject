@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway+Dots');
 @import url('https://fonts.googleapis.com/css?family=Londrina+Sketch');
+
 .home_Container {
     width: 100vw;
     height: 100vh;
     background-size: cover;
     overflow-y: hidden;
-    color: #ecf4f4;
+    color: white;
+    position: relative;
 }
 
-* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
 
 .img {
     width:50px;
@@ -24,23 +21,24 @@
 }
 
 #video {
-    top:0;
-    left:0;
-    /* width:100vw; */
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:auto;
     height:auto;
     position: absolute;
-    /* display: none; */
     z-index:-1;
-    /* opacity:0.5; */
+    opacity:0.5;
+   
 }
 
 .aboutusButton {
     margin-top:-3%;
     padding:11px;
     font-size: 23px;
-    color:#ecf4f4;
+    color:white;
     background: none;
-    border: #ecf4f4 1px solid;
+    border: white 1px solid;
     cursor: pointer;  
     transition:0.3s;
 
@@ -50,11 +48,11 @@
     transform:  translate(0,-6px) ;
     border: none !important;
     background: none;
-    color: #ecf4f4;
+    color: white;
     box-shadow:
-    1px 1px #ecf4f4,
-    2px 2px #ecf4f4,
-    3px 3px #ecf4f4;
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
 transform: translateX(-3px);
 transform: translateX(-3px);
 }
@@ -64,7 +62,7 @@ transform: translateX(-3px);
 }
 
 .home_quote{
-    color: #ecf4f4; 
+    color: white; 
     margin: 10px 0 0 10px;
     white-space: nowrap;
     overflow: hidden;

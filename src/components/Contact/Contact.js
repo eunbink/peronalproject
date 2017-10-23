@@ -11,6 +11,7 @@ import arrow from '../../Images/arrow.png';
 import fax from '../../Images/faxicon.png';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import contact from '../../Images/contact.png';
+import multiple from '../../Images/multiple.mp4';
 
 class Contact extends Component {
   constructor() {
@@ -49,9 +50,9 @@ class Contact extends Component {
     mapboxgl.accessToken = 'pk.eyJ1Ijoia2FuZ3AxODMiLCJhIjoiY2o4a25wdnB4MGZjaTJ3bXZrZ3lqanl4ZyJ9.15XvXGwFuUbl5uhPOEW2QA';
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/kangp183/cj8n92kxw7j0u2rpqpr3iy7pu',
-      center: [-111.728694, 40.311100],
-      zoom: 16.8
+      style: 'mapbox://styles/kangp183/cj94myyyonrxj2qp9l1uc3v5l',
+      center: [-111.728694, 40.310700],
+      zoom: 17.5
     });
 
     map.on('load', () => {
@@ -66,7 +67,9 @@ class Contact extends Component {
 
     return (
       <div>
-
+         <video autoPlay loop="true" id="video">
+         <source src={multiple} type="video/mp4"/>
+         </video>
         <div className='contact'>
           <div className="form" >
             <h1>Contact Us</h1>

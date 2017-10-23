@@ -8,17 +8,16 @@ input:focus {
 .request_container{
     width: 100vw;
     height: 100vh;
-    background: #202020;
-    background-size: cover;
-    overflow-y: scroll;
+    position:relative;
+    overflow: hidden;
     font-family: 'Saira Extra Condensed', sans-serif;
-    color: #ecf4f4;
+    color: white;
 }
 
 .quote_button {
     background: none;
-    border: #ecf4f4 solid 1px;
-    color: #ecf4f4;
+    border: white solid 1px;
+    color: white;
     font-size: 20px;
     padding:1.2%;
     cursor: pointer;  
@@ -30,12 +29,12 @@ input:focus {
 .quote_button:hover, .check_button:hover{
     background:none;
     transform: translate(0,-6px) ;
-    color:#ecf4f4;
-    border:#ecf4f4;
+    color:white;
+    border:white;
     box-shadow:
-    1px 1px #ecf4f4,
-    2px 2px #ecf4f4,
-    3px 3px #ecf4f4;
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
 transform: translateX(-3px);
 transform: translateX(-3px);
 }    
@@ -48,7 +47,7 @@ transform: translateX(-3px);
     
     width: 400px;
     background: none;
-    border: 1px solid #ecf4f4;
+    border: 1px solid white;
 }
 .formHorizontalPay {
     margin-left:40px;
@@ -56,7 +55,7 @@ transform: translateX(-3px);
 
 ::-webkit-input-placeholder { /* Chrome */
     font-size:15px;
-    color:#ecf4f4;
+    color:white;
     font-family: 'Abel', sans-serif;
     
 }
@@ -67,7 +66,7 @@ transform: translateX(-3px);
 .pay_form {
     position: absolute;
     font-size: 25px;
-    border: #ecf4f4 1px solid;
+    border: white 1px solid;
     padding: 2%;
     margin-top:-2%;
 }
@@ -103,7 +102,7 @@ transform: translateX(-3px);
 .modal-content {
     width: 600px;
     height:900px;
-    background: #ecf4f4;
+    background: white;
     color:black;
 }  
 
@@ -124,8 +123,8 @@ label {
     margin-top:2%;
     margin-left:6%;
     background: none;
-    border: #ecf4f4 solid 1px;
-    color: #ecf4f4;
+    border: white solid 1px;
+    color: white;
     font-size: 21px;
     padding:15px;
     cursor: pointer;  

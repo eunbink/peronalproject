@@ -20,14 +20,14 @@ html {
     height: 40px;
     font-size:20px;
     border: none;
-    border-bottom: 1px #ecf4f4 solid;
+    border-bottom: 1px white solid;
     background: none;
     margin-top: 20px;
 
 }
 .form{
     margin-top:8%;
-    border: #ecf4f4 solid 1px;
+    border: white solid 1px;
     display: inline-block;
     padding: 2%
     
@@ -39,7 +39,7 @@ html {
     height: 150px;
     font-size:20px;
     border: none;
-    border-bottom: 1px #ecf4f4 solid;
+    border-bottom: 1px white solid;
     background: none;
 }
 
@@ -47,9 +47,9 @@ html {
 .messageSubmitbutton {
     margin-top: 5%;
     margin-left:74%;
-    border: #ecf4f4 solid 1px;
+    border: white solid 1px;
     font-size:25px;
-    color: #ecf4f4;
+    color: white;
     background: none;
     transition: 0.4s;
 }
@@ -57,11 +57,11 @@ html {
 .messageSubmitbutton:hover {
     border: none;
     background:none;
-    color:#ecf4f4;
+    color:white;
     box-shadow:
-    1px 1px #ecf4f4,
-    2px 2px #ecf4f4,
-    3px 3px #ecf4f4;
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
     transform: translateX(-3px);
     transform: translateX(-3px);
 }
@@ -81,7 +81,7 @@ html {
 
 #map {
     margin-top: 7%;
-    height:340px;
+    height:300px;
     opacity:0.8;
     
  

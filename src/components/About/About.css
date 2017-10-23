@@ -2,17 +2,37 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
-body {
-    background: #202020;
-}
-.project_container{  
+.about_container {
     width: 100vw;
     height: 100vh;
-    background: #202020 repeat;
     background-size: cover;
-    color: #ecf4f4;
+    overflow: scroll;
+    color: white;
+    position: relative;
+}
+#video2 {
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:auto;
+    position: fixed;
+    z-index:-1;
+    overflow:scroll;
+    opacity:0.5;
 }
 
+#video3 {
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:auto;
+    position: fixed;
+    z-index:-1;
+    overflow:scroll;
+    opacity:0.3;
+}
 .image {
     margin: 0 auto;
 }
@@ -38,15 +58,15 @@ body {
     height:100vh !important;
   }
 
-#apparel, #logo, #ticket, #books {
+#apparel, #logo, #tradeshow, #marketingproducts{
     display: inline-block;
     border: none;
-    color: #ecf4f4;
+    color: white;
     font-size: 23px;
     padding:50px;
     cursor: pointer;
-    transition: 0.2s;
-    margin-top: -4%; 
+    transition: 0.2s ease;
+    margin-top: -3%; 
  
 }
 
@@ -62,9 +82,10 @@ body {
     
 }
 
-#apparel:hover, #logo:hover, #ticket:hover, #books:hover {
+#apparel:hover, #logo:hover, #tradeshow:hover, #marketingproducts:hover {
     transform: translate(0,-4px) ;
-    opacity:0.5;
+    opacity:0.8;
+    
     
 }
 
@@ -76,7 +97,7 @@ body {
     margin-top:-10% !important;
     text-indent: 0;
     cursor: pointer;
-    border: #ecf4f4 solid 1px;
+    border: white solid 1px;
     border-radius: 30%;
     background-color: none;
     
@@ -86,7 +107,7 @@ body {
     height: 10px;
     margin-left:1%;
     margin-top:6%;
-    background-color: #ecf4f4;
+    background-color: white;
     opacity: 0.7;
     
 }
@@ -97,22 +118,26 @@ margin-bottom: 4%;
 
 
 .aboutparagraph{
-    font-size: 20px;
+    font-size: 30px !important;
 }
 
 .about {
-    margin-top:10%;
+    margin-top:6%;
     margin-left:15%;
     margin-right:15%;
+    margin-bottom: 7%;
     align-content: center;
+}
+.aboutexplain {
+    text-align: left;
+    font-size: 25px;
 }
 
 .carousel img {
-    position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
+    min-width: 70%;
     height: 500px;
     max-width: none;
-    opacity:0.7;
+    
   }

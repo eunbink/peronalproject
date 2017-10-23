@@ -4,7 +4,10 @@ import { NavLink } from 'react-router-dom';
 import { Button } from "react-bootstrap";
 import Typist from 'react-typist';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
-import night from '../../Images/night.mp4';
+import lamp from '../../Images/lamp.mp4';
+
+
+
 class Home extends Component {
   
   
@@ -12,7 +15,7 @@ class Home extends Component {
     return (
       <div className="home_Container">
        <video autoPlay loop="true" id="video">
-         <source src={night} type="video/mp4"/>
+         <source src={ lamp } type="video/mp4"/>
          </video>
        <div className="letter">
        <Typist 
