@@ -4,13 +4,17 @@ import { NavLink } from 'react-router-dom';
 import { Button } from "react-bootstrap";
 import Typist from 'react-typist';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
-
+import night from '../../Images/night.mp4';
 class Home extends Component {
   
   
   render() {
     return (
       <div className="home_Container">
+       <video autoPlay loop="true" id="video">
+         <source src={night} type="video/mp4"/>
+         </video>
+       <div className="letter">
        <Typist 
            className="home_quote"
           avgTypingSpeed={40}
@@ -20,6 +24,7 @@ class Home extends Component {
           </Typist>
         <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
         <Flip x delay={500} duration={2000}><NavLink activeClassName='active' to='/About'><Button className="aboutusButton">Discover About Us</Button></NavLink></Flip>
+      </div>
         
       </div>
     );

@@ -24,6 +24,7 @@
 }
 .logout_button:hover {
     transform: translate(0,-4px);
+    opacity: 0.5;
 }
 .Quote_Table {
     margin: 12%;
@@ -75,7 +76,7 @@ input{
     color: #ecf4f4;
 }
 #table_filter {
-    margin-left:75%;
+    margin-left:78.5%;
 }
 .tabletitle {
     text-align: center;

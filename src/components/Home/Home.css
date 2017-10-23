@@ -3,12 +3,17 @@
 .home_Container {
     width: 100vw;
     height: 100vh;
-    background: #202020;
     background-size: cover;
     overflow-y: hidden;
     color: #ecf4f4;
-    
 }
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 .img {
     width:50px;
     height:50px;
@@ -18,6 +23,16 @@
     padding:30px;
 }
 
+#video {
+    top:0;
+    left:0;
+    /* width:100vw; */
+    height:auto;
+    position: absolute;
+    /* display: none; */
+    z-index:-1;
+    /* opacity:0.5; */
+}
 
 .aboutusButton {
     margin-top:-3%;
@@ -30,6 +45,7 @@
     transition:0.3s;
 
 }
+
 .aboutusButton:hover {
     transform:  translate(0,-6px) ;
     border: none !important;
@@ -43,6 +59,9 @@ transform: translateX(-3px);
 transform: translateX(-3px);
 }
 
+.letter {
+    z-index: 3;
+}
 
 .home_quote{
     color: #ecf4f4; 
@@ -52,9 +71,9 @@ transform: translateX(-3px);
     margin-top:14.5%;
     padding: 5.5%;
     font-size: 70px; 
-    
-    
+    /* z-index:2; */
   }
+
   .Typist .Cursor {
     display: inline-block; }
     .Typist .Cursor--blinking {

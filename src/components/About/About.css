@@ -1,21 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Londrina+Sketch');
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 body {
     background: #202020;
 }
 .project_container{  
-    padding:0;
-    margin:0;
-    top:0;
-    left:0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     background: #202020 repeat;
-    
-}
-
-.projecttext {
-    font-size:35px;
-    
+    background-size: cover;
+    color: #ecf4f4;
 }
 
 .image {
@@ -30,36 +25,36 @@ body {
     
  }
 .carousel-control {
-    width:600px;
+    width:100px;
 }
-.project {
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    font-size: 40px;
-}
+
 .carousel {
-    position: static !important;
-    width:700px;
-    height:300px;
+    width:100vw !important;
+    height:100vh !important;
     margin: auto;
   }
-
+  .carousel-inner {
+    width:100vw !important;
+    height:100vh !important;
+  }
 
 #apparel, #logo, #ticket, #books {
     display: inline-block;
     border: none;
     color: #ecf4f4;
-    font-size: 180%;
+    font-size: 23px;
     padding:50px;
     cursor: pointer;
     transition: 0.2s;
-    font-family: 'Open Sans Condensed', sans-serif;   
-    margin-top: 10%; 
+    margin-top: -4%; 
  
 }
 
-
+.carousel-item {
+    height: 100vh !important;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
 .wrap {
     display:flex;
     justify-content: center;
@@ -68,7 +63,8 @@ body {
 }
 
 #apparel:hover, #logo:hover, #ticket:hover, #books:hover {
-    transform: translate(0,-7px) ;
+    transform: translate(0,-4px) ;
+    opacity:0.5;
     
 }
 
@@ -89,14 +85,34 @@ body {
     width: 10px;
     height: 10px;
     margin-left:1%;
-    margin-top:-5%;
+    margin-top:6%;
     background-color: #ecf4f4;
     opacity: 0.7;
     
 }
 
 ol,ul {
-margin-bottom: 8%;
+margin-bottom: 4%;
 }
 
 
+.aboutparagraph{
+    font-size: 20px;
+}
+
+.about {
+    margin-top:10%;
+    margin-left:15%;
+    margin-right:15%;
+    align-content: center;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+    max-width: none;
+    opacity:0.7;
+  }

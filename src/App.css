@@ -8,6 +8,13 @@ body {
   color: #ecf4f4;
 }
 
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
 .Navicon{
   display: flex;
   flex-direction: column;
@@ -21,18 +28,11 @@ body {
  
 }
 
-.bluelogo {
-  border:#ecf4f4 solid 1px;
-  margin-right: 1165px;
-  margin-top:-195px;
-  width: 70px;
-  height: 70px;
-}
-
 .Naviconbox {
   position: fixed;
   padding: 40px;
   z-index: 3;
+  cursor: pointer;
  
 }
 
@@ -41,8 +41,9 @@ body {
 .Navbar {
   background-color:#ecf4f4;;
   border-radius: 5px;
-  width:100%;
-  height:8%;
+  width:95%;
+  height:9%;
+  
 }
 
 
@@ -58,7 +59,7 @@ body {
   position: fixed;
   top: 0px;
   right: 0px;
-  margin: 30px;
+  margin:3%;
   margin-right:50px;
   font-size: 25px;
   color: #ecf4f4;
@@ -68,27 +69,40 @@ body {
 .Admin_button:hover{
   transform: translate(0,-4px) ;
   color:#ecf4f4 !important;
+  opacity: 0.5;
 }
 .facebook {
   width: 65px;
   height: 43px;
-  
+  transition:0.3s;
+ cursor: pointer;
+ z-index:5;
 }
 .instagram {
   width: 21px;
   height:21px;
   margin-top: 30%;
-  
+  transition:0.3s;
+ cursor: pointer;
+  z-index:5;
 }
 .linkedin {
   width:21px;
   height:21px;
   margin-top: 40%;
-  
+  transition:0.3s;
+  cursor: pointer;
+  z-index:5;
 }
 
 .follow {
   position: fixed;
-  margin-left:95%;
+  margin-left:94.5%;
   margin-top: 20%;
+  
 } 
+
+.facebook:hover, .instagram:hover, .linkedin:hover {
+  transform: translateY(-2px);
+  opacity: 0.5;
+}
