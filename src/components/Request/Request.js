@@ -16,7 +16,6 @@ class Request extends Component {
       isChecked: false,
       paymentAmt: 2500,
       show: false,
-      email:"",
       quote: {
         name:"",
         phoneNumber:"",
@@ -328,10 +327,10 @@ class Request extends Component {
       
       
       <FormControl input className="input" onChange={(e) => {
-              this.setState({ 
-                email: e.target.value }
-              )
-            }}placeholder="Email" value={this.state.email}/>
+              this.setState({
+                quote: { ...this.state.quote, email: e.target.value }
+              })
+            }}placeholder="Email" value={this.state.quote.email}/>
      
     </FormGroup>
    

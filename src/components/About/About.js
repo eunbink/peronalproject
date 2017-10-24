@@ -41,15 +41,7 @@ class About extends Component {
           <video autoPlay loop="true" id="video3">
          <source src={ multiple } type="video/mp4"/>
          </video>
-     
       
-      <div className="about">
-          <p  className="aboutparagraph">About Us</p>
-          <p className="aboutexplain">Since the 1990s we’ve tackled design and fulfillment projects  with our competent and highly trained creative people.  We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition!
-          </p>
-          </div>
-      
-          
       <Button onClick={this.showProjects} className="project-button" > Discover Projects </Button>
      {this.state.show ?  <Fade top duration={1500}><div className="project_container">
         <div className="wrap">
@@ -58,8 +50,7 @@ class About extends Component {
         <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer3"><p id="tradeshow">TRADE SHOW DISPLAYS</p></div>
         <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer4"><p id="marketingproducts">MARKETING PRODUCTS</p></div>
         </div>
-        
-        
+             
        { this.state.showApparel ? <Fade duration={1000}><Carousel>
           <Carousel.Item >
             <img className="image"  src={colorshirts} />
@@ -148,6 +139,12 @@ class About extends Component {
         </Carousel></Fade> : null }
         </div></Fade>: null }
         
+        <div className="about">
+          <p  className="aboutparagraph">About Us</p>
+          <p className="aboutexplain">Since the 1990s we’ve tackled design and fulfillment projects  with our competent and highly trained creative people.  We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition!
+          </p>
+          </div>
+
         <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
      
       </div>

@@ -21,7 +21,7 @@ class Home extends Component {
        <Typist 
            className="home_quote"
           avgTypingSpeed={40}
-          startDelay={1000}
+          startDelay={500}
           onTypingDone={this.onHeaderTyped}> 
           Fulfilling Creative Jobs from Ideas to Delivery.
           </Typist>

@@ -66,7 +66,7 @@ class Contact extends Component {
   render() {
 
     return (
-      <div>
+      <div className="contact-container">
          <video autoPlay loop="true" id="video">
          <source src={multiple} type="video/mp4"/>
          </video>
