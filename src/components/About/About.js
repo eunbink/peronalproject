@@ -5,6 +5,17 @@ import { NavLink } from 'react-router-dom';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import multiple from '../../Images/multiple.mp4';
 import colorshirts from '../../Images/colorshirts.JPG';
+import hat from '../../Images/hat.jpg';
+import western from '../../Images/westernshirt.JPG';
+import hokulia from '../../Images/Hokulia.jpg';
+import honey from '../../Images/Honey.JPG';
+import mvhs from '../../Images/mvhs.JPG';
+import paradise from '../../Images/Paradise.png';
+import Clayton from '../../Images/Clayton.png';
+import amazon from '../../Images/amazon.JPG';
+import limitless from '../../Images/limitless.JPG';
+import stentorian from '../../Images/stentorian.jpg';
+
 
 
 class About extends Component {
@@ -13,9 +24,9 @@ class About extends Component {
     this.state = {
       show: false,
       showApparel:false,
-      showLogo: false,
+      showLogo: true,
       showtradeshow:false,
-      showmarketingproducts:true,
+      showmarketingproducts:false,
     }
     this.showProjects = this.showProjects.bind(this);
     this.showOneCarousel = this.showOneCarousel.bind(this);
@@ -34,6 +45,7 @@ class About extends Component {
      show: !this.state.show
    })
  }
+ 
 
   render() {
     return (
@@ -42,7 +54,7 @@ class About extends Component {
          <source src={ multiple } type="video/mp4"/>
          </video>
       
-      <Button onClick={this.showProjects} className="project-button" > Discover Projects </Button>
+         <Flip x duration={3000}><Button onClick={this.showProjects} className="project-button" > Discover Projects </Button></Flip>
      {this.state.show ?  <Fade top duration={1500}><div className="project_container">
         <div className="wrap">
         <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer1"><p id="apparel" >CLOTHING & ACCESSORIES</p></div>
@@ -53,19 +65,19 @@ class About extends Component {
              
        { this.state.showApparel ? <Fade duration={1000}><Carousel>
           <Carousel.Item >
-            <img className="image"  src={colorshirts} />
+            <img className="image" width={900} height={200}  src={colorshirts} />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image"   src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
+            <img className="image" width={900} height={200}   src={hat} />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image"  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/sign-rre.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={900} height={200} src={western} />
             <Carousel.Caption>
              
             </Carousel.Caption>
@@ -75,19 +87,19 @@ class About extends Component {
         
          { this.state.showLogo ? <Fade duration={1000}><Carousel>
           <Carousel.Item >
-            <img className="image"  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2013/02/QuietCreek-logo.png&w=630&h=378&zc=1" />
+            <img className="image" width={900} height={200} src={paradise} />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image"   src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2011/08/Infinity Logo.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={900} height={200}  src={Clayton} />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image"   src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/logo-psychotique.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={900} height={200}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/logo-design-leloux-orem.jpg&w=630&h=378&zc=1" />
             <Carousel.Caption>
               
             </Carousel.Caption>
@@ -97,19 +109,19 @@ class About extends Component {
         
        { this.state.showtradeshow ? <Fade duration={1000}><Carousel>
           <Carousel.Item >
-            <img className="image"   src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/catalog-chic.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={900} height={200}  src={amazon} />
             <Carousel.Caption>
              
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image"   src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/sign-rre.jpg&w=630&h=378&zc=1" />
+            <img className="image" width={900} height={200}  src={limitless} />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image"   src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/business-card-eclipse.jpg&w=630&h=378&zc=1" />
+            <img className="image"  width={900} height={200} src={stentorian} />
             <Carousel.Caption>
               
             </Carousel.Caption>
@@ -119,19 +131,19 @@ class About extends Component {
         
        { this.state.showmarketingproducts ? <Fade duration={1000}><Carousel>
           <Carousel.Item >
-            <img className="image"   src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
+            <img className="image" width={900} height={200}  src={hokulia} />
             <Carousel.Caption>
              
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image"   src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
+            <img className="image"  width={900} height={200} src={honey} />
             <Carousel.Caption>
               
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="image"   src="https://images.unsplash.com/photo-1472806679307-eab7abd1eb32?dpr=1&auto=compress,format&fit=crop&w=1000&h=&q=80&cs=tinysrgb&crop=" />
+            <img className="image" width={900} height={200}  src={mvhs} />
             <Carousel.Caption>
               
             </Carousel.Caption>

@@ -128,10 +128,10 @@ class Admin extends Component {
       <div className="Admin_container">
         <a href={process.env.REACT_APP_LOGOUT}> <div className="logout_button">LOG OUT</div></a>
         <div className="Quote_Table">
-          <Table id="table" className="table" striped bordered condensed hover>
+          <Table id="table" className="table" responsive>
             <thead>
               <tr>
-                <th className="tabletitle"colSpan={6}>QUOTES TABLE</th>
+                <th className="tabletitle"colSpan={6}>QUOTES</th>
               </tr>
               <tr>
                 <th className="column-text">#</th>

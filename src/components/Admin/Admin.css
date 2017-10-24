@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 .Admin_container {
     width: 100vw;
@@ -7,9 +8,6 @@
     overflow-y: scroll;
     font-size: 20px;
     color: white;
-   
-    
-   
 }
 .logout_button {
     color:white;
@@ -48,6 +46,7 @@
 
 .table {
     margin-top: 1%;
+    font-family:'Quicksand', sans-serif;
 
 }
 
@@ -58,11 +57,12 @@
 
 .datacolumn {
     background:none !important;
-    color: #232323 !important;
+    color: white!important;
 }
 
 select{
     background: none;
+   
 }
 input{
     background: none;
@@ -79,4 +79,14 @@ input{
 }
 .tabletitle {
     text-align: center;
+}
+
+.dt-button buttons-create {
+    color: white important;
+}
+span {
+    color: white;
+}
+.sorting_1 {
+    cursor: pointer;
 }

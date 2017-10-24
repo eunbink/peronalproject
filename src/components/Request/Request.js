@@ -135,7 +135,8 @@ class Request extends Component {
         
         <ButtonToolbar>
             <div className="message_button_container">
-            <Flip y duration={3000}><Button className="quote_button" onClick={this.showModal}>
+            <Flip x
+             duration={3000}><Button className="quote_button" onClick={this.showModal}>
           Get A Quote
         </Button></Flip>
         </div>
@@ -154,7 +155,7 @@ class Request extends Component {
           <Modal.Body>
 
 {/* name */}
-    <FormGroup controlId="formHorizontalName" >
+    <FormGroup controlId="formHorizontal" >
       <Col componentClass={ControlLabel} sm={2} className="title_input">
         Name
       </Col>
@@ -272,13 +273,13 @@ class Request extends Component {
       </Col>
     </FormGroup>
 
-{/* Details */}
+{/* Comments */}
 <FormGroup controlId="formHorizontal">
       <Col componentClass={ControlLabel} sm={2}className="title_input">
         Comments
       </Col>
       <Col sm={8}>
-        <FormControl className="comments" onChange={(e)=>{this.setState({
+        <FormControl  className="comments" onChange={(e)=>{this.setState({
           quote:{...this.state.quote, comments:e.target.value}
           })}} type="text" placeholder="Write any comments here.." />
       </Col>
@@ -330,7 +331,7 @@ class Request extends Component {
               this.setState({
                 quote: { ...this.state.quote, email: e.target.value }
               })
-            }}placeholder="Email" value={this.state.quote.email}/>
+            }}placeholder="Email" />
      
     </FormGroup>
    
@@ -353,7 +354,7 @@ class Request extends Component {
     </FormGroup>
     <FormGroup>
       <Col >
-     { this.state.isChecked ? null :<Flip y duration={3000}><Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button></Flip> }
+     { this.state.isChecked ? null :<Flip x duration={3000}><Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button></Flip> }
       </Col>
     </FormGroup>
         </Form>

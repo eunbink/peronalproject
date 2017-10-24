@@ -10,7 +10,7 @@ class Login extends Component {
         <div className="Login_container">
          <div className="logo_container">
          <img className="colorlogo"src={ colorlogo }/>
-         <Flip x duration={3000}><div><a href={process.env.REACT_APP_LOGIN}><Button className="login_button">Login</Button></a> </div></Flip>
+         <Flip x duration={3000}><div><a href={process.env.REACT_APP_LOGIN}><Button className="login_button">Proceed to Admin Login</Button></a> </div></Flip>
           </div>
         </div>
 

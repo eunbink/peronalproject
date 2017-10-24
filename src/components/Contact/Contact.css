@@ -82,7 +82,6 @@ html {
     
 }
 .contact_form {
-    
     font-size: 22px;
     display: center;
     padding: 0px;
@@ -148,3 +147,19 @@ html {
 .contactbook:hover {
     transform: scale(1.3);
 }
+.arrow {
+    margin-top:-2%;
+    width:2%;
+    height:2%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.showmap {
+    margin-top:3%;
+    font-size:20px;
+}
+
+/* .arrow:hover {
+    transform: translateY(-3px)
+} */

@@ -13,6 +13,7 @@ import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import contact from '../../Images/contact.png';
 import multiple from '../../Images/multiple.mp4';
 
+
 class Contact extends Component {
   constructor() {
     super();
@@ -26,7 +27,16 @@ class Contact extends Component {
     }
     this.send = this.send.bind(this);
     this.showContact = this.showContact.bind(this);
+    this.showMap = this.showMap.bind(this);
   }
+
+  showMap() {
+    this.setState({
+      show: !this.state.show
+    });
+  }
+
+
   showContact() {
     this.setState({
       show: !this.state.show
@@ -64,12 +74,13 @@ class Contact extends Component {
 
 
   render() {
+  
 
     return (
       <div className="contact-container">
-         <video autoPlay loop="true" id="video">
-         <source src={multiple} type="video/mp4"/>
-         </video>
+        <video autoPlay loop="true" id="video">
+          <source src={multiple} type="video/mp4" />
+        </video>
         <div className='contact'>
           <div className="form" >
             <h1>Contact Us</h1>
@@ -78,9 +89,9 @@ class Contact extends Component {
             {/* --------Contacts-------- */}
 
 
-           <div className="CT">
+            <div className="CT">
 
-             {this.state.show ? <Fade top duration={2000}> <div className="contactlist">
+              {this.state.show ? <Fade top duration={2000}> <div className="contactlist">
 
 
                 <div className="col">
@@ -100,7 +111,7 @@ class Contact extends Component {
                 </div>
 
               </div></Fade> : null}
-            </div> 
+            </div>
 
 
             <input className="input" onChange={(e) => {
@@ -132,12 +143,16 @@ class Contact extends Component {
 
 
           {/* --------MAP------------- */}
-          <div id="map"></div>
+
+
+          <div className="showmap">
+            <p>Show Map</p>
+            <img onClick={this.showMap} className="arrow" src={arrow} />
+          </div>
 
 
 
-
-
+          <div id="map"></div> 
 
 
           <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
