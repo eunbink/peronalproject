@@ -37,16 +37,14 @@
     margin: 0 auto;
 }
 
+
 .carousel-control.left, .carousel-control.right {
     background-image:none !important;
     filter:none !important;
-    margin-top:25%;
-    height:10%;
-    
+    margin-top:20%;
+    height:10%;  
  }
-.carousel-control {
-    width:100px;
-}
+
 
 .carousel {
     width:100vw !important;
@@ -56,17 +54,24 @@
   .carousel-inner {
     width:100vw !important;
     height:100vh !important;
+    margin-bottom: 120px;
   }
 
 #apparel, #logo, #tradeshow, #marketingproducts{
+    height:50px;
     display: inline-block;
-    border: none;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
     color: white;
-    font-size: 23px;
-    padding:50px;
+    font-size: 15px;
+    padding:10px;
     cursor: pointer;
     transition: 0.2s ease;
-    margin-top: -3%; 
+    margin: 70px 10px 40px 25px; 
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+
  
 }
 
@@ -78,15 +83,13 @@
 .wrap {
     display:flex;
     justify-content: center;
-    margin-bottom:-2%;
+    
     
 }
 
 #apparel:hover, #logo:hover, #tradeshow:hover, #marketingproducts:hover {
     transform: translate(0,-4px) ;
-    opacity:0.8;
-    
-    
+    opacity:0.7;
 }
 
 .carousel-indicators li {
@@ -118,19 +121,24 @@ margin-bottom: 4%;
 
 
 .aboutparagraph{
-    font-size: 30px !important;
+    font-size: 25px !important;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 .about {
-    margin-top:6%;
+    margin-top:10%;
     margin-left:15%;
     margin-right:15%;
     margin-bottom: 7%;
     align-content: center;
+    border: white 1px solid;
+    font-family: 'Quicksand', sans-serif;
+    padding: 1.5%;
 }
 .aboutexplain {
     text-align: left;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .carousel img {
@@ -141,3 +149,23 @@ margin-bottom: 4%;
     max-width: none;
     
   }
+
+.project-button {
+    background: none;
+    border: 1px white solid;
+    color: white;
+    font-size: 25px;
+    transition:0.3s;
+  }
+.project-button:hover {
+  background:none;
+  transform: translate(0,-6px) ;
+  color:white;
+  border:white;
+  box-shadow:
+  1px 1px white,
+  2px 2px white,
+  3px 3px white;
+transform: translateX(-3px);
+transform: translateX(-3px);
+}

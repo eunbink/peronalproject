@@ -19,7 +19,7 @@ ul {
 }
 
 li {
-    padding: 20px;
+    padding: 25px;
     color:white;
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 25px;
@@ -39,7 +39,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #nav.slidemenu{
-    left:1.2%;
+    left:3.5%;
     position: fixed;
     z-index: 1;
    

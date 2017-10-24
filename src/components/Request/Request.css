@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 button:focus {outline:0 !important;}
 input:focus {
@@ -22,7 +23,7 @@ input:focus {
     padding:1.2%;
     cursor: pointer;  
     transition:0.3s;
-    margin-top: 10%;
+    margin-top: 15%;
     margin-left: 47%;
     
 } 
@@ -43,6 +44,11 @@ transform: translateX(-3px);
    margin-left:35%;
    margin-top:10%;
 }
+
+#formHorizontal{
+    font-family: 'Quicksand', sans-serif;
+    
+}
 #formHorizontalInvoice, #formHorizontalEmail2 {
     
     width: 400px;
@@ -51,10 +57,11 @@ transform: translateX(-3px);
 }
 .formHorizontalPay {
     margin-left:40px;
+    
 }
 
-::-webkit-input-placeholder { /* Chrome */
-    font-size:15px;
+::-webkit-input-placeholder {
+    font-size:18px;
     color:white;
     font-family: 'Abel', sans-serif;
     
@@ -102,7 +109,7 @@ transform: translateX(-3px);
 .modal-content {
     width: 600px;
     height:900px;
-    background: white;
+    background: GAINSBORO;
     color:black;
 }  
 
@@ -113,7 +120,7 @@ transform: translateX(-3px);
     
 }
 label {
-    margin-top: 0;
+    margin-top: -1%;
 }
 .comments {
     height:200px;
