@@ -19,7 +19,7 @@
     position: fixed;
     z-index:-1;
     overflow:scroll;
-    opacity:0.5;
+    opacity:0.7;
 }
 
 #video3 {
@@ -31,7 +31,7 @@
     position: fixed;
     z-index:-1;
     overflow:scroll;
-    opacity:0.3;
+    opacity:0.5;
 }
 .image {
     margin: 0 auto;

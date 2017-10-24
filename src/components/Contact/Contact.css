@@ -12,7 +12,7 @@ input:focus {
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    overflow-x: hidden;
+    overflow:scroll;
     color: white;
     position: relative;
 }
@@ -88,10 +88,8 @@ html {
 }
 
 #map {
-    margin-top: 7%;
     height:300px;
     opacity:0.8;
-    
  
 }
 .mapboxgl-marker {

@@ -12,12 +12,13 @@ import fax from '../../Images/faxicon.png';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import contact from '../../Images/contact.png';
 import multiple from '../../Images/multiple.mp4';
-
+import Map from '../Map.js'
 
 class Contact extends Component {
   constructor() {
     super();
     this.state = {
+      showmap:false,
       show: false,
       email: {
         name: "",
@@ -32,7 +33,7 @@ class Contact extends Component {
 
   showMap() {
     this.setState({
-      show: !this.state.show
+      showmap: !this.state.showmap
     });
   }
 
@@ -55,30 +56,10 @@ class Contact extends Component {
   }
 
 
-  componentDidMount() {
-
-    mapboxgl.accessToken = 'pk.eyJ1Ijoia2FuZ3AxODMiLCJhIjoiY2o4a25wdnB4MGZjaTJ3bXZrZ3lqanl4ZyJ9.15XvXGwFuUbl5uhPOEW2QA';
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/kangp183/cj94myyyonrxj2qp9l1uc3v5l',
-      center: [-111.728694, 40.310700],
-      zoom: 17.5
-    });
-
-    map.on('load', () => {
-      var marker = new mapboxgl.Marker().setLngLat([-111.72867, 40.31083]).addTo(map);
-
-    });
-    map.scrollZoom.disable();
-  }
-
-
   render() {
-  
-
     return (
       <div className="contact-container">
-        <video autoPlay loop="true" id="video">
+        <video autoPlay loop="true" id="video3">
           <source src={multiple} type="video/mp4" />
         </video>
         <div className='contact'>
@@ -147,19 +128,17 @@ class Contact extends Component {
 
           <div className="showmap">
             <p>Show Map</p>
-            <img onClick={this.showMap} className="arrow" src={arrow} />
+            <img onClick= {()=>{this.showMap()}} className="arrow" src={arrow} />
           </div>
 
-
-
-          <div id="map"></div> 
+        {this.state.showmap ? <Map/>: null}
 
 
           <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
         </div>
 
       </div>
-
+  
 
 
     );
