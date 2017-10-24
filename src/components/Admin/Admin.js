@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import './Admin.css';
 import { Button, Table } from 'react-bootstrap';
 import axios from 'axios';
+
+import 'datatables.net-buttons';
+import 'datatables.net-select';
+
 const $ = require('jquery');
+// Create global aliases for jquery
+window.jQuery = window.$ = $;
 $.DataTable = require('datatables.net');
+require('datatables.net-editor');
 
 
 class Admin extends Component {
@@ -61,7 +68,31 @@ class Admin extends Component {
         )
       })
 
-      $('#table').DataTable({
+      // Editor code
+      var editor = new $.fn.dataTable.Editor( {} );
+      new $.fn.dataTable.Editor( {
+        // ajax: 'some endpoint here', // edit stuff using this
+        table: '#table',
+        fields: [
+          {
+            label: "Comments:",
+            name: "Comments"
+        }, {
+            label: "Invoice:",
+            name: "Add Invoice" 
+        }
+ 
+        ]
+      } );
+
+      // $('#table').on( 'click', 'tbody td:not(:first-child)', function (e) {
+      //   editor.inline( this );
+      // } );
+
+
+      // DataTable code
+      var table = $('#table').DataTable({
+        dom: 'Bfrltip',
         data: quotesDisplayed,
         columns: [
           { title: "#" },
@@ -69,10 +100,24 @@ class Admin extends Component {
           { title: "Phone Number" },
           { title: "Comments" },
           { title: "Add Invoice" },
-          { title: "Invoice #" },
+          { title: "Invoice #" }
           
+        ],
+        select: {
+          style:    'os',
+          selector: 'td:first-child'
+        },
+        buttons: [
+            { extend: "create", editor: editor },
+            { extend: "edit",   editor: editor }
         ]
       });
+
+
+      // Buttons code
+      table.buttons().container()
+      .appendTo( $('#table_buttons', table.table().container() ) );
+
 
     })
   }
@@ -108,6 +153,8 @@ class Admin extends Component {
             </tfoot>
 
           </Table>
+          <div id="table_buttons">
+            </div>
         </div>
 
 
