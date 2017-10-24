@@ -13,6 +13,8 @@ import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import contact from '../../Images/contact.png';
 import multiple from '../../Images/multiple.mp4';
 import Map from '../Map.js'
+import scrollToComponent from 'react-scroll-to-component';
+
 
 class Contact extends Component {
   constructor() {
@@ -29,6 +31,9 @@ class Contact extends Component {
     this.send = this.send.bind(this);
     this.showContact = this.showContact.bind(this);
     this.showMap = this.showMap.bind(this);
+    this.scrollMap = this.scrollMap.bind(this);
+    
+    
   }
 
   showMap() {
@@ -37,7 +42,12 @@ class Contact extends Component {
     });
   }
 
-
+  scrollMap(val){
+    scrollToComponent(val,{
+      align:'bottom'
+    })
+    
+  }
   showContact() {
     this.setState({
       show: !this.state.show
@@ -127,11 +137,15 @@ class Contact extends Component {
 
 
           <div className="showmap">
-            <p>Show Map</p>
-            <img onClick= {()=>{this.showMap()}} className="arrow" src={arrow} />
+            <p>View Map</p>
+            <img onClick= {()=>{
+              this.showMap()
+
+              }
+                } className="arrow" src={arrow} />
           </div>
 
-        {this.state.showmap ? <Map/>: null}
+        {this.state.showmap ? <Map scrollMap={this.scrollMap}/>: null}
 
 
           <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>

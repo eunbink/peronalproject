@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+
+
+.dt-button:focus {outline:0;}
+
 .Admin_container {
     width: 100vw;
     height: 100vh;
@@ -46,8 +50,6 @@
 
 .table {
     margin-top: 1%;
-    font-family:'Quicksand', sans-serif;
-
 }
 
 .column-text{

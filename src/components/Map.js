@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
+import scrollToComponent from 'react-scroll-to-component';
 
 class Map extends Component {
     componentDidMount() {
@@ -16,11 +17,15 @@ class Map extends Component {
     
         });
         map.scrollZoom.disable();
+        
+        this.props.scrollMap(this.refs.scroll)
     }
     render() {
+        
+        
         return (
-            <div>
-                 <div id="map"></div> 
+            <div ref="scroll">
+                 <div  id="map"></div> 
             </div>
         )
     }
