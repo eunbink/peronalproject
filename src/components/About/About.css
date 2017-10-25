@@ -4,9 +4,9 @@
 
 .about_container {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-size: cover;
-    overflow: scroll;
+    overflow: hidden;
     color: white;
     position: relative;
 }
@@ -127,10 +127,9 @@ margin-bottom: 4%;
 }
 
 .about {
-    margin-top:5%;
+    margin-top:12%;
     margin-left:15%;
     margin-right:15%;
-    margin-bottom: 7%;
     align-content: center;
     border: white 1px solid;
     font-family: 'Quicksand', sans-serif;
@@ -155,7 +154,8 @@ margin-bottom: 4%;
     color: white;
     font-size: 25px;
     transition:0.3s;
-    margin-top:12%;
+    margin-top:5%;
+    margin-bottom:1%;
   }
 .project-button:hover {
   background:none;

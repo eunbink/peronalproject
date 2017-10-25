@@ -81,7 +81,7 @@ app.get('/auth/me', (req, res) => {   //if users are authenticated.
 
 app.get('/auth/logout', ( req, res ) => {
     req.logOut();
-    res.redirect(302, 'https://eunbin.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:3000/#/Login')
+    res.redirect(302, 'https://eunbin.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:3000/#/')
 })
 
 

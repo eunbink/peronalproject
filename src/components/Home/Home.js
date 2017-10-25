@@ -25,7 +25,8 @@ class Home extends Component {
           onTypingDone={this.onHeaderTyped}> 
           Fulfilling Creative Jobs from Ideas to Delivery.
           </Typist>
-        <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
+          <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
+        
         <Flip x delay={500} duration={2000}><NavLink activeClassName='active' to='/About'><Button className="aboutusButton">Discover About Us</Button></NavLink></Flip>
       </div>
         

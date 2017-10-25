@@ -24,8 +24,8 @@
     transition: 0.3s;
 }
 .logout_button:hover {
-    transform: translate(0,-4px);
-    opacity: 0.7;
+    letter-spacing: 4px;
+    opacity: 0.8;
 }
 .Quote_Table {
     margin: 12%;

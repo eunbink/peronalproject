@@ -32,8 +32,6 @@ class Contact extends Component {
     this.showContact = this.showContact.bind(this);
     this.showMap = this.showMap.bind(this);
     this.scrollMap = this.scrollMap.bind(this);
-    
-    
   }
 
   showMap() {
@@ -46,7 +44,6 @@ class Contact extends Component {
     scrollToComponent(val,{
       align:'bottom'
     })
-    
   }
   showContact() {
     this.setState({
@@ -140,7 +137,6 @@ class Contact extends Component {
             <p>View Map</p>
             <img onClick= {()=>{
               this.showMap()
-
               }
                 } className="arrow" src={arrow} />
           </div>
@@ -148,7 +144,7 @@ class Contact extends Component {
         {this.state.showmap ? <Map scrollMap={this.scrollMap}/>: null}
 
 
-          <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
+        <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
         </div>
 
       </div>

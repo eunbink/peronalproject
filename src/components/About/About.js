@@ -15,7 +15,7 @@ import Clayton from '../../Images/Clayton.png';
 import amazon from '../../Images/amazon.JPG';
 import limitless from '../../Images/limitless.JPG';
 import stentorian from '../../Images/stentorian.jpg';
-
+import scrollToComponent from 'react-scroll-to-component';
 
 
 class About extends Component {
@@ -29,6 +29,7 @@ class About extends Component {
       showmarketingproducts:false,
     }
     this.showProjects = this.showProjects.bind(this);
+    this.scrollProjects = this.scrollProjects.bind(this);
     this.showOneCarousel = this.showOneCarousel.bind(this);
   }
 
@@ -45,8 +46,15 @@ class About extends Component {
      show: !this.state.show
    })
  }
- 
 
+ scrollProjects (val) {
+  scrollToComponent(val,{
+    align:'bottom'
+  })
+ }
+ componentDidMount() {
+  this.scrollProjects(this.refs.pro)
+}
   render() {
     return (
       <div className="about_container">
@@ -54,9 +62,17 @@ class About extends Component {
          <source src={ multiple } type="video/mp4"/>
          </video>
       
-         <Flip x duration={3000}><Button onClick={this.showProjects} className="project-button" > Discover Projects </Button></Flip>
-     {this.state.show ?  <Fade top duration={1500}><div className="project_container">
-        <div className="wrap">
+         <div className="about">
+          <p  className="aboutparagraph">About Us</p>
+          <p className="aboutexplain">Since the 1990s we’ve tackled design and fulfillment projects  with our competent and highly trained creative people.  We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition!
+          </p>
+       </div>
+
+         <Flip x duration={2000}><Button 
+         onClick={ this.showProjects} className="project-button" > Discover Projects </Button></Flip>
+     {this.state.show ?  
+        <div ref="pro" className="project_container">
+        <div  className="wrap">
         <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer1"><p id="apparel" >CLOTHING & ACCESSORIES</p></div>
         <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer2"><p id="logo" >LOGOS</p></div>
         <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer3"><p id="tradeshow">TRADE SHOW DISPLAYS</p></div>
@@ -149,15 +165,9 @@ class About extends Component {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel></Fade> : null }
-        </div></Fade>: null }
+        </div>: null }
         
-        <div className="about">
-          <p  className="aboutparagraph">About Us</p>
-          <p className="aboutexplain">Since the 1990s we’ve tackled design and fulfillment projects  with our competent and highly trained creative people.  We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition!
-          </p>
-          </div>
-
-        <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
+        <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
      
       </div>
     );

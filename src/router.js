@@ -4,7 +4,6 @@ import Home from './components/Home/Home.js';
 import About from './components/About/About.js';
 import Contact from './components/Contact/Contact.js';
 import Request from './components/Request/Request.js';
-import Login from './components/Login/Login.js';
 import Admin from './components/Admin/Admin.js';
 
 export default (
@@ -13,7 +12,6 @@ export default (
     <Route component={ About} path="/about" /> 
     <Route component={ Contact } path="/contact" />
     <Route component={ Request } path="/request" />
-    <Route component={ Login } path="/Login" />
     <Route component={ Admin } path="/Admin" />
   </Switch>
 )

@@ -23,15 +23,13 @@ li {
     color:white;
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 25px;
-    transition: 0.2s; 
+    transition: 0.2s ease; 
     cursor: pointer;
     
 }
 
 li:hover {
-    transform: translateY(-4px);
-    opacity: 0.7;
-  
+    letter-spacing: 4px;
 }
 
 a:link, a:visited, a:hover, a:active {

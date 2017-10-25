@@ -360,7 +360,7 @@ class Request extends Component {
         </Form>
         </div>
        </div>
-       <NavLink className="Admin_button" activeClassName='active' to='/Login'>ADMIN LOGIN</NavLink>
+       <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
       </div>
     );
   }
