@@ -29,7 +29,8 @@ li {
 }
 
 li:hover {
-    letter-spacing: 4px;
+    transform: translateY(-4px);
+    opacity:0.85;
 }
 
 a:link, a:visited, a:hover, a:active {

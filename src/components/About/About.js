@@ -3,19 +3,21 @@ import './About.css';
 import { Carousel, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
-import clouds from '../../Images/clouds.mp4';
+import blue from '../../Images/blue.mp4';
 import colorshirts from '../../Images/colorshirts.JPG';
 import hat from '../../Images/hat.jpg';
 import western from '../../Images/westernshirt.JPG';
 import hokulia from '../../Images/Hokulia.jpg';
 import honey from '../../Images/Honey.JPG';
 import mvhs from '../../Images/mvhs.JPG';
-import paradise from '../../Images/Paradise.png';
-import Clayton from '../../Images/Clayton.png';
+import valley from '../../Images/valley.png';
+import mt from '../../Images/mt.png';
 import amazon from '../../Images/amazon.JPG';
 import limitless from '../../Images/limitless.JPG';
 import stentorian from '../../Images/stentorian.jpg';
 import scrollToComponent from 'react-scroll-to-component';
+import mtech from '../../Images/mtech.png'
+import colorlogo from '../../Images/colorlogo.png'
 
 
 class About extends Component {
@@ -23,8 +25,8 @@ class About extends Component {
     super();
     this.state = {
       show: false,
-      showApparel: true,
-      showLogo: false,
+      showApparel: false,
+      showLogo: true,
       showtradeshow: false,
       showmarketingproducts: false,
     }
@@ -59,17 +61,18 @@ class About extends Component {
     return (
       <div className="about_container">
         <video autoPlay loop="true" id="video3">
-          <source src={clouds} type="video/mp4" />
+          <source src={blue} type="video/mp4" />
         </video>
 
         <div className="about">
-          <p className="aboutparagraph">About Us</p>
-          <p className="aboutexplain">Since the 1990s we’ve tackled design and fulfillment projects  with our competent and highly trained creative people.  We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition!
+          <img className="colorlogo" src={colorlogo}/>
+          <p className="aboutexplain"> MAKE IT BIG! We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition!
           </p>
+          <Flip x duration={2000}><Button
+          onClick={()=>{this.showProjects(); setTimeout(()=>{this.scrollProjects(this.refs.pro)},100)}} className="project-button" > Discover Projects </Button></Flip>
         </div>
 
-        <Flip x duration={2000}><Button
-          onClick={()=>{this.showProjects(); setTimeout(()=>{this.scrollProjects(this.refs.pro)},100)}} className="project-button" > Discover Projects </Button></Flip>
+        
         {this.state.show ?
           <div ref="pro" className="project_container">
             <div className="wrap">
@@ -79,7 +82,7 @@ class About extends Component {
               <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer4"><p id="marketingproducts">MARKETING PRODUCTS</p></div>
             </div>
 
-            {this.state.showApparel ? <Fade duration={1000}><Carousel>
+            {this.state.showApparel ? <Fade duration={1500}><Carousel>
               <Carousel.Item >
                 <img className="image" width={700} height={200} src={colorshirts} />
                 <Carousel.Caption>
@@ -101,21 +104,21 @@ class About extends Component {
             </Carousel></Fade> : null}
 
 
-            {this.state.showLogo ? <Fade duration={1000}><Carousel>
+            {this.state.showLogo ? <Fade delay={2000} duration={1000}><Carousel>
               <Carousel.Item >
-                <img className="image" width={700} height={200} src={paradise} />
+                <img className="image" width={700} height={200} src={valley} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={700} height={200} src={Clayton} />
+                <img className="image" width={700} height={200} src={mt} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={700} height={200} src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/logo-design-leloux-orem.jpg&w=630&h=378&zc=1" />
+                <img className="image" width={700} height={200} src={mtech} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
@@ -123,7 +126,7 @@ class About extends Component {
             </Carousel></Fade> : null}
 
 
-            {this.state.showtradeshow ? <Fade duration={1000}><Carousel>
+            {this.state.showtradeshow ? <Fade duration={1500}><Carousel>
               <Carousel.Item >
                 <img className="image" width={700} height={200} src={amazon} />
                 <Carousel.Caption>
@@ -145,7 +148,7 @@ class About extends Component {
             </Carousel></Fade> : null}
 
 
-            {this.state.showmarketingproducts ? <Fade duration={1000}><Carousel>
+            {this.state.showmarketingproducts ? <Fade duration={1500}><Carousel>
               <Carousel.Item >
                 <img className="image" width={700} height={200} src={hokulia} />
                 <Carousel.Caption>
@@ -168,7 +171,7 @@ class About extends Component {
           </div> : null}
 
           <div className="ourservice">
-          <p>Our Service</p>
+          <p>Our Services</p>
          <div className="servicetype">
             <div>
               <p className="servicetitle" >PRINTING</p>

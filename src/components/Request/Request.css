@@ -78,9 +78,9 @@ transform: translateX(-3px);
     margin-top:-2%;
 }
 .custom-modal2 {
-    height:80%;
+    height:60%;
     font-family: 'Saira Extra Condensed', sans-serif;
-    overflow-y: 300px;
+    overflow-y: hidden;
     
 }
 
@@ -108,8 +108,9 @@ transform: translateX(-3px);
 }
 .modal-content {
     width: 600px;
-    height:900px;
-    background: GAINSBORO;
+    height:530px;
+    overflow-y: scroll;
+    background: white;
     color:black;
 }  
 
@@ -149,3 +150,8 @@ label {
     margin-right: 0;
 }
 
+.close {
+    width:10px;
+    height: 10px;
+    color:black !important;
+}

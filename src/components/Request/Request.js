@@ -6,7 +6,7 @@ import stripe from './Stripekey';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
-import multiple from '../../Images/multiple.mp4';
+import blue from '../../Images/blue.mp4';
 
 
 class Request extends Component {
@@ -126,7 +126,7 @@ class Request extends Component {
     return (
       <div className='request_container'>
          <video autoPlay loop="true" id="video3">
-         <source src={multiple} type="video/mp4"/>
+         <source src={blue} type="video/mp4"/>
          </video>
       <div>
      
@@ -135,10 +135,9 @@ class Request extends Component {
         
         <ButtonToolbar>
             <div className="message_button_container">
-            <Flip x
-             duration={3000}><Button className="quote_button" onClick={this.showModal}>
+            <Button className="quote_button" onClick={this.showModal}>
           Get A Quote
-        </Button></Flip>
+        </Button>
         </div>
           <Modal   
           {...this.props}

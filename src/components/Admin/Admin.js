@@ -40,11 +40,11 @@ class Admin extends Component {
 
   addInvoice(e) {
     axios.patch('api/quote/addinvoice', { invoice: this.state.invoice, invoiceid: this.state.id })
-      .then(response => {
-        this.setState({ quotes: response.data })
-        alert('Your invoice has been saved!') //refresh the page!
-      })
+      .then( res => { alert('Your invoice has been saved!') 
+    })
   }
+
+
 
   componentDidMount() {
     axios.get('/api/quote/getquote').then(response => {
