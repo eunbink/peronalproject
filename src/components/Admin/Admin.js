@@ -59,67 +59,53 @@ class Admin extends Component {
           quote.id, 
           quote.name, 
           quote.phonenumber, 
-          "", 
+          quote.email, 
           "",
-          quote.invoice, 
-          
-        
+          quote.invoice
           ]
         )
       })
 
-      // Editor code
-      var editor = new $.fn.dataTable.Editor( {} );
-      new $.fn.dataTable.Editor( {
-        // ajax: 'some endpoint here', // edit stuff using this
-        table: '#table',
-        fields: [
-          {
-            label: "Comments:",
-            name: "Comments"
-        }, {
-            label: "Invoice:",
-            name: "Add Invoice" 
-        }
- 
-        ]
-      } );
-
-      // $('#table').on( 'click', 'tbody td:not(:first-child)', function (e) {
-      //   editor.inline( this );
-      // } );
-
+      
 
       // DataTable code
       var table = $('#table').DataTable({
-        dom: 'Bfrltip',
+        // dom: 'Bfrltip',
         data: quotesDisplayed,
         columns: [
           { title: "#" },
           { title: "Full Name" },
           { title: "Phone Number" },
-          { title: "Comments" },
-          { title: "Add Invoice" },
+          { title: "Email" },
+          { title: "Add Invoice",
+            render: function (data, type, row){
+              return '<input className="invoiceinput"/>';
+            }
+          },
           { title: "Invoice #" }
-          
         ],
         select: {
           style:    'os',
           selector: 'td:first-child'
-        },
-        buttons: [
-            { extend: "create", editor: editor },
-            { extend: "edit",   editor: editor }
-        ]
+        }
       });
 
+    // Update state from invoice input box
+    $('input[className=invoiceinput]').on('input', e => {
+      
+      console.log(e.target.value);
+      console.log($(e.target).closest('tr').find('td:nth-child(1)').text());
 
-      // Buttons code
-      table.buttons().container()
-      .appendTo( $('#table_buttons', table.table().container() ) );
-
+      this.setState({
+        invoice: e.target.value,
+        id: $(e.target).closest('tr').find('td:nth-child(1)').text(),
+      })
+    });
 
     })
+
+    
+
   }
   
 
@@ -128,7 +114,7 @@ class Admin extends Component {
       <div className="Admin_container">
         <a href={process.env.REACT_APP_LOGOUT}> <div className="logout_button">LOG OUT</div></a>
         <div className="Quote_Table">
-          <Table id="table" className="table" responsive>
+          <Table id="table" className="table" bordered condensed>
             <thead>
               <tr>
                 <th className="tabletitle"colSpan={6}>QUOTES</th>
@@ -181,3 +167,39 @@ export default Admin;
       //   <td className="table_body">{quote.invoice}</td>
       //   <td className="table_body"><Button onClick={() => { this.deleteQuote(quote.id) }} className="delete_button">DELETE</Button></td>
       // </tr>
+
+
+
+// // Editor code
+      // var editor = new $.fn.dataTable.Editor( {} );
+      // new $.fn.dataTable.Editor( {
+      //   // ajax: function ( method, url, d, successCallback, errorCallback ){
+      //   //   console.log("hi");
+      //   //   if ( d.action === 'create' ){
+      //   //     console.log("in here");
+      //   //   }
+
+      //   //   successCallback( d );
+      //   // },
+      //   ajax: quotesDisplayed,
+      //   table: '#table',
+      //   fields: [
+      //     {
+      //       label: "Comments:",
+      //       name: "Comments"
+      //   }, {
+      //       label: "Invoice:",
+      //       name: "Add Invoice" 
+      //   }
+ 
+      //   ]
+      // } );
+
+      // $('#table').on( 'click', 'tbody td:not(:first-child)', function (e) {
+      //   editor.inline( this );
+      // } );
+
+ // buttons: [
+        //     { extend: "create", editor: editor },
+        //     { extend: "edit",   editor: editor }
+        // ]

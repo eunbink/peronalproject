@@ -61,6 +61,7 @@ html {
     color: white;
     background: none;
     transition: 0.4s;
+    font-family: 'Saira Extra Condensed', sans-serif;
 }
 
 .messageSubmitbutton:hover {

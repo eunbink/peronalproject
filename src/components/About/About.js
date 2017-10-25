@@ -23,17 +23,17 @@ class About extends Component {
     super();
     this.state = {
       show: false,
-      showApparel:false,
+      showApparel: false,
       showLogo: true,
-      showtradeshow:false,
-      showmarketingproducts:false,
+      showtradeshow: false,
+      showmarketingproducts: false,
     }
     this.showProjects = this.showProjects.bind(this);
     this.scrollProjects = this.scrollProjects.bind(this);
     this.showOneCarousel = this.showOneCarousel.bind(this);
   }
 
-  showOneCarousel (carousel){
+  showOneCarousel(carousel) {
     this.setState({
       showApparel: carousel === "apparel" ? true : false,
       showLogo: carousel === "logo" ? true : false,
@@ -41,134 +41,138 @@ class About extends Component {
       showmarketingproducts: carousel === "marketingproducts" ? true : false,
     })
   }
- showProjects () {
-   this.setState({
-     show: !this.state.show
-   })
- }
+  showProjects() {
+    this.setState({
+      show: !this.state.show
+    })
+  }
 
- scrollProjects (val) {
-  scrollToComponent(val,{
-    align:'bottom'
-  })
- }
- componentDidMount() {
-  this.scrollProjects(this.refs.pro)
-}
+  scrollProjects(val) {
+    scrollToComponent(val, {
+      align: 'bottom'
+    })
+  }
+  componentDidMount() {
+    this.scrollProjects(this.refs.pro)
+  }
   render() {
     return (
       <div className="about_container">
-          <video autoPlay loop="true" id="video3">
-         <source src={ multiple } type="video/mp4"/>
-         </video>
-      
-         <div className="about">
-          <p  className="aboutparagraph">About Us</p>
+        <video autoPlay loop="true" id="video3">
+          <source src={multiple} type="video/mp4" />
+        </video>
+
+        <div className="about">
+          <p className="aboutparagraph">About Us</p>
           <p className="aboutexplain">Since the 1990s we’ve tackled design and fulfillment projects  with our competent and highly trained creative people.  We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition!
           </p>
-       </div>
-
-         <Flip x duration={2000}><Button 
-         onClick={ this.showProjects} className="project-button" > Discover Projects </Button></Flip>
-     {this.state.show ?  
-        <div ref="pro" className="project_container">
-        <div  className="wrap">
-        <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer1"><p id="apparel" >CLOTHING & ACCESSORIES</p></div>
-        <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer2"><p id="logo" >LOGOS</p></div>
-        <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer3"><p id="tradeshow">TRADE SHOW DISPLAYS</p></div>
-        <div onClick={(e)=>{this.showOneCarousel(e.target.id)}} className="picturecontainer4"><p id="marketingproducts">MARKETING PRODUCTS</p></div>
         </div>
-             
-       { this.state.showApparel ? <Fade duration={1000}><Carousel>
-          <Carousel.Item >
-            <img className="image" width={900} height={200}  src={colorshirts} />
-            <Carousel.Caption>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="image" width={900} height={200}   src={hat} />
-            <Carousel.Caption>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="image" width={900} height={200} src={western} />
-            <Carousel.Caption>
-             
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel></Fade> : null }
 
-        
-         { this.state.showLogo ? <Fade duration={1000}><Carousel>
-          <Carousel.Item >
-            <img className="image" width={900} height={200} src={paradise} />
-            <Carousel.Caption>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="image" width={900} height={200}  src={Clayton} />
-            <Carousel.Caption>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="image" width={900} height={200}  src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/logo-design-leloux-orem.jpg&w=630&h=378&zc=1" />
-            <Carousel.Caption>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel></Fade> : null }
+        <div className="ourservice">
+          
+        </div>
 
-        
-       { this.state.showtradeshow ? <Fade duration={1000}><Carousel>
-          <Carousel.Item >
-            <img className="image" width={900} height={200}  src={amazon} />
-            <Carousel.Caption>
-             
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="image" width={900} height={200}  src={limitless} />
-            <Carousel.Caption>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="image"  width={900} height={200} src={stentorian} />
-            <Carousel.Caption>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel></Fade> : null }
-       
-        
-       { this.state.showmarketingproducts ? <Fade duration={1000}><Carousel>
-          <Carousel.Item >
-            <img className="image" width={900} height={200}  src={hokulia} />
-            <Carousel.Caption>
-             
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="image"  width={900} height={200} src={honey} />
-            <Carousel.Caption>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="image" width={900} height={200}  src={mvhs} />
-            <Carousel.Caption>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel></Fade> : null }
-        </div>: null }
-        
+        <Flip x duration={2000}><Button
+          onClick={this.showProjects} className="project-button" > Discover Projects </Button></Flip>
+        {this.state.show ?
+          <div ref="pro" className="project_container">
+            <div className="wrap">
+              <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer1"><p id="apparel" >CLOTHING & ACCESSORIES</p></div>
+              <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer2"><p id="logo" >LOGOS</p></div>
+              <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer3"><p id="tradeshow">TRADE SHOW DISPLAYS</p></div>
+              <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer4"><p id="marketingproducts">MARKETING PRODUCTS</p></div>
+            </div>
+
+            {this.state.showApparel ? <Fade duration={1000}><Carousel>
+              <Carousel.Item >
+                <img className="image" width={900} height={200} src={colorshirts} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={900} height={200} src={hat} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={900} height={200} src={western} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel></Fade> : null}
+
+
+            {this.state.showLogo ? <Fade duration={1000}><Carousel>
+              <Carousel.Item >
+                <img className="image" width={900} height={200} src={paradise} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={900} height={200} src={Clayton} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={900} height={200} src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/logo-design-leloux-orem.jpg&w=630&h=378&zc=1" />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel></Fade> : null}
+
+
+            {this.state.showtradeshow ? <Fade duration={1000}><Carousel>
+              <Carousel.Item >
+                <img className="image" width={900} height={200} src={amazon} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={900} height={200} src={limitless} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={900} height={200} src={stentorian} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel></Fade> : null}
+
+
+            {this.state.showmarketingproducts ? <Fade duration={1000}><Carousel>
+              <Carousel.Item >
+                <img className="image" width={900} height={200} src={hokulia} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={900} height={200} src={honey} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={900} height={200} src={mvhs} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel></Fade> : null}
+          </div> : null}
+
         <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
-     
+
       </div>
     );
   }

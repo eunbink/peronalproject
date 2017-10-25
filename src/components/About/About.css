@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Londrina+Sketch');
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
 
 .about_container {
     width: 100vw;
@@ -19,7 +19,7 @@
     position: fixed;
     z-index:-1;
     overflow:scroll;
-    opacity:0.7;
+    opacity:0.4;
 }
 
 #video3 {
@@ -31,7 +31,7 @@
     position: fixed;
     z-index:-1;
     overflow:scroll;
-    opacity:0.5;
+    opacity:0.4;
 }
 .image {
     margin: 0 auto;
@@ -63,12 +63,12 @@
     border-bottom: 1px solid white;
     border-top: 1px solid white;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     padding:10px;
     cursor: pointer;
     transition: 0.2s ease;
     margin: 70px 10px 40px 25px; 
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;
     display: flex;
     align-items: center;
 
@@ -122,7 +122,7 @@ margin-bottom: 4%;
 
 .aboutparagraph{
     font-size: 25px !important;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;
 
 }
 
@@ -132,7 +132,7 @@ margin-bottom: 4%;
     margin-right:15%;
     align-content: center;
     border: white 1px solid;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;  
     padding: 1.5%;
 }
 .aboutexplain {
@@ -152,7 +152,7 @@ margin-bottom: 4%;
     background: none;
     border: 1px white solid;
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     transition:0.3s;
     margin-top:5%;
     margin-bottom:1%;
@@ -168,4 +168,12 @@ margin-bottom: 4%;
   3px 3px white;
 transform: translateX(-3px);
 transform: translateX(-3px);
+}
+
+.ourservice {
+    background: #202020;
+    opacity:0.8;
+    color: white;
+    font-size:15px;
+    height:300px;
 }

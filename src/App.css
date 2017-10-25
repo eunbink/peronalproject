@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
 
 body {
   background:#202020;
   text-align: center;
   height: 100vh;
-  font-family: 'Saira Extra Condensed', sans-serif;
+  font-family: 'Saira Condensed', sans-serif;
   color: white;
 }
 

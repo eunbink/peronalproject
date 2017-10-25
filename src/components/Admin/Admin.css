@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 
 .dt-button:focus {outline:0;}
@@ -28,13 +28,13 @@
     opacity: 0.8;
 }
 .Quote_Table {
-    margin: 12%;
+    margin: 11%;
 }
 
 .invoiceinput {
     border: none;
     background: none;
-    width:200px;
+    width:100px;
    
 }
 .admin_button {
@@ -43,16 +43,24 @@
     font-size: 20px;
     color:white;
 }
+.admin_button:hover {
+    background: none;
+    color: white;
+    border: white 1px solid;
+
+} 
 .text {
     text-align: center;
     font-size:25px;
 }
 
 .table {
-    margin-top: 1%;
+    margin-top: 2%;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .column-text{
+    max-width:100px;
     text-align: center;
 }
 
@@ -77,10 +85,12 @@ input{
     color: white;
 }
 #table_filter {
-    margin-left:78.5%;
+    margin-left:74.5%;
+   
 }
 .tabletitle {
     text-align: center;
+    font-size: 30px;
 }
 
 .dt-button buttons-create {
