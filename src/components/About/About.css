@@ -19,7 +19,7 @@
     position: fixed;
     z-index:-1;
     overflow:scroll;
-    opacity:0.4;
+    opacity:0.8;
 }
 
 #video3 {
@@ -31,30 +31,36 @@
     position: fixed;
     z-index:-1;
     overflow:scroll;
-    opacity:0.4;
+    opacity:0.8;
 }
 .image {
     margin: 0 auto;
+    border-radius:40px;
+    width:600px !important;
+    height:550px !important;
+    opacity: 0.9;
 }
 
 
 .carousel-control.left, .carousel-control.right {
     background-image:none !important;
     filter:none !important;
-    margin-top:20%;
+    margin-top:15%;
     height:10%;  
+    margin-left:6%;
+    margin-right:6%;
  }
 
 
 .carousel {
     width:100vw !important;
     height:100vh !important;
-    margin: auto;
+    margin-bottom:-17%;
+    
   }
-  .carousel-inner {
+.carousel-inner {
     width:100vw !important;
     height:100vh !important;
-    margin-bottom: 120px;
   }
 
 #apparel, #logo, #tradeshow, #marketingproducts{
@@ -94,10 +100,9 @@
 
 .carousel-indicators li {
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
     margin-left:1%;
-    margin-top:-10% !important;
     text-indent: 0;
     cursor: pointer;
     border: white solid 1px;
@@ -106,19 +111,16 @@
     
 }
 .carousel-indicators .active {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     margin-left:1%;
-    margin-top:6%;
     background-color: white;
     opacity: 0.7;
-    
 }
 
 ol,ul {
-margin-bottom: 4%;
+margin-bottom: 13%;
 }
-
 
 .aboutparagraph{
     font-size: 25px !important;
@@ -127,7 +129,7 @@ margin-bottom: 4%;
 }
 
 .about {
-    margin-top:12%;
+    margin-top:10%;
     margin-left:15%;
     margin-right:15%;
     align-content: center;
@@ -143,8 +145,7 @@ margin-bottom: 4%;
 .carousel img {
     top: 0;
     left: 0;
-    min-width: 70%;
-    height: 500px;
+    min-width: 60%;
     max-width: none;
   }
 
@@ -155,7 +156,6 @@ margin-bottom: 4%;
     font-size: 22px;
     transition:0.3s;
     margin-top:5%;
-    margin-bottom:1%;
   }
 .project-button:hover {
   background:none;
@@ -171,9 +171,23 @@ transform: translateX(-3px);
 }
 
 .ourservice {
+   
+    margin-top:10%;
     background: #202020;
     opacity:0.8;
     color: white;
-    font-size:15px;
-    height:300px;
+    font-size:35px;
+    height:260px;
+}
+
+.servicetype {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-left:11%;
+    margin-right:11%;
+}
+.servicetitle {
+    font-size: 25px;
+    border-bottom:1px solid white;
 }

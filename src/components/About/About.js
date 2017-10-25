@@ -3,7 +3,7 @@ import './About.css';
 import { Carousel, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
-import multiple from '../../Images/multiple.mp4';
+import clouds from '../../Images/clouds.mp4';
 import colorshirts from '../../Images/colorshirts.JPG';
 import hat from '../../Images/hat.jpg';
 import western from '../../Images/westernshirt.JPG';
@@ -23,8 +23,8 @@ class About extends Component {
     super();
     this.state = {
       show: false,
-      showApparel: false,
-      showLogo: true,
+      showApparel: true,
+      showLogo: false,
       showtradeshow: false,
       showmarketingproducts: false,
     }
@@ -49,17 +49,17 @@ class About extends Component {
 
   scrollProjects(val) {
     scrollToComponent(val, {
-      align: 'bottom'
+      offset:30,
+      align: 'top',
+      duration: 2000
     })
   }
-  componentDidMount() {
-    this.scrollProjects(this.refs.pro)
-  }
+
   render() {
     return (
       <div className="about_container">
         <video autoPlay loop="true" id="video3">
-          <source src={multiple} type="video/mp4" />
+          <source src={clouds} type="video/mp4" />
         </video>
 
         <div className="about">
@@ -68,12 +68,8 @@ class About extends Component {
           </p>
         </div>
 
-        <div className="ourservice">
-          
-        </div>
-
         <Flip x duration={2000}><Button
-          onClick={this.showProjects} className="project-button" > Discover Projects </Button></Flip>
+          onClick={()=>{this.showProjects(); setTimeout(()=>{this.scrollProjects(this.refs.pro)},100)}} className="project-button" > Discover Projects </Button></Flip>
         {this.state.show ?
           <div ref="pro" className="project_container">
             <div className="wrap">
@@ -85,19 +81,19 @@ class About extends Component {
 
             {this.state.showApparel ? <Fade duration={1000}><Carousel>
               <Carousel.Item >
-                <img className="image" width={900} height={200} src={colorshirts} />
+                <img className="image" width={700} height={200} src={colorshirts} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={900} height={200} src={hat} />
+                <img className="image" width={700} height={200} src={hat} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={900} height={200} src={western} />
+                <img className="image" width={700} height={200} src={western} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
@@ -107,19 +103,19 @@ class About extends Component {
 
             {this.state.showLogo ? <Fade duration={1000}><Carousel>
               <Carousel.Item >
-                <img className="image" width={900} height={200} src={paradise} />
+                <img className="image" width={700} height={200} src={paradise} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={900} height={200} src={Clayton} />
+                <img className="image" width={700} height={200} src={Clayton} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={900} height={200} src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/logo-design-leloux-orem.jpg&w=630&h=378&zc=1" />
+                <img className="image" width={700} height={200} src="http://www.bigfatlogos.com/wp-content/themes/dpmg-theme/library/timthumb.php?src=http://www.bigfatlogos.com/wp-content/uploads/2009/09/logo-design-leloux-orem.jpg&w=630&h=378&zc=1" />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
@@ -129,19 +125,19 @@ class About extends Component {
 
             {this.state.showtradeshow ? <Fade duration={1000}><Carousel>
               <Carousel.Item >
-                <img className="image" width={900} height={200} src={amazon} />
+                <img className="image" width={700} height={200} src={amazon} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={900} height={200} src={limitless} />
+                <img className="image" width={700} height={200} src={limitless} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={900} height={200} src={stentorian} />
+                <img className="image" width={700} height={200} src={stentorian} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
@@ -151,19 +147,19 @@ class About extends Component {
 
             {this.state.showmarketingproducts ? <Fade duration={1000}><Carousel>
               <Carousel.Item >
-                <img className="image" width={900} height={200} src={hokulia} />
+                <img className="image" width={700} height={200} src={hokulia} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={900} height={200} src={honey} />
+                <img className="image" width={700} height={200} src={honey} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={900} height={200} src={mvhs} />
+                <img className="image" width={700} height={200} src={mvhs} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
@@ -171,7 +167,42 @@ class About extends Component {
             </Carousel></Fade> : null}
           </div> : null}
 
+          <div className="ourservice">
+          <p>Our Service</p>
+         <div className="servicetype">
+            <div>
+              <p className="servicetitle" >PRINTING</p>
+              <p>Ticekts/Brochures</p>
+              <p>Clothes</p>
+              <p>Backdrop/Banner</p>
+              <p>Labels/Stickers</p>
+            </div>
+            <div>
+              <p className="servicetitle" >DESIGNING</p>
+              <p>Web Design</p>
+              <p>Logo Branding</p>
+              <p>Packaging</p>
+              <p>Illustration</p>
+            </div>
+            <div>
+              <p className="servicetitle" >CREATING</p>
+              <p>Audio/Video Producing</p>
+              <p>Book Pusblishing</p>
+              <p>Logo Promotion</p>
+              <p>Show Displaying</p>
+            </div>
+            <div>
+              <p className="servicetitle" >GRAPHICS</p>
+              <p>Logo Graphic</p>
+              <p>Car Graphic</p>
+              <p>Sign Graphic</p>
+              <p>Glass/Window Graphic</p>
+            </div>
+          </div>
+          
+        </div>
         <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
+
 
       </div>
     );

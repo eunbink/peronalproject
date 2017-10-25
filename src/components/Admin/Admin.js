@@ -42,7 +42,7 @@ class Admin extends Component {
     axios.patch('api/quote/addinvoice', { invoice: this.state.invoice, invoiceid: this.state.id })
       .then(response => {
         this.setState({ quotes: response.data })
-        alert('Your invoice has been saved!')
+        alert('Your invoice has been saved!') //refresh the page!
       })
   }
 
@@ -66,8 +66,6 @@ class Admin extends Component {
         )
       })
 
-      
-
       // DataTable code
       var table = $('#table').DataTable({
         // dom: 'Bfrltip',
@@ -90,24 +88,19 @@ class Admin extends Component {
         }
       });
 
-    // Update state from invoice input box
-    $('input[className=invoiceinput]').on('input', e => {
-      
-      console.log(e.target.value);
-      console.log($(e.target).closest('tr').find('td:nth-child(1)').text());
 
-      this.setState({
-        invoice: e.target.value,
-        id: $(e.target).closest('tr').find('td:nth-child(1)').text(),
-      })
-    });
+      // Update state from invoice input box
+      $('input[className=invoiceinput]').on('input', e => {
+        
+        this.setState({
+          invoice: e.target.value,
+          id: $(e.target).closest('tr').find('td:nth-child(1)').text(),
+        })
+      });
 
     })
-
-    
-
   }
-  
+
 
   render() {
     return (
