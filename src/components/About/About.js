@@ -63,7 +63,7 @@ class About extends Component {
         <video autoPlay loop="true" id="video3">
           <source src={blue} type="video/mp4" />
         </video>
-
+      
         <div className="about">
           <img className="colorlogo" src={colorlogo}/>
           <p className="aboutexplain"> MAKE IT BIG! We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition!

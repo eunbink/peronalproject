@@ -128,11 +128,17 @@ class Request extends Component {
          <video autoPlay loop="true" id="video3">
          <source src={blue} type="video/mp4"/>
          </video>
-      <div>
      
 
-        {     /* get a quote form */   }
-        
+
+      <div className="horistring"></div>
+      <div className="string">
+      <div className="verstring1"></div>
+      <div className="verstring2"></div>
+      </div>
+         {     /* get a quote form */   }
+      <div>
+  
         <ButtonToolbar>
             <div className="message_button_container">
             <Button className="quote_button" onClick={this.showModal}>
@@ -321,6 +327,12 @@ class Request extends Component {
 
 
     <div className="payform_container"> 
+      <div className="pay">
+      <div className="circle">
+      <div className="circle1"></div>
+      <div className="circle2"></div>
+      </div>
+
        <div className="pay_form">
        <Form horizontal>
     <FormGroup controlId="formHorizontalEmail2">
@@ -353,10 +365,11 @@ class Request extends Component {
     </FormGroup>
     <FormGroup>
       <Col >
-     { this.state.isChecked ? null :<Flip x duration={3000}><Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button></Flip> }
+     { this.state.isChecked ? null :<Button className="check_button" onClickCapture={this.checkEmailInvoice}>Proceed to Payment</Button>}
       </Col>
     </FormGroup>
         </Form>
+        </div>
         </div>
        </div>
        <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>

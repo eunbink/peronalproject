@@ -59,7 +59,9 @@ class Contact extends Component {
       to: "kangeb1992@gmail.com",
       subject: "Message"
     }
-    axios.post('/api/send_email', body)
+    axios.post('/api/send_email', body).then(response => {
+      alert('Message has been sent')
+    });
   }
 
 
@@ -120,7 +122,7 @@ class Contact extends Component {
                 })
               }} type="text" placeholder="Message" /></div>
             <div>
-              <Flip x delay={500} duration={2000}><Button onClick={() => { this.send(this.state.email) }} className="messageSubmitbutton" type="submit">
+              <Flip x delay={500} duration={2000}><Button onClick={() => { this.send(this.state.email);  window.location.reload()}} className="messageSubmitbutton" type="submit">
                 Send Message
         </Button></Flip>
             </div>

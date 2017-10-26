@@ -23,8 +23,8 @@ input:focus {
     padding:1.2%;
     cursor: pointer;  
     transition:0.3s;
-    margin-top: 15%;
-    margin-left: 47%;
+    margin-top: -10%;
+    margin-left: 665px;
     
 } 
 .quote_button:hover, .check_button:hover{
@@ -41,8 +41,9 @@ transform: translateX(-3px);
 }    
 
 .payform_container{
-   margin-left:35%;
-   margin-top:10%;
+   margin-left:33.5%;
+   margin-top:-2%;
+   z-index:1;
 }
 
 #formHorizontal{
@@ -68,7 +69,7 @@ transform: translateX(-3px);
 }
 .pay_button {
     margin-top:5%;
-    margin-left: 10%;
+    margin-left: 11%;
 }
 .pay_form {
     position: absolute;
@@ -129,7 +130,7 @@ label {
 
 .check_button {
     margin-top:2%;
-    margin-left:6%;
+    margin-left:8%;
     background: none;
     border: white solid 1px;
     color: white;
@@ -155,3 +156,103 @@ label {
     height: 10px;
     color:black !important;
 }
+
+.horistring{
+    margin-top:10%;
+    height: .05em;
+    border:2px solid white;
+    margin-left: 26%;
+    margin-right: 26%;
+}
+.circle {
+    display: flex;
+    justify-content: space-between;
+    margin-top:2%;
+    
+}
+.circle1, .circle2 {
+    
+	width: 17px;
+	height: 17px;
+	background: none;
+	border-radius: 50px;
+	border: white 1px solid;
+}
+.circle1 {
+    margin-left:75px;
+}
+.circle2 {
+    margin-right:576px;
+}
+
+.string{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.verstring1, .verstring2 {
+    height: 230px;
+    border:1px solid white;
+}
+.verstring1 {
+    margin-left:564px;
+}
+.verstring2 {
+    margin-right:584px;
+}
+
+
+
+/* animation */
+.payform_container {
+    perspective: 10000;
+    
+}
+
+.pay {
+    position: relative; z-index:1;
+    transition:0.2s;
+    transform-origin: top;
+    animation: balance 2.5s  alternate;
+    
+}
+
+ 
+@keyframes balance {
+    0% {
+    }
+    12% {
+    transform: rotateX(-35deg);
+    }
+    24% {
+    
+    transform: rotateX(28deg);
+    }
+    36% {
+    
+    transform: rotateX(-25deg);
+    }
+    48% {
+    
+    transform: rotateX(20deg);
+    }
+    60% {
+    
+    transform: rotateX(-15deg);
+    }
+    72% {
+    
+    transform: rotateX(10deg);
+    }
+    84% {
+        
+    transform: rotateX(-5deg);
+    }
+    100% {
+        
+    transform: rotateX(0deg);
+    }
+}
+    
+   
