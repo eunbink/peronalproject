@@ -41,6 +41,12 @@ module.exports = {
     db.add_invoice([ invoice, invoiceid ])
     .then(response => res.status(200).send(response))
     },
-
+    
+    add_detail: (req, res, next) => {         //this happens in admin page with save button. 
+        const { detail, detailid } = req.body
+        const db = req.app.get("db")
+        db.add_detail([ detail, detailid ])
+        .then(response => res.status(200).send(response))
+        },
 
 }

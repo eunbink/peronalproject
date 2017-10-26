@@ -20,11 +20,12 @@ class Admin extends Component {
       quotes: [],
       id: 0,
       invoice: "",
+      detail:"",
       isChecked: false,
 
     }
     this.addInvoice = this.addInvoice.bind(this);
-
+    this.addDetail = this.addDetail.bind(this);
   }
 
   componentWillUnmount(){
@@ -43,7 +44,12 @@ class Admin extends Component {
       .then( res => { window.location.reload()
     })
   }
-
+  
+  addDetail(e) {
+    axios.patch('api/quote/adddetail', { detail: this.state.detail, detailid: this.state.id })
+      .then( res => { window.location.reload()
+    })
+  }
 
 
   componentDidMount() {
@@ -51,6 +57,7 @@ class Admin extends Component {
       this.setState({
         quotes: response.data,
         invoice: response.data,
+        detail: response.data
       })
 
       const quotesDisplayed = response.data.map((quote, i) => { 
@@ -59,7 +66,8 @@ class Admin extends Component {
           quote.id, 
           quote.name, 
           quote.phonenumber, 
-          quote.email, 
+          "",
+          quote.detail, 
           "",
           quote.invoice
           ]
@@ -71,10 +79,15 @@ class Admin extends Component {
         // dom: 'Bfrltip',
         data: quotesDisplayed,
         columns: [
-          { title: "#" },
-          { title: "Full Name" },
-          { title: "Phone Number" },
-          { title: "Email" },
+          { title: "ID" },
+          { title: "Name" },
+          { title: "Phone" },
+          { title: "Add Details",
+          render: function (data, type, row){
+            return '<input className="detailinput"/>';
+              }
+            },
+          { title: "Job Details" },
           { title: "Add Invoice",
             render: function (data, type, row){
               return '<input className="invoiceinput"/>';
@@ -98,6 +111,13 @@ class Admin extends Component {
         })
       });
 
+      $('input[className=detailinput]').on('input', e => {
+        
+        this.setState({
+          detail: e.target.value,
+          id: $(e.target).closest('tr').find('td:nth-child(1)').text(),
+        })
+      });
     })
   }
 
@@ -110,13 +130,14 @@ class Admin extends Component {
           <Table id="table" className="table" bordered condensed>
             <thead>
               <tr>
-                <th className="tabletitle"colSpan={6}>QUOTES</th>
+                <th className="tabletitle"colSpan={7}>QUOTES</th>
               </tr>
               <tr>
-                <th className="column-text">#</th>
-                <th className="column-text" >Full Name</th>
-                <th className="column-text" >Phone Number</th>
-                <th className="column-text" >Comments</th>
+                <th className="column-text">ID</th>
+                <th className="column-text" >Name</th>
+                <th className="column-text" >Phone</th>
+                <th className="column-text" >Add Details</th>
+                <th className="column-text" >Job Details</th>
                 <th className="column-text" >Add Invoice</th>
                 <th className="column-text" >Invoice #</th>
                 
@@ -127,7 +148,7 @@ class Admin extends Component {
               </tbody>
               <tfoot>
               <tr>
-                <td className="text" colSpan={6}><Button onClick={() => { this.addInvoice() }} className="admin_button">SAVE</Button></td>
+                <td className="text" colSpan={7}><Button onClick={() => { this.addInvoice(); this.addDetail() }} className="admin_button">SAVE</Button></td>
               </tr>
             </tfoot>
 

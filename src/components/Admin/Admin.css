@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
 
 .dt-button:focus {outline:0;}
@@ -31,7 +32,7 @@
     margin: 11%;
 }
 
-.invoiceinput {
+.invoiceinput, .detailinput {
     border: none;
     background: none;
     width:100px;
@@ -56,11 +57,12 @@
 
 .table {
     margin-top: 2%;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;;
 }
 
 .column-text{
     max-width:100px;
+    font-size:15px;
     text-align: center;
 }
 
