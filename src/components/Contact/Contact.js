@@ -42,7 +42,8 @@ class Contact extends Component {
 
   scrollMap(val){
     scrollToComponent(val,{
-      align:'bottom'
+      align:'bottom',
+      duration:2500
     })
   }
   showContact() {
@@ -81,7 +82,7 @@ class Contact extends Component {
 
             <div className="CT">
 
-              {this.state.show ? <Fade top duration={2000}> <div className="contactlist">
+              {this.state.show ? <Fade top duration={1500}> <div className="contactlist">
 
 
                 <div className="col">
@@ -122,7 +123,7 @@ class Contact extends Component {
                 })
               }} type="text" placeholder="Message" /></div>
             <div>
-              <Flip x delay={500} duration={2000}><Button onClick={() => { this.send(this.state.email);  window.location.reload()}} className="messageSubmitbutton" type="submit">
+              <Flip x delay={500} duration={1500}><Button onClick={() => { this.send(this.state.email)}} className="messageSubmitbutton" type="submit">
                 Send Message
         </Button></Flip>
             </div>

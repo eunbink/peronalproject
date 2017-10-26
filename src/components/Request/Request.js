@@ -357,11 +357,11 @@ class Request extends Component {
       
     </FormGroup>
     <FormGroup className="pay" >     
-     { this.state.isChecked ? <StripeCheckout className="pay_button"
+     { this.state.isChecked ? <Zoom><StripeCheckout className="pay_button"
           token={this.onToken}
           stripeKey={ stripe.pub_key }
           amount={this.state.paymentAmt}
-          /> : null }
+          /></Zoom> : null }
     </FormGroup>
     <FormGroup>
       <Col >

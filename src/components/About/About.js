@@ -25,8 +25,8 @@ class About extends Component {
     super();
     this.state = {
       show: false,
-      showApparel: false,
-      showLogo: true,
+      showApparel: true,
+      showLogo: false,
       showtradeshow: false,
       showmarketingproducts: false,
     }
@@ -68,7 +68,7 @@ class About extends Component {
           <img className="colorlogo" src={colorlogo}/>
           <p className="aboutexplain"> MAKE IT BIG! We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition!
           </p>
-          <Flip x duration={2000}><Button
+          <Flip x duration={1500}><Button
           onClick={()=>{this.showProjects(); setTimeout(()=>{this.scrollProjects(this.refs.pro)},100)}} className="project-button" > Discover Projects </Button></Flip>
         </div>
 
@@ -104,7 +104,7 @@ class About extends Component {
             </Carousel></Fade> : null}
 
 
-            {this.state.showLogo ? <Fade delay={2000} duration={1000}><Carousel>
+            {this.state.showLogo ? <Fade duration={1500}><Carousel>
               <Carousel.Item >
                 <img className="image" width={700} height={200} src={valley} />
                 <Carousel.Caption>
