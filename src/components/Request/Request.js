@@ -6,7 +6,7 @@ import stripe from './Stripekey';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
-import multiple from '../../Images/multiple.mp4';
+import Busy from '../../Images/Busy.mp4';
 import swal from 'sweetalert';
 
 class Request extends Component {
@@ -135,7 +135,7 @@ class Request extends Component {
     return (
       <div className='request_container'>
          <video autoPlay loop="true" id="video2">
-         <source src={multiple} type="video/mp4"/>
+         <source src={Busy} type="video/mp4"/>
          </video>
      
 

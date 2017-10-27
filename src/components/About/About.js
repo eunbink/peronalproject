@@ -3,7 +3,7 @@ import './About.css';
 import { Carousel, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
-import multiple from '../../Images/multiple.mp4';
+import Busy from '../../Images/Busy.mp4';
 import colorshirts from '../../Images/colorshirts.JPG';
 import hat from '../../Images/hat.jpg';
 import western from '../../Images/westernshirt.JPG';
@@ -60,7 +60,7 @@ class About extends Component {
     return (
       <div className="about_container">
         <video autoPlay loop="true" id="video2">
-          <source src={multiple} type="video/mp4" />
+          <source src={Busy} type="video/mp4" />
         </video>
       
         <div className="about">

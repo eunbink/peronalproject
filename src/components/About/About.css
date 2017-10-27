@@ -78,7 +78,7 @@
     background-size: cover;
   }
 .wrap {
-    background: rgba(140, 140, 140, 0.80);
+    background: rgba(255, 255, 255, 0.13);
     display:flex;
     justify-content: center;
     margin-top:8%;
@@ -168,7 +168,7 @@ transform: translateX(-3px);
 }
 
 .ourservice {
-    background: rgba(65, 65, 65, 0.8);
+    background: rgba(255, 255, 255, 0.13);
     color: white;
     font-size:27px;
     height:225px;

@@ -11,7 +11,7 @@ import arrow from '../../Images/arrow.png';
 import fax from '../../Images/faxicon.png';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import contact from '../../Images/contact.png';
-import multiple from '../../Images/multiple.mp4';
+import Busy from '../../Images/Busy.mp4';
 import Map from '../Map.js'
 import scrollToComponent from 'react-scroll-to-component';
 import swal from 'sweetalert';
@@ -75,7 +75,7 @@ class Contact extends Component {
     return (
       <div className="contact-container">
         <video autoPlay loop="true" id="video2">
-          <source src={multiple} type="video/mp4" />
+          <source src={Busy} type="video/mp4" />
         </video>
         <div className='contact'>
           <div className="form" >
