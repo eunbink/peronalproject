@@ -7,14 +7,14 @@ import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import blue from '../../Images/blue.mp4';
-
+import swal from 'sweetalert';
 
 class Request extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isChecked: false,
-      paymentAmt: 2500,
+      paymentAmt: 1500,
       show: false,
       quote: {
         name:"",
@@ -76,9 +76,7 @@ class Request extends Component {
       image:this.state.quote.image,
       
     }
-    axios.post('api/quote/addquote', body).then(response => {
-      alert('Your quote has been submitted')
-    })
+    axios.post('api/quote/addquote', body)
   }
 
   send () {
@@ -98,7 +96,13 @@ class Request extends Component {
       to: "kangeb1992@gmail.com",
       subject: "Request Quote"
     }
-    axios.post ('/api/send_quote', body )
+    axios.post ('/api/send_quote', body ).then(response => {
+      swal({
+        icon: "success",
+        title: "Your Quote has been Submitted!",
+        text:"Thank You"
+      });
+    })
   }
 
   close () {
@@ -117,8 +121,13 @@ class Request extends Component {
     token.card = void 0;
     console.log('token', token);
     axios.post('/api/payment', { token, amount: this.state.paymentAmt } ).then(response => {
-      alert('Payment has been completed')
-    });
+      console.log(response)
+      swal({
+        icon: "success",
+        title: "Payment has been Submitted!",
+        text:"Thank You" 
+      });
+    }).catch(err=>{console.log(err)});
   }
   render() {
 
@@ -357,11 +366,12 @@ class Request extends Component {
       
     </FormGroup>
     <FormGroup className="pay" >     
-     { this.state.isChecked ? <Zoom><StripeCheckout className="pay_button"
+     { this.state.isChecked ? <Zoom>
+     <StripeCheckout className="pay_button"
           token={this.onToken}
           stripeKey={ stripe.pub_key }
           amount={this.state.paymentAmt}
-          /></Zoom> : null }
+          /></Zoom>: null }
     </FormGroup>
     <FormGroup>
       <Col >

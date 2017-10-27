@@ -191,6 +191,7 @@ label {
     
 }
 
+
 .verstring1, .verstring2 {
     height: 230px;
     border:1px solid white;
@@ -254,5 +255,9 @@ label {
     transform: rotateX(0deg);
     }
 }
-    
-   
+.swal-footer {
+    background-color: rgb(245, 248, 250);
+    margin-top: 32px;
+    border-top: 1px solid #E9EEF1;
+    overflow: hidden;
+  }

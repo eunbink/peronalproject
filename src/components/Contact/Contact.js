@@ -14,6 +14,7 @@ import contact from '../../Images/contact.png';
 import blue from '../../Images/blue.mp4';
 import Map from '../Map.js'
 import scrollToComponent from 'react-scroll-to-component';
+import swal from 'sweetalert';
 
 
 class Contact extends Component {
@@ -43,7 +44,7 @@ class Contact extends Component {
   scrollMap(val){
     scrollToComponent(val,{
       align:'bottom',
-      duration:2500
+      duration:1500
     })
   }
   showContact() {
@@ -61,7 +62,11 @@ class Contact extends Component {
       subject: "Message"
     }
     axios.post('/api/send_email', body).then(response => {
-      alert('Message has been sent')
+      swal({
+        icon: "success",
+        title: "Your Message has been Sent!",
+        text:"Thank You"
+      });
     });
   }
 

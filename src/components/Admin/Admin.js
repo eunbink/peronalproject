@@ -26,6 +26,7 @@ class Admin extends Component {
     }
     this.addInvoice = this.addInvoice.bind(this);
     this.addDetail = this.addDetail.bind(this);
+    this.reloadPage = this.reloadPage.bind(this);
   }
 
   componentWillUnmount(){
@@ -40,15 +41,21 @@ class Admin extends Component {
   }
 
   addInvoice(e) {
-    axios.patch('api/quote/addinvoice', { invoice: this.state.invoice, invoiceid: this.state.id })
-      .then( res => { window.location.reload()
-    })
+    if(typeof this.state.invoice === 'string' || this.state.invoice instanceof String) {
+      axios.patch('api/quote/addinvoice', { invoice: this.state.invoice, invoiceid: this.state.id })
+        .then( res => { })
+    }
   }
   
   addDetail(e) {
-    axios.patch('api/quote/adddetail', { detail: this.state.detail, detailid: this.state.id })
-      .then( res => { window.location.reload()
-    })
+    if(typeof this.state.detail === 'string' || this.state.detail instanceof String) {
+      axios.patch('api/quote/adddetail', { detail: this.state.detail, detailid: this.state.id })
+        .then( res => { })
+    }
+  }
+
+  reloadPage() {
+    window.location.reload();
   }
 
 
@@ -148,7 +155,7 @@ class Admin extends Component {
               </tbody>
               <tfoot>
               <tr>
-                <td className="text" colSpan={7}><Button onClick={() => { this.addInvoice(); this.addDetail() }} className="admin_button">SAVE</Button></td>
+                <td className="text" colSpan={7}><Button onClick={() => { this.addInvoice(); this.addDetail(); this.reloadPage(); }} className="admin_button">SAVE</Button></td>
               </tr>
             </tfoot>
 
@@ -165,7 +172,7 @@ class Admin extends Component {
 
 export default Admin;
 
-// quotes: this.keepInvoice(i)
+// quotes: this.keepInvoice(i)no
 // value={quote.invoice} 
  // <tr key={i} className="table_contanier">
       //   <td className="table_body">{quote.id}</td>

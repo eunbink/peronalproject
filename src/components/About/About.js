@@ -51,9 +51,9 @@ class About extends Component {
 
   scrollProjects(val) {
     scrollToComponent(val, {
-      offset:30,
+      offset:-1.3,
       align: 'top',
-      duration: 2000
+      duration: 1500
     })
   }
 
