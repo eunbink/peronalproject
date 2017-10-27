@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
 
 body {
-  background:#202020;
+  background:#202020 ;
+  width:100%;
   text-align: center;
-  height: 100vh;
+  height: 100%;
   font-family: 'Saira Condensed', sans-serif;
   color: white;
+  margin: 0 auto;
+  
 }
 
 * {

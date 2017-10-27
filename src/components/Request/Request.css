@@ -55,6 +55,7 @@ transform: translateX(-3px);
     width: 400px;
     background: none;
     border: 1px solid white;
+    color:white !important;
 }
 .formHorizontalPay {
     margin-left:40px;

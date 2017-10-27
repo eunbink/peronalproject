@@ -3,7 +3,7 @@ import './About.css';
 import { Carousel, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
-import blue from '../../Images/blue.mp4';
+import multiple from '../../Images/multiple.mp4';
 import colorshirts from '../../Images/colorshirts.JPG';
 import hat from '../../Images/hat.jpg';
 import western from '../../Images/westernshirt.JPG';
@@ -50,8 +50,7 @@ class About extends Component {
   }
 
   scrollProjects(val) {
-    scrollToComponent(val, {
-      offset:-1.3,
+    scrollToComponent(val, {     
       align: 'top',
       duration: 1500
     })
@@ -60,8 +59,8 @@ class About extends Component {
   render() {
     return (
       <div className="about_container">
-        <video autoPlay loop="true" id="video3">
-          <source src={blue} type="video/mp4" />
+        <video autoPlay loop="true" id="video2">
+          <source src={multiple} type="video/mp4" />
         </video>
       
         <div className="about">
