@@ -211,7 +211,7 @@ class Request extends Component {
       <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, designType:e.target.value}
-          })}} type="text" placeholder="Design Type" />
+          })}} type="text" placeholder="T-shirts/Signs/flyers/Posters/Banner/Booklets/Logo" />
       </Col>
     </FormGroup>
 
@@ -235,7 +235,7 @@ class Request extends Component {
       <Col sm={8}>
         <FormControl  onChange={(e)=>{this.setState({
           quote:{...this.state.quote, color:e.target.value}
-          })}} type="color" placeholder="Color" />
+          })}} type="text" placeholder="Color" />
       </Col>
     </FormGroup>
 

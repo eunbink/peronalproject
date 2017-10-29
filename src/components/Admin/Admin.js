@@ -137,13 +137,13 @@ class Admin extends Component {
           <Table id="table" className="table" bordered condensed>
             <thead>
               <tr>
-                <th className="tabletitle"colSpan={7}>QUOTES</th>
+                <th className="tabletitle"colSpan={7}>JOB TICKET</th>
               </tr>
               <tr>
                 <th className="column-text">ID</th>
                 <th className="column-text" >Name</th>
                 <th className="column-text" >Phone</th>
-                <th className="column-text" >Add Details</th>
+                <th className="column-text" >Add Job Details</th>
                 <th className="column-text" >Job Details</th>
                 <th className="column-text" >Add Invoice</th>
                 <th className="column-text" >Invoice #</th>

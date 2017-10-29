@@ -38,7 +38,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #nav.slidemenu{
-    left:3.5%;
+    left:1.5%;
     position: fixed;
     z-index: 1;
    
