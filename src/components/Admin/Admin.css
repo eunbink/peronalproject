@@ -108,3 +108,9 @@ span {
 td {
     font-size:15px
 }
+
+button[className="deletebutton"] {
+    background: none !important;
+   border:none!important;
+    color: white !important;
+}

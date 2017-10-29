@@ -19,6 +19,7 @@ import scrollToComponent from 'react-scroll-to-component';
 import mtech from '../../Images/mtech.png'
 import colorlogo from '../../Images/colorlogo.png'
 import scrolldown from '../../Images/scrolldown.gif';
+import scrolling from '../../Images/scrolling.gif';
 
 
 class About extends Component {
@@ -87,7 +88,7 @@ class About extends Component {
          {this.state.showscroll ? null:<div className="scroll-container">   
           <p>View Projects/Services</p>
         <img onClick={()=>{this.showProjects(); this.disappearScroll(); setTimeout(()=>{this.scrollProjects(this.refs.pro)},100)}} className="scroll" src={scrolldown}/>
-        </div>}
+        </div> }
         
         
         {this.state.show ?
@@ -97,6 +98,7 @@ class About extends Component {
               <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer2"><p id="logo" >LOGOS</p></div>
               <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer3"><p id="tradeshow">TRADE SHOW DISPLAYS</p></div>
               <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer4"><p id="marketingproducts">MARKETING PRODUCTS</p></div>
+
             </div>
 
             {this.state.showApparel ? <Fade duration={1500}><Carousel>
@@ -185,6 +187,7 @@ class About extends Component {
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel></Fade> : null}
+            <img className="scrollingicon"src={scrolling}/>
             <div className="ourservice">
           <p>Our Services</p>
          <div className="servicetype">

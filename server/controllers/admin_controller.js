@@ -48,5 +48,12 @@ module.exports = {
         db.add_detail([ detail, detailid ])
         .then(response => res.status(200).send(response))
         },
+        
+     //-----delete------//
+     delete_quote: (req, res, next) => {   //this happens in admin page with delete button.
+        const db = req.app.get("db")
+        db.delete_quote([req.params.id])
+            .then(response => res.status(200).send(response))
+    }
 
 }

@@ -61,6 +61,7 @@ app.get('/api/quote', admin_controller.get_email_invoice );
 app.post('/api/quote/addquote', admin_controller.add_quote); //done
 app.patch('/api/quote/addinvoice', admin_controller.add_invoice);
 app.patch('/api/quote/adddetail', admin_controller.add_detail);
+app.delete('/api/quote/:id', admin_controller.delete_quote);
 
 
 

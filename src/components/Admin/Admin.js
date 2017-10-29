@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Admin.css';
 import { Button, Table } from 'react-bootstrap';
 import axios from 'axios';
-
+import swal from 'sweetalert';
 import 'datatables.net-buttons';
 import 'datatables.net-select';
 
@@ -27,6 +27,7 @@ class Admin extends Component {
     this.addInvoice = this.addInvoice.bind(this);
     this.addDetail = this.addDetail.bind(this);
     this.reloadPage = this.reloadPage.bind(this);
+    this.deleteQuote = this.deleteQuote.bind(this);
   }
 
   componentWillUnmount(){
@@ -40,6 +41,15 @@ class Admin extends Component {
       return false;
   }
 
+  deleteQuote (id) {
+
+    console.log(id);
+
+    axios.delete(`/api/quote/${id}`).then(response =>{
+      window.location.reload();
+    })
+  }
+  
   addInvoice(e) {
     if(typeof this.state.invoice === 'string' || this.state.invoice instanceof String) {
       axios.patch('api/quote/addinvoice', { invoice: this.state.invoice, invoiceid: this.state.id })
@@ -72,11 +82,12 @@ class Admin extends Component {
           [
           quote.id, 
           quote.name, 
-          quote.phonenumber, 
+          quote.email, 
           "",
           quote.detail, 
           "",
-          quote.invoice
+          quote.invoice,
+          ""
           ]
         )
       })
@@ -100,7 +111,12 @@ class Admin extends Component {
               return '<input className="invoiceinput"/>';
             }
           },
-          { title: "Invoice #" }
+          { title: "Invoice #" },
+          { title: "",
+            render: function (data, type, row){
+              return '<button className="deletebutton">Delete</button>';
+                },
+          },
         ],
         select: {
           style:    'os',
@@ -125,6 +141,11 @@ class Admin extends Component {
           id: $(e.target).closest('tr').find('td:nth-child(1)').text(),
         })
       });
+
+      $('button[className=deletebutton]').on('click', e => {
+        
+        this.deleteQuote($(e.target).closest('tr').find('td:nth-child(1)').text());
+      });
     })
   }
 
@@ -137,17 +158,17 @@ class Admin extends Component {
           <Table id="table" className="table" bordered condensed>
             <thead>
               <tr>
-                <th className="tabletitle"colSpan={7}>JOB TICKET</th>
+                <th className="tabletitle"colSpan={8}>JOB TICKETS</th>
               </tr>
               <tr>
-                <th className="column-text">ID</th>
+                <th className="column-text" >ID</th>
                 <th className="column-text" >Name</th>
                 <th className="column-text" >Phone</th>
                 <th className="column-text" >Add Job Details</th>
                 <th className="column-text" >Job Details</th>
                 <th className="column-text" >Add Invoice</th>
                 <th className="column-text" >Invoice #</th>
-                
+                <th className="column-text" ></th>
               </tr>
             </thead>
             <tbody className="datacolumn">
@@ -155,7 +176,7 @@ class Admin extends Component {
               </tbody>
               <tfoot>
               <tr>
-                <td className="text" colSpan={7}><Button onClick={() => { this.addInvoice(); this.addDetail(); this.reloadPage(); }} className="admin_button">SAVE</Button></td>
+                <td className="text" colSpan={8}><Button onClick={() => { this.addInvoice(); this.addDetail(); this.reloadPage(); }} className="admin_button">SAVE</Button></td>
               </tr>
             </tfoot>
 
