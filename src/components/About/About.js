@@ -123,7 +123,7 @@ class About extends Component {
             </Carousel></Fade> : null}
 
 
-            {this.state.showLogo ? <Fade delay={1500}duration={1500}><Carousel>
+            {this.state.showLogo ? <Fade duration={1500}><Carousel>
               <Carousel.Item >
                 <img className="image" width={700} height={200} src={valley} />
                 <Carousel.Caption>
@@ -147,7 +147,7 @@ class About extends Component {
 
             {this.state.showtradeshow ? <Fade duration={1500}><Carousel>
               <Carousel.Item >
-                <img className="image" width={700} height={200} src={amazon} />
+                <img className="image" width={700} height={200} src={stentorian}  />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
@@ -159,7 +159,7 @@ class About extends Component {
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={700} height={200} src={stentorian} />
+                <img className="image" width={700} height={200} src={amazon}/>
                 <Carousel.Caption>
 
                 </Carousel.Caption>
@@ -169,7 +169,7 @@ class About extends Component {
 
             {this.state.showmarketingproducts ? <Fade duration={1500}><Carousel>
               <Carousel.Item >
-                <img className="image" width={700} height={200} src={hokulia} />
+                <img className="image" width={700} height={200} src= {mvhs}/>
                 <Carousel.Caption>
 
                 </Carousel.Caption>
@@ -181,7 +181,7 @@ class About extends Component {
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="image" width={700} height={200} src={mvhs} />
+                <img className="image" width={700} height={200} src= {hokulia}/>
                 <Carousel.Caption>
 
                 </Carousel.Caption>

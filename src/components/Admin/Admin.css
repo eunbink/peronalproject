@@ -112,5 +112,6 @@ td {
 button[className="deletebutton"] {
     background: none !important;
    border:none!important;
-    color: white !important;
+    color: lightgray!important;
+    transition: 0.3s;
 }

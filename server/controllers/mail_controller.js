@@ -17,7 +17,7 @@ module.exports ={
 
         // setup email data with unicode symbols
         let mailOptions = {
-            from: `Eunbin <${config.nodemailer.user_email}>`, // sender address
+            from: ` <${config.nodemailer.user_email}>`, // sender address
             to: req.body.to, // list of receivers
             subject: req.body.subject, // Subject line
             text: 'Making breadsticks', // plain text body

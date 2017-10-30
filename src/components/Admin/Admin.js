@@ -99,7 +99,7 @@ class Admin extends Component {
         columns: [
           { title: "ID" },
           { title: "Name" },
-          { title: "Phone" },
+          { title: "Email" },
           { title: "Add Details",
           render: function (data, type, row){
             return '<input className="detailinput"/>';
@@ -163,7 +163,7 @@ class Admin extends Component {
               <tr>
                 <th className="column-text" >ID</th>
                 <th className="column-text" >Name</th>
-                <th className="column-text" >Phone</th>
+                <th className="column-text" >Email</th>
                 <th className="column-text" >Add Job Details</th>
                 <th className="column-text" >Job Details</th>
                 <th className="column-text" >Add Invoice</th>
