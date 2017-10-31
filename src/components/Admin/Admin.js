@@ -28,6 +28,7 @@ class Admin extends Component {
     this.addDetail = this.addDetail.bind(this);
     this.reloadPage = this.reloadPage.bind(this);
     this.deleteQuote = this.deleteQuote.bind(this);
+    this.addListeners = this.addListeners.bind(this);
   }
 
   componentWillUnmount(){
@@ -68,6 +69,31 @@ class Admin extends Component {
     window.location.reload();
   }
 
+  addListeners() {
+
+    // Update state from invoice input box
+    $('input[className=invoiceinput]').on('input', e => {
+      
+      this.setState({
+        invoice: e.target.value,
+        id: $(e.target).closest('tr').find('td:nth-child(1)').text(),
+      })
+    });
+
+    $('input[className=detailinput]').on('input', e => {
+      
+      this.setState({
+        detail: e.target.value,
+        id: $(e.target).closest('tr').find('td:nth-child(1)').text(),
+      })
+    });
+
+    $('button[className=deletebutton]').on('click', e => {
+      
+      this.deleteQuote($(e.target).closest('tr').find('td:nth-child(1)').text());
+    });
+
+  }
 
   componentDidMount() {
     axios.get('/api/quote/getquote').then(response => {
@@ -92,15 +118,21 @@ class Admin extends Component {
         )
       })
 
+      // Make sure listeners has the correct scope/this binding
+      var listeners = this.addListeners;
+
       // DataTable code
       var table = $('#table').DataTable({
         // dom: 'Bfrltip',
         data: quotesDisplayed,
+        drawCallback: function( settings ) {
+          listeners();
+        },
         columns: [
           { title: "ID" },
           { title: "Name" },
           { title: "Email" },
-          { title: "Add Details",
+          { title: "Add Job Details",
           render: function (data, type, row){
             return '<input className="detailinput"/>';
               }
@@ -124,28 +156,6 @@ class Admin extends Component {
         }
       });
 
-
-      // Update state from invoice input box
-      $('input[className=invoiceinput]').on('input', e => {
-        
-        this.setState({
-          invoice: e.target.value,
-          id: $(e.target).closest('tr').find('td:nth-child(1)').text(),
-        })
-      });
-
-      $('input[className=detailinput]').on('input', e => {
-        
-        this.setState({
-          detail: e.target.value,
-          id: $(e.target).closest('tr').find('td:nth-child(1)').text(),
-        })
-      });
-
-      $('button[className=deletebutton]').on('click', e => {
-        
-        this.deleteQuote($(e.target).closest('tr').find('td:nth-child(1)').text());
-      });
     })
   }
 

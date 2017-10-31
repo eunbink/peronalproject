@@ -131,7 +131,7 @@ class Request extends Component {
   }
   render() {
 
-
+console.log(this.state)
     return (
       <div className='request_container'>
          <video autoPlay loop="true" id="video2">
@@ -347,7 +347,7 @@ class Request extends Component {
     <FormGroup controlId="formHorizontalEmail2">
       
       
-      <FormControl input className="input" onChange={(e) => {
+      <FormControl  className="input" onChange={(e) => {
               this.setState({
                 quote: { ...this.state.quote, email: e.target.value }
               })
@@ -358,27 +358,24 @@ class Request extends Component {
     <FormGroup controlId="formHorizontalInvoice">
      
       
-        <FormControl input className="input" onChange={(e) => {
+        <FormControl  className="input" onChange={(e) => {
               this.setState({
                 quote: { ...this.state.quote, invoice: e.target.value }
               })
             }}placeholder="Invoice #" value={this.state.quote.invoice}/>
       
     </FormGroup>
-    <FormGroup className="pay" >     
-     { this.state.isChecked ? <Zoom>
+    <FormGroup onSubmit={e=>{e.preventDefault()}} className="pay" >     
+   
+    </FormGroup>
+  
+        </Form>
+         { this.state.isChecked ? <Zoom>
      <StripeCheckout className="pay_button"
           token={this.onToken}
           stripeKey={ stripe.pub_key }
           amount={this.state.paymentAmt}
-          /></Zoom>: null }
-    </FormGroup>
-    <FormGroup>
-      <Col >
-     { this.state.isChecked ? null :<Button className="check_button" onClickCapture={this.checkEmailInvoice}>Proceed to Payment</Button>}
-      </Col>
-    </FormGroup>
-        </Form>
+          /></Zoom>:<Button className="check_button" onClick={this.checkEmailInvoice}>Proceed to Payment</Button> }
         </div>
         </div>
        </div>
