@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Admin.css';
+import { NavLink } from 'react-router-dom';
 import { Button, Table } from 'react-bootstrap';
 import axios from 'axios';
 import swal from 'sweetalert';
@@ -164,6 +165,7 @@ class Admin extends Component {
     return (
       <div className="Admin_container">
         <a href={process.env.REACT_APP_LOGOUT}> <div className="logout_button">LOG OUT</div></a>
+        <NavLink activeClassName='active' to='/Pay'><div className="paying_button">PAY</div></NavLink>
         <div className="Quote_Table">
           <Table id="table" className="table" bordered condensed>
             <thead>

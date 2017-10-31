@@ -14,6 +14,17 @@
     font-size: 20px;
     color: white;
 }
+.paying_button {
+    color:white;
+    background: none;
+    border:none;
+    position: absolute;
+    margin-left: 85%;
+    margin-top: 3%;
+    font-size: 26px;
+    transition: 0.3s;
+    cursor: pointer;
+}
 .logout_button {
     color:white;
     background: none;
@@ -24,8 +35,8 @@
     font-size: 26px;
     transition: 0.3s;
 }
-.logout_button:hover {
-    letter-spacing: 4px;
+.logout_button:hover, .paying_button:hover, .paying2_button:hover {
+    letter-spacing: 3px;
     opacity: 0.8;
 }
 .Quote_Table {
@@ -115,3 +126,4 @@ button[className="deletebutton"] {
     color: lightgray!important;
     transition: 0.3s;
 }
+

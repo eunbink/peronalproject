@@ -10,24 +10,12 @@ input:focus {
     width: 100vw;
     height: 100vh;
     position:relative;
-    overflow: hidden;
+    overflow: scroll;
     font-family: 'Saira Extra Condensed', sans-serif;
     color: white;
 }
-
-.quote_button {
-    background: none;
-    border: white solid 1px;
-    color: white;
-    font-size: 20px;
-    padding:1.2%;
-    cursor: pointer;  
-    transition:0.3s;
-    margin-top: -10%;
-    margin-left: 665px;
-    
-} 
-.quote_button:hover, .check_button:hover{
+ 
+.check_button:hover{
     background:none;
     transform: translate(0,-6px) ;
     color:white;
@@ -77,50 +65,34 @@ transform: translateX(-3px);
     position: absolute;
     font-size: 25px;
     border: white 1px solid;
-    padding: 2%;
+    padding: 3.5%;
     margin-top:-2%;
 }
-.custom-modal2 {
-    height:60%;
-    font-family: 'Saira Extra Condensed', sans-serif;
-    overflow-y: hidden;
-    
-}
 
-.modal-dialog {
-    width: 43%;
-    height: auto;
-    margin: 10% auto;
- 
-}
 
 .Quote_Form {
-    font-size: 16.5px;
+    margin-top:4%;
+    margin-left:20%;
+    font-size: 20px;
 }
 
 .title_input {
-    padding: 0px;
+    margin-top:2px;
+    padding: 4px;
    
 }
 #contained-modal-title{
-    font-size: 30px;
+    font-size: 35px;
+    margin-top: 3%;
 }
 
-.modal-container {
-    height: 200px;
-}
-.modal-content {
-    width: 600px;
-    height:530px;
-    overflow-y: scroll;
-    background: white;
-    color:black;
-}  
+
 
 .form-control {
-    width:420px;
-    border: black solid  1px;
+    width:500px;
+    border: white solid  1px;
     background: none;
+    margin:1%;
     
 }
 label {
@@ -143,10 +115,23 @@ label {
 
 }
 .requestsubmit {
-    border: black solid 1px;
+    border: white solid 1px;
     background: none;
     margin-left:420px;
     font-size: 20px;
+    color: white;
+}
+.requestsubmit:hover {
+    background:none;
+    transform: translate(0,-6px) ;
+    color:white;
+    border:white;
+    box-shadow:
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
+transform: translateX(-3px);
+transform: translateX(-3px);
 }
 
 .form-horizontal .form-group {
@@ -195,7 +180,7 @@ label {
 
 
 .verstring1, .verstring2 {
-    height: 230px;
+    height: 200px;
     border:1px solid white;
 }
 .verstring1 {
@@ -210,6 +195,7 @@ label {
 /* animation */
 .payform_container {
     perspective: 10000;
+    
     
 }
 

@@ -19,7 +19,7 @@ class Home extends Component {
          </video>
        <div className="letter">
        <Typist 
-           className="home_quote"
+          className="home_quote"
           avgTypingSpeed={40}
           startDelay={500}
           onTypingDone={this.onHeaderTyped}> 
