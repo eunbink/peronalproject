@@ -13,7 +13,7 @@ class Pay extends Component {
         super(props);
         this.state = {
             isChecked: false,
-            paymentAmt: 1500,
+            paymentAmt: "",
             show: false,
             quote: {
                 name: "",
@@ -101,9 +101,21 @@ class Pay extends Component {
                                 }} placeholder="Invoice #" value={this.state.quote.invoice} />
 
                             </FormGroup>
+                            <FormGroup controlId="formHorizontalTotal">
+
+
+                                <FormControl className="input" onChange={(e) => {
+                                    this.setState({
+                                        paymentAmt: e.target.value *100
+                                    })
+                                }} placeholder="Total Cost" />
+
+                            </FormGroup>
                             <FormGroup onSubmit={e => { e.preventDefault() }} className="pay" >
 
                             </FormGroup>
+
+                            
 
                         </Form>
                         {this.state.isChecked ? <Zoom>

@@ -16,7 +16,7 @@ class Map extends Component {
           var marker = new mapboxgl.Marker().setLngLat([-111.72867, 40.31083]).addTo(map);
     
         });
-        
+        map.scrollZoom.disable();
         
         this.props.scrollMap(this.refs.scroll)
     }

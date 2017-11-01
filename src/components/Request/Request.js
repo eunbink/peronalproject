@@ -11,6 +11,7 @@ class Request extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      select: false,
       isChecked: false,
       show: false,
       quote: {
@@ -34,9 +35,14 @@ class Request extends Component {
     this.hideModal = this.hideModal.bind(this);
     this.send = this.send.bind(this);
     this.close = this.close.bind(this);
+    this.onSelect = this.onSelect.bind(this);
     this.submitQuotesToDatabase = this.submitQuotesToDatabase.bind(this);
   }
-
+  onSelect() {
+    this.setState({
+      select: ""
+    });
+  }
 
   submitQuotesToDatabase() {
 
@@ -122,9 +128,9 @@ class Request extends Component {
               <FormGroup controlId="formHorizontal" >
                 <Col componentClass={ControlLabel} sm={2} className="title_input">
                   Name
-      </Col>
+             </Col>
                 <Col sm={8}>
-                  <FormControl onChange={(e) => {
+                  <FormControl className="inputtext" onChange={(e) => {
                     this.setState({
                       quote: { ...this.state.quote, name: e.target.value }
                     })
@@ -138,7 +144,7 @@ class Request extends Component {
                   Phone Number
                   </Col>
                 <Col sm={8}>
-                  <FormControl onChange={(e) => {
+                  <FormControl className="inputtext" onChange={(e) => {
                     this.setState({
                       quote: { ...this.state.quote, phoneNumber: e.target.value }
                     })
@@ -151,7 +157,7 @@ class Request extends Component {
                   Email
                  </Col>
                 <Col sm={8}>
-                  <FormControl onChange={(e) => {
+                  <FormControl className="inputtext" onChange={(e) => {
                     this.setState({
                       quote: { ...this.state.quote, email: e.target.value }
                     })
@@ -162,143 +168,603 @@ class Request extends Component {
               {/* design type */}
               <FormGroup controlId="formHorizontal">
                 <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Design Type
-                 </Col>
+                  <ControlLabel>Design Type</ControlLabel>
+                </Col>
                 <Col sm={8}>
-                  <FormControl onChange={(e) => {
+                  <FormControl className="inputtext" componentClass="select" onChange={(e) => {
                     this.setState({
-                      quote: { ...this.state.quote, designType: e.target.value }
+                      select: e.target.value,
+                      quote: { ...this.state.quote, designType: e.target.value } //spread operator used to change big obect that wants to keep the data same time.
                     })
-                  }} type="text" placeholder="T-shirts/Signs/flyers/Posters/Banner/Booklets/Logo" />
+                  }}>
+                    <option value="select">Please Select Design Types...</option>
+                    <option value="T-Shirts">T-Shirts</option>
+                    <option value="Signs">Signs</option>
+                    <option value="Flyers">Flyers</option>
+                    <option value="Posters">Posters</option>
+                    <option value="Banners">Banners</option>
+                    <option value="Logo Design">Logo Design</option>
+                  </FormControl>
                 </Col>
               </FormGroup>
 
+
+              {/* -------------------------OPTIONS------------------------------- */}
+
+              {/* --------T-Shirts------- */}
               {/* size */}
-              <FormGroup controlId="formHorizontal">
-                <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Size
+              {this.state.select === "T-Shirts" ?
+                <div>
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Size
                  </Col>
-                <Col sm={8}>
-                  <FormControl onChange={(e) => {
-                    this.setState({
-                      quote: { ...this.state.quote, size: e.target.value }
-                    })
-                  }} type="text" placeholder="Size" />
-                </Col>
-              </FormGroup>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, size: e.target.value }
+                        })
+                      }} type="text" placeholder="Size" />
+                    </Col>
+                  </FormGroup>
 
-              {/* color */}
-              <FormGroup controlId="formHorizontal">
-                <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Color
+                  {/* color */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Color
                  </Col>
-                <Col sm={8}>
-                  <FormControl onChange={(e) => {
-                    this.setState({
-                      quote: { ...this.state.quote, color: e.target.value }
-                    })
-                  }} type="text" placeholder="Color" />
-                </Col>
-              </FormGroup>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, color: e.target.value }
+                        })
+                      }} type="text" placeholder="Color" />
+                    </Col>
+                  </FormGroup>
 
-              {/* printed shirts - front/back/both */}
-              <FormGroup controlId="formHorizontal">
-                <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Sides
+                  {/* printed shirts - front/back/both */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Sides
                  </Col>
-                <Col sm={8}>
-                  <FormControl onChange={(e) => {
-                    this.setState({
-                      quote: { ...this.state.quote, sides: e.target.value }
-                    })
-                  }} type="text" placeholder="Front/Back/Both (Shirts)" />
-                </Col>
-              </FormGroup>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" componentClass="select" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, sides: e.target.value }
+                        })
+                      }} >
+                        <option value="select">Sides</option>
+                        <option value="Front">Front</option>
+                        <option value="Back">Back</option>
+                        <option value="Both">Both</option>
+                      </FormControl>
+                    </Col>
+                  </FormGroup>
 
-              {/* single/double */}
-              <FormGroup controlId="formHorizontal">
-                <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Single/Double
+
+                  {/* how many */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Quantity
                  </Col>
-                <Col sm={8}>
-                  <FormControl onChange={(e) => {
-                    this.setState({
-                      quote: { ...this.state.quote, singleDouble: e.target.value }
-                    })
-                  }} type="text" placeholder="Single/Double" />
-                </Col>
-              </FormGroup>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, quantitiy: e.target.value }
+                        })
+                      }} type="number" placeholder="Quantity" />
+                    </Col>
+                  </FormGroup>
 
-              {/* how many */}
-              <FormGroup controlId="formHorizontal">
-                <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Quantity
+                  {/* Due date */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Due Date
                  </Col>
-                <Col sm={8}>
-                  <FormControl onChange={(e) => {
-                    this.setState({
-                      quote: { ...this.state.quote, quantitiy: e.target.value }
-                    })
-                  }} type="number" placeholder="Quantity" />
-                </Col>
-              </FormGroup>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, dueDate: e.target.value }
+                        })
+                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                    </Col>
+                  </FormGroup>
 
-              {/* Due date */}
-              <FormGroup controlId="formHorizontal">
-                <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Due Date
+                  {/* Comments */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Comments
                  </Col>
-                <Col sm={8}>
-                  <FormControl onChange={(e) => {
-                    this.setState({
-                      quote: { ...this.state.quote, dueDate: e.target.value }
-                    })
-                  }} type="date" placeholder="Due Date (Rushed job costs extra)" />
-                </Col>
-              </FormGroup>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" className="comments" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, comments: e.target.value }
+                        })
+                      }} type="text" placeholder="Write any comments here.." />
+                    </Col>
+                  </FormGroup>
 
-              {/* Comments */}
-              <FormGroup controlId="formHorizontal">
-                <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Comments
-                 </Col>
-                <Col sm={8}>
-                  <FormControl className="comments" onChange={(e) => {
-                    this.setState({
-                      quote: { ...this.state.quote, comments: e.target.value }
-                    })
-                  }} type="text" placeholder="Write any comments here.." />
-                </Col>
-              </FormGroup>
 
-              {/* image */}
-              <FormGroup controlId="formHorizontal">
-                <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Image
-                  </Col>
-                <Col sm={8}>
-                  <FormControl type="file" id="fileInput" onChange={(e) => {
-                    this.setState({
-                      quote: { ...this.state.quote, image: e.target.value }
-                    }
-                    )
-                  }
-                  } />
-                </Col>
-              </FormGroup>
-
-              <FormGroup >
-                <Col smOffset={1} sm={4}>
-                  <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
-                    SUBMIT
+                  <FormGroup >
+                    <Col smOffset={1} sm={4}>
+                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                        SUBMIT
         </Button>
-                </Col>
-              </FormGroup>
+                    </Col>
+                  </FormGroup>
+                </div>
+                : null}
 
 
+              {/* -----------Signs------------ */}
+
+              {this.state.select === "Signs" ?
+                <div>
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Size
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, size: e.target.value }
+                        })
+                      }} type="text" placeholder="Size" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* color */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Color
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, color: e.target.value }
+                        })
+                      }} type="text" placeholder="Color" />
+                    </Col>
+                  </FormGroup>
+
+
+                  {/* how many */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Quantity
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, quantitiy: e.target.value }
+                        })
+                      }} type="number" placeholder="Quantity" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Due date */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Due Date
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, dueDate: e.target.value }
+                        })
+                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Comments */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Comments
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" className="comments" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, comments: e.target.value }
+                        })
+                      }} type="text" placeholder="Write any comments here.." />
+                    </Col>
+                  </FormGroup>
+
+
+                  <FormGroup >
+                    <Col smOffset={1} sm={4}>
+                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                        SUBMIT
+        </Button>
+                    </Col>
+                  </FormGroup>
+                </div>
+                : null}
+
+
+
+              {/* -------------Flyers-------------------- */}
+              {this.state.select === "Flyers" ?
+                <div>
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Size
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, size: e.target.value }
+                        })
+                      }} type="text" placeholder="Size" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* color */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Color
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, color: e.target.value }
+                        })
+                      }} type="text" placeholder="Color" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* single/double */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Single/Double
+               </Col>
+                    <Col sm={8}>
+                      <FormControl onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, singleDouble: e.target.value }
+                        })
+                      }} type="text" placeholder="Single/Double" />
+                    </Col>
+                  </FormGroup>
+
+
+                  {/* how many */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Quantity
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, quantitiy: e.target.value }
+                        })
+                      }} type="number" placeholder="Quantity" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Due date */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Due Date
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, dueDate: e.target.value }
+                        })
+                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Comments */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Comments
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" className="comments" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, comments: e.target.value }
+                        })
+                      }} type="text" placeholder="Write any comments here.." />
+                    </Col>
+                  </FormGroup>
+
+
+                  <FormGroup >
+                    <Col smOffset={1} sm={4}>
+                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                        SUBMIT
+        </Button>
+                    </Col>
+                  </FormGroup>
+                </div>
+                : null}
+
+              {/* -------------Posters-------------------- */}
+              {this.state.select === "Posters" ?
+                <div>
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Size
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, size: e.target.value }
+                        })
+                      }} type="text" placeholder="Size" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* color */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Color
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, color: e.target.value }
+                        })
+                      }} type="text" placeholder="Color" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* single/double */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Single/Double
+               </Col>
+                    <Col sm={8}>
+                      <FormControl onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, singleDouble: e.target.value }
+                        })
+                      }} type="text" placeholder="Single/Double" />
+                    </Col>
+                  </FormGroup>
+
+
+                  {/* how many */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Quantity
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, quantitiy: e.target.value }
+                        })
+                      }} type="number" placeholder="Quantity" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Due date */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Due Date
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, dueDate: e.target.value }
+                        })
+                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Comments */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Comments
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" className="comments" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, comments: e.target.value }
+                        })
+                      }} type="text" placeholder="Write any comments here.." />
+                    </Col>
+                  </FormGroup>
+
+
+                  <FormGroup >
+                    <Col smOffset={1} sm={4}>
+                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                        SUBMIT
+               </Button>
+                    </Col>
+                  </FormGroup>
+                </div>
+                : null}
+
+                {/* -------------Banners-------------------- */}
+              {this.state.select === "Banners" ?
+                <div>
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Size
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, size: e.target.value }
+                        })
+                      }} type="text" placeholder="Size" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* color */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Color
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, color: e.target.value }
+                        })
+                      }} type="text" placeholder="Color" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* single/double */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Single/Double
+               </Col>
+                    <Col sm={8}>
+                      <FormControl onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, singleDouble: e.target.value }
+                        })
+                      }} type="text" placeholder="Single/Double" />
+                    </Col>
+                  </FormGroup>
+
+
+                  {/* how many */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Quantity
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, quantitiy: e.target.value }
+                        })
+                      }} type="number" placeholder="Quantity" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Due date */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Due Date
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, dueDate: e.target.value }
+                        })
+                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Comments */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Comments
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" className="comments" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, comments: e.target.value }
+                        })
+                      }} type="text" placeholder="Write any comments here.." />
+                    </Col>
+                  </FormGroup>
+
+
+                  <FormGroup >
+                    <Col smOffset={1} sm={4}>
+                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                        SUBMIT
+               </Button>
+                    </Col>
+                  </FormGroup>
+                </div>
+                : null}
+
+
+              {/* -----------Logo Design------------ */}
+
+              {this.state.select === "Logo Design" ?
+                <div>
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Size
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, size: e.target.value }
+                        })
+                      }} type="text" placeholder="Size" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* color */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Color
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, color: e.target.value }
+                        })
+                      }} type="text" placeholder="Color" />
+                    </Col>
+                  </FormGroup>
+
+
+                  {/* how many */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Quantity
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, quantitiy: e.target.value }
+                        })
+                      }} type="number" placeholder="Quantity" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Due date */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Due Date
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, dueDate: e.target.value }
+                        })
+                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Comments */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Comments
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" className="comments" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, comments: e.target.value }
+                        })
+                      }} type="text" placeholder="Write any comments here.." />
+                    </Col>
+                  </FormGroup>
+
+
+                  <FormGroup >
+                    <Col smOffset={1} sm={4}>
+                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                        SUBMIT
+                 </Button>
+                    </Col>
+                  </FormGroup>
+                </div>
+                : null}
             </Form>
           </div>
-          {/* </Modal> */}
+
 
 
 

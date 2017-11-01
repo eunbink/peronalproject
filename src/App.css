@@ -113,3 +113,11 @@ body {
   transform: translateY(-4px);
   opacity: 0.7;
 }
+
+ .inputtext{
+  color:white;
+ }
+
+ .formHorizontal{
+   color:white !important;
+ }

@@ -38,7 +38,7 @@ transform: translateX(-3px);
     font-family: 'Quicksand', sans-serif;
     
 }
-#formHorizontalInvoice, #formHorizontalEmail2 {
+#formHorizontalInvoice, #formHorizontalEmail2, #formHorizontalTotal {
     
     width: 400px;
     background: none;
@@ -71,9 +71,11 @@ transform: translateX(-3px);
 
 
 .Quote_Form {
-    margin-top:4%;
+    margin-top:6%;
     margin-left:20%;
     font-size: 20px;
+    margin-bottom:10%;
+
 }
 
 .title_input {
@@ -117,7 +119,7 @@ label {
 .requestsubmit {
     border: white solid 1px;
     background: none;
-    margin-left:420px;
+    margin-left:535px;
     font-size: 20px;
     color: white;
 }
@@ -249,3 +251,5 @@ transform: translateX(-3px);
     border-top: 1px solid #E9EEF1;
     overflow: hidden;
   }
+
+
