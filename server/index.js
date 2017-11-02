@@ -26,14 +26,17 @@ app.use(session({
   saveUninitialized: true
 }))
 
-app.use(passport.initialize());
+app.use(passport.initialize());       
 app.use(passport.session());
 
-massive(process.env.CONNECTION_STRING).then( db => {
+//-------------------------------------------------
+
+massive(process.env.CONNECTION_STRING).then( db => {       //it converts the sql files queries to JS functions usuable by node.
   app.set( 'db', db );
 })
 
-passport.use(new Auth0Strategy({
+
+passport.use(new Auth0Strategy({     //configuring auth0 with passport.
   domain: process.env.AUTH_DOMAIN,
   clientID: process.env.AUTH_CLIENT_ID,
   clientSecret: process.env.AUTH_CLIENT_SECRET,
@@ -71,7 +74,7 @@ app.delete('/api/quote/:id', admin_controller.delete_quote);
 //-------------------AUTH0------------------
 app.get('/auth', passport.authenticate('auth0'));  //backend endpoint
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/Admin',
+    successRedirect: process.env.REDIRECT,
     failureRedirect: '/auth'
 }));
 app.get('/auth/me', (req, res) => {   //if users are authenticated.
@@ -83,7 +86,7 @@ app.get('/auth/me', (req, res) => {   //if users are authenticated.
 
 app.get('/auth/logout', ( req, res ) => {
     req.logOut();
-    res.redirect(302, 'https://eunbin.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:3000/#/')
+    res.redirect(302, process.env.LOGOUTREDIRECT )
 })
 
 
