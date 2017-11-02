@@ -177,7 +177,7 @@ class Request extends Component {
                       quote: { ...this.state.quote, designType: e.target.value } //spread operator used to change big obect that wants to keep the data same time.
                     })
                   }}>
-                    <option value="select">Please Select Design Types...</option>
+                    <option value="select">Please Select Design Type...</option>
                     <option value="T-Shirts">T-Shirts</option>
                     <option value="Signs">Signs</option>
                     <option value="Flyers">Flyers</option>
@@ -197,30 +197,17 @@ class Request extends Component {
                 <div>
                   <FormGroup controlId="formHorizontal">
                     <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Size
+                      Size/Quantity
                  </Col>
                     <Col sm={8}>
                       <FormControl className="inputtext" onChange={(e) => {
                         this.setState({
                           quote: { ...this.state.quote, size: e.target.value }
                         })
-                      }} type="text" placeholder="Size" />
+                      }} type="text" placeholder="ex) small - 10, medium - 8 etc." />
                     </Col>
                   </FormGroup>
 
-                  {/* color */}
-                  <FormGroup controlId="formHorizontal">
-                    <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Color
-                 </Col>
-                    <Col sm={8}>
-                      <FormControl className="inputtext" onChange={(e) => {
-                        this.setState({
-                          quote: { ...this.state.quote, color: e.target.value }
-                        })
-                      }} type="text" placeholder="Color" />
-                    </Col>
-                  </FormGroup>
 
                   {/* printed shirts - front/back/both */}
                   <FormGroup controlId="formHorizontal">
@@ -241,20 +228,6 @@ class Request extends Component {
                     </Col>
                   </FormGroup>
 
-
-                  {/* how many */}
-                  <FormGroup controlId="formHorizontal">
-                    <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Quantity
-                 </Col>
-                    <Col sm={8}>
-                      <FormControl className="inputtext" onChange={(e) => {
-                        this.setState({
-                          quote: { ...this.state.quote, quantitiy: e.target.value }
-                        })
-                      }} type="number" placeholder="Quantity" />
-                    </Col>
-                  </FormGroup>
 
                   {/* Due date */}
                   <FormGroup controlId="formHorizontal">
@@ -399,17 +372,21 @@ class Request extends Component {
                     </Col>
                   </FormGroup>
 
-                  {/* color */}
+                  {/* color  black and white option */   }
                   <FormGroup controlId="formHorizontal">
                     <Col componentClass={ControlLabel} sm={2} className="title_input">
                       Color
                  </Col>
                     <Col sm={8}>
-                      <FormControl className="inputtext" onChange={(e) => {
+                      <FormControl className="inputtext" componentClass="select" onChange={(e) => {
                         this.setState({
                           quote: { ...this.state.quote, color: e.target.value }
                         })
-                      }} type="text" placeholder="Color" />
+                      }} type="text" placeholder="Color" >
+                      <option value="select">Color</option>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                      </FormControl>
                     </Col>
                   </FormGroup>
 
@@ -419,11 +396,15 @@ class Request extends Component {
                       Single/Double
                </Col>
                     <Col sm={8}>
-                      <FormControl onChange={(e) => {
+                      <FormControl className="inputtext" componentClass="select" onChange={(e) => {
                         this.setState({
                           quote: { ...this.state.quote, singleDouble: e.target.value }
                         })
-                      }} type="text" placeholder="Single/Double" />
+                      }}  >
+                        <option value="select">Sides</option>
+                        <option value="Singlet">Single</option>
+                        <option value="Double">Double</option>
+                      </FormControl>
                     </Col>
                   </FormGroup>
 
@@ -503,11 +484,15 @@ class Request extends Component {
                       Color
                  </Col>
                     <Col sm={8}>
-                      <FormControl className="inputtext" onChange={(e) => {
+                      <FormControl className="inputtext" componentClass="select" onChange={(e) => {
                         this.setState({
                           quote: { ...this.state.quote, color: e.target.value }
                         })
-                      }} type="text" placeholder="Color" />
+                      }} type="text" placeholder="Color" >
+                      <option value="select">Sides</option>
+                        <option value="Singlet">Single</option>
+                        <option value="Double">Double</option>
+                      </FormControl>
                     </Col>
                   </FormGroup>
 
@@ -517,11 +502,15 @@ class Request extends Component {
                       Single/Double
                </Col>
                     <Col sm={8}>
-                      <FormControl onChange={(e) => {
+                      <FormControl className="inputtext" componentClass="select" onChange={(e) => {
                         this.setState({
                           quote: { ...this.state.quote, singleDouble: e.target.value }
                         })
-                      }} type="text" placeholder="Single/Double" />
+                      }} >
+                        <option value="select">Sides</option>
+                        <option value="Singlet">Single</option>
+                        <option value="Double">Double</option>
+                      </FormControl>
                     </Col>
                   </FormGroup>
 
@@ -579,7 +568,7 @@ class Request extends Component {
                 </div>
                 : null}
 
-                {/* -------------Banners-------------------- */}
+              {/* -------------Banners-------------------- */}
               {this.state.select === "Banners" ?
                 <div>
                   <FormGroup controlId="formHorizontal">
@@ -615,11 +604,15 @@ class Request extends Component {
                       Single/Double
                </Col>
                     <Col sm={8}>
-                      <FormControl onChange={(e) => {
+                      <FormControl className="inputtext" componentClass="select" onChange={(e) => {
                         this.setState({
                           quote: { ...this.state.quote, singleDouble: e.target.value }
                         })
-                      }} type="text" placeholder="Single/Double" />
+                      }} >
+                        <option value="select">Sides</option>
+                        <option value="Singlet">Single</option>
+                        <option value="Double">Double</option>
+                      </FormControl>
                     </Col>
                   </FormGroup>
 
@@ -682,48 +675,7 @@ class Request extends Component {
 
               {this.state.select === "Logo Design" ?
                 <div>
-                  <FormGroup controlId="formHorizontal">
-                    <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Size
-                 </Col>
-                    <Col sm={8}>
-                      <FormControl className="inputtext" onChange={(e) => {
-                        this.setState({
-                          quote: { ...this.state.quote, size: e.target.value }
-                        })
-                      }} type="text" placeholder="Size" />
-                    </Col>
-                  </FormGroup>
-
-                  {/* color */}
-                  <FormGroup controlId="formHorizontal">
-                    <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Color
-                 </Col>
-                    <Col sm={8}>
-                      <FormControl className="inputtext" onChange={(e) => {
-                        this.setState({
-                          quote: { ...this.state.quote, color: e.target.value }
-                        })
-                      }} type="text" placeholder="Color" />
-                    </Col>
-                  </FormGroup>
-
-
-                  {/* how many */}
-                  <FormGroup controlId="formHorizontal">
-                    <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Quantity
-                 </Col>
-                    <Col sm={8}>
-                      <FormControl className="inputtext" onChange={(e) => {
-                        this.setState({
-                          quote: { ...this.state.quote, quantitiy: e.target.value }
-                        })
-                      }} type="number" placeholder="Quantity" />
-                    </Col>
-                  </FormGroup>
-
+                 
                   {/* Due date */}
                   <FormGroup controlId="formHorizontal">
                     <Col componentClass={ControlLabel} sm={2} className="title_input">

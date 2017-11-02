@@ -20,6 +20,14 @@ import mtech from '../../Images/mtech.png'
 import colorlogo from '../../Images/colorlogo.png'
 import scrolldown from '../../Images/scrolldown.gif';
 import scrolling from '../../Images/scrolling.gif';
+import bag from '../../Images/bag.JPG';
+import paige from '../../Images/paige.JPG';
+import Paradise from '../../Images/Paradise.png';
+import Clayton from '../../Images/Clayton.png';
+import k from '../../Images/7k.jpeg';
+import spicy from '../../Images/spicy.JPG';
+import ycc from '../../Images/ycc.jpg';
+import bottle from '../../Images/Bottle.jpg';
 
 
 class About extends Component {
@@ -120,6 +128,18 @@ class About extends Component {
 
                 </Carousel.Caption>
               </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={700} height={200} src={paige} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={700} height={200} src={bag} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
             </Carousel></Fade> : null}
 
 
@@ -138,6 +158,18 @@ class About extends Component {
               </Carousel.Item>
               <Carousel.Item>
                 <img className="image" width={700} height={200} src={mtech} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={700} height={200} src={Paradise} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={700} height={200} src={Clayton} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>
@@ -164,6 +196,18 @@ class About extends Component {
 
                 </Carousel.Caption>
               </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={700} height={200} src={k} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={700} height={200} src={spicy} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
             </Carousel></Fade> : null}
 
 
@@ -182,6 +226,18 @@ class About extends Component {
               </Carousel.Item>
               <Carousel.Item>
                 <img className="image" width={700} height={200} src= {hokulia}/>
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={700} height={200} src={bottle} />
+                <Carousel.Caption>
+
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="image" width={700} height={200} src={ycc} />
                 <Carousel.Caption>
 
                 </Carousel.Caption>

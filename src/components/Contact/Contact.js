@@ -123,7 +123,7 @@ class Contact extends Component {
 
 
           {this.state.showscroll? null: <div className="showmap">
-            <p>View Contacts</p>
+            <p>View Contact Info</p>
             <img onClick={() => {
               this.showMap(); this.disappearScroll()
             }
