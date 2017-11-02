@@ -12,6 +12,7 @@ const express = require('express')
 , mail_controller = require("./controllers/mail_controller.js")
 , request_controller = require("./controllers/request_controller.js")
 , admin_controller = require("./controllers/admin_controller.js")
+, path = require('path')
 
 
 //------------------MIDDLEWARES----------------
@@ -141,7 +142,10 @@ return res.sendStatus(200);
 });
 });
 
-
+app.get('*', (req, res)=>{
+    console.log("None Met");
+    res.sendFile(path.join(__dirname, '..','build','index.html'));
+  })
 
 app.listen(3001, () => {
 console.log('Listening to port: ', 3001)}); 
