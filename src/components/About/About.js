@@ -17,7 +17,7 @@ import limitless from '../../Images/limitless.JPG';
 import stentorian from '../../Images/stentorian.jpg';
 import scrollToComponent from 'react-scroll-to-component';
 import mtech from '../../Images/mtech.png'
-import colorlogo from '../../Images/colorlogo.png'
+import bluelogo from '../../Images/bluelogo.png'
 import scrolldown from '../../Images/scrolldown.gif';
 import scrolling from '../../Images/scrolling.gif';
 import bag from '../../Images/bag.JPG';
@@ -88,7 +88,7 @@ class About extends Component {
         </video>
       
         <div className="about">
-          <img className="colorlogo" src={colorlogo}/>
+          <img className="colorlogo" src={bluelogo}/>
           <p className="aboutexplain"> 
             <p> We offer a free quote or consultation of your current or budgeted advertising plans, and the expertise to help you position your product or service at the top of your competition! </p>
           </p>    
@@ -243,7 +243,7 @@ class About extends Component {
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel></Fade> : null}
-            <img className="scrollingicon"src={scrolling}/>
+            
             <div className="ourservice">
           <p>Our Services</p>
          <div className="servicetype">

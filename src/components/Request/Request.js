@@ -239,7 +239,7 @@ class Request extends Component {
                         this.setState({
                           quote: { ...this.state.quote, dueDate: e.target.value }
                         })
-                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                      }} type="text" placeholder="Rushed job fee (1-2 days)" />
                     </Col>
                   </FormGroup>
 
@@ -539,7 +539,7 @@ class Request extends Component {
                         this.setState({
                           quote: { ...this.state.quote, dueDate: e.target.value }
                         })
-                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                      }} type="date" placeholder="Due Date (Rushed job costs )" />
                     </Col>
                   </FormGroup>
 

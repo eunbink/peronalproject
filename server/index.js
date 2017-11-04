@@ -17,7 +17,7 @@ const express = require('express')
 
 //------------------MIDDLEWARES----------------
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '../build'))
+app.use(express.static(__dirname + '/../build'))
 
 app.use(cors())
 
@@ -147,5 +147,5 @@ app.get('*', (req, res)=>{
     res.sendFile(path.join(__dirname, '..','build','index.html'));
   })
 
-app.listen(3001, () => {
-console.log('Listening to port: ', 3001)}); 
+app.listen(3002, () => {
+console.log('Listening to port: ', 3002)}); 

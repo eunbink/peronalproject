@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway+Dots');
 @import url('https://fonts.googleapis.com/css?family=Londrina+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
 .home_Container {
     width: 100vw;
@@ -70,6 +71,7 @@ transform: translateX(-3px);
     margin-top:16%;
     padding: 5.5%;
     font-size: 65px; 
+    
     /* z-index:2; */
   }
 

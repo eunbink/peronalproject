@@ -21,8 +21,12 @@ module.exports ={
             to: req.body.to, // list of receivers
             subject: req.body.subject, // Subject line
             text: 'Making breadsticks', // plain text body
-            html: `<p>${ req.body.message }</p>` // html body
+            html: `<p><b style="color:black;">Name: </b> ${ req.body.name }</p>
+                   <p><b style="color:black;">Email: </b> ${ req.body.email }</p>
+                   <p><b style="color:black;">Message: </b> ${ req.body.message }</p>`
+       
         };
+
 
         // send mail with defined transport object
         transporter.sendMail(mailOptions, (error, info) => {
