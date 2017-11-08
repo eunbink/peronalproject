@@ -22,3 +22,8 @@ yarn-error.log*
 
 .env
 config.js
+
+.env.save
+.env.save.1
+.env.save.2
+.dotenv.swp
