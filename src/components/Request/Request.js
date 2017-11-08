@@ -113,12 +113,8 @@ class Request extends Component {
         </video>
 
 
-
-
         {     /* get a quote form */}
-        <div>
-
-
+        <div className="quote-container">
           <Modal.Title id="contained-modal-title">Quote Form</Modal.Title>
           <div className="contact_form">
             <Form horizontal className="Quote_Form">
@@ -141,7 +137,7 @@ class Request extends Component {
               {/* phonenumber */}
               <FormGroup controlId="formHorizontal" >
                 <Col componentClass={ControlLabel} sm={2} className="title_input">
-                  Phone Number
+                  Phone
                   </Col>
                 <Col sm={8}>
                   <FormControl className="inputtext" onChange={(e) => {
@@ -247,7 +243,7 @@ class Request extends Component {
                   <FormGroup controlId="formHorizontal">
                     <Col componentClass={ControlLabel} sm={2} className="title_input">
                       Comments
-                 </Col>
+                    </Col>
                     <Col sm={8}>
                       <FormControl className="inputtext" className="comments" onChange={(e) => {
                         this.setState({
@@ -348,7 +344,7 @@ class Request extends Component {
                     <Col smOffset={1} sm={4}>
                       <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
                         SUBMIT
-        </Button>
+                      </Button>
                     </Col>
                   </FormGroup>
                 </div>
@@ -372,7 +368,7 @@ class Request extends Component {
                     </Col>
                   </FormGroup>
 
-                  {/* color  black and white option */   }
+                  {/* color  black and white option */}
                   <FormGroup controlId="formHorizontal">
                     <Col componentClass={ControlLabel} sm={2} className="title_input">
                       Color
@@ -383,7 +379,7 @@ class Request extends Component {
                           quote: { ...this.state.quote, color: e.target.value }
                         })
                       }} type="text" placeholder="Color" >
-                      <option value="select">Color</option>
+                        <option value="select">Color</option>
                         <option value="Black">Black</option>
                         <option value="White">White</option>
                       </FormControl>
@@ -489,7 +485,7 @@ class Request extends Component {
                           quote: { ...this.state.quote, color: e.target.value }
                         })
                       }} type="text" placeholder="Color" >
-                      <option value="select">Sides</option>
+                        <option value="select">Sides</option>
                         <option value="Singlet">Single</option>
                         <option value="Double">Double</option>
                       </FormControl>
@@ -675,7 +671,7 @@ class Request extends Component {
 
               {this.state.select === "Logo Design" ?
                 <div>
-                 
+
                   {/* Due date */}
                   <FormGroup controlId="formHorizontal">
                     <Col componentClass={ControlLabel} sm={2} className="title_input">
@@ -717,9 +713,39 @@ class Request extends Component {
             </Form>
           </div>
 
-
-
-
+        </div>
+        <div className="ourservice">
+          <p>Our Services</p>
+          <div className="servicetype">
+            <div>
+              <p className="servicetitle" >PRINTING</p>
+              <p>Ticekts/Brochures</p>
+              <p>Clothes</p>
+              <p>Backdrop/Banner</p>
+              <p>Labels/Stickers</p>
+            </div>
+            <div>
+              <p className="servicetitle" >DESIGNING</p>
+              <p>Web Design</p>
+              <p>Logo Branding</p>
+              <p>Packaging</p>
+              <p>Illustration</p>
+            </div>
+            <div>
+              <p className="servicetitle" >CREATING</p>
+              <p>Audio/Video Producing</p>
+              <p>Book Pusblishing</p>
+              <p>Logo Promotion</p>
+              <p>Show Displaying</p>
+            </div>
+            <div>
+              <p className="servicetitle" >GRAPHICS</p>
+              <p>Logo Graphic</p>
+              <p>Car Graphic</p>
+              <p>Sign Graphic</p>
+              <p>Glass/Window Graphic</p>
+            </div>
+          </div>
 
         </div>
         <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>

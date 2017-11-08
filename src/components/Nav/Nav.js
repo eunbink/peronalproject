@@ -10,8 +10,13 @@ class Nav extends Component {
     this.state = {
       show: false,
     }
-    
+    this.showService=this.showService.bind(this);
   }
+
+  showService(){
+    showservice: !this.showservice
+  }
+
 
   render() {
     return (
@@ -25,6 +30,7 @@ class Nav extends Component {
         
         </ul>
         
+
       </div>
     );
   }

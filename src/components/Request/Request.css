@@ -28,11 +28,6 @@ transform: translateX(-3px);
 transform: translateX(-3px);
 }    
 
-.payform_container{
-   margin-left:33.5%;
-   margin-top:-2%;
-   z-index:1;
-}
 
 #formHorizontal{
     font-family: 'Quicksand', sans-serif;
@@ -56,25 +51,10 @@ transform: translateX(-3px);
     font-family: 'Abel', sans-serif;
     
 }
-.pay_button {
-    margin-top:5%;
-    margin-left: 5%;
-    margin-bottom:2%;
-}
-.pay_form {
-    position: absolute;
-    font-size: 25px;
-    border: white 1px solid;
-    padding: 3.5%;
-    margin-top:-2%;
-}
 
 
 .Quote_Form {
-    margin-top:6%;
-    margin-left:20%;
-    font-size: 20px;
-    margin-bottom:10%;
+    margin-top:10%;
 
 }
 
@@ -98,10 +78,12 @@ transform: translateX(-3px);
     
 }
 label {
-    margin-top: -1%;
+    position: static!important;
+    margin-top:-1% !important;
 }
 .comments {
     height:200px;
+    color:white;
 }
 
 .check_button {
@@ -119,8 +101,10 @@ label {
 .requestsubmit {
     border: white solid 1px;
     background: none;
-    margin-left:535px;
-    font-size: 20px;
+    margin-left:33vw;
+    margin-top:5%;
+    margin-bottom:-10%;
+    font-size: 23px;
     color: white;
 }
 .requestsubmit:hover {
@@ -140,77 +124,12 @@ transform: translateX(-3px);
     margin-right: 0;
 }
 
-.close {
-    width:10px;
-    height: 10px;
-    color:black !important;
-}
-
-.horistring{
-    margin-top:10%;
-    height: .05em;
-    border:2px solid white;
-    margin-left: 26%;
-    margin-right: 26%;
-}
-.circle {
-    display: flex;
-    justify-content: space-between;
-    margin-top:2%;
-    
-}
-.circle1, .circle2 {
-    
-	width: 17px;
-	height: 17px;
-	background: none;
-	border-radius: 50px;
-	border: white 1px solid;
-}
-.circle1 {
-    margin-left:75px;
-}
-.circle2 {
-    margin-right:576px;
-}
-
-.string{
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-
-.verstring1, .verstring2 {
-    height: 200px;
-    border:1px solid white;
-}
-.verstring1 {
-    margin-left:564px;
-}
-.verstring2 {
-    margin-right:584px;
-}
 
 
 
-/* animation */
-.payform_container {
-    perspective: 10000;
-    
-    
-}
-
-.pay {
-    position: relative; z-index:1;
-    transition:0.2s;
-    transform-origin: top;
-    animation: balance 2.5s  alternate;
-    
-}
 
  
-@keyframes balance {
+/* @keyframes balance {
     0% {
     }
     12% {
@@ -244,7 +163,7 @@ transform: translateX(-3px);
         
     transform: rotateX(0deg);
     }
-}
+} */
 .swal-footer {
     background-color: rgb(245, 248, 250);
     margin-top: 32px;
@@ -253,3 +172,32 @@ transform: translateX(-3px);
   }
   select option { color: black; }
 
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.ourservice {
+    margin-top:13.5%;
+    bottom:0;
+    left:0;
+    background: rgba(255, 255, 255, 0.13);
+    color: white;
+    font-size:35px;
+    height:250px;
+    width:100%;
+    z-index:1;
+}
+
+.servicetype {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-left:11%;
+    margin-right:11%;
+}
+.servicetitle {
+    font-size: 22px;
+    color:#C3BABA;
+    font-family: 'Quicksand', sans-serif;
+}

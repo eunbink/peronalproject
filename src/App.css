@@ -115,7 +115,7 @@ body {
 }
 
  .inputtext{
-  color:white;
+  color:white !important;
  }
 
  .formHorizontal{

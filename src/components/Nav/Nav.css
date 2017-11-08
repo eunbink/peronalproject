@@ -40,7 +40,7 @@ a:link, a:visited, a:hover, a:active {
 #nav.slidemenu{
     left:4%;
     position: fixed;
-    z-index: 1;
+    z-index: 20;
    
 }
 #nav {

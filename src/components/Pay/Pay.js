@@ -72,8 +72,8 @@ class Pay extends Component {
             <div className="pay-container">
                 <a href={process.env.REACT_APP_LOGOUT}> <div className="logout_button">LOG OUT</div></a>
                 <NavLink activeClassName='active' to='/Admin'><div className="paying2_button">TICKETS</div></NavLink>
+               
                 <div className="payform_container">
-
                 <div className="payhere">
                     <p>PAY HERE</p>
                 </div>
@@ -114,9 +114,6 @@ class Pay extends Component {
                             <FormGroup onSubmit={e => { e.preventDefault() }} className="pay" >
 
                             </FormGroup>
-
-                            
-
                         </Form>
                         {this.state.isChecked ? <Zoom>
                             <StripeCheckout className="pay_button"

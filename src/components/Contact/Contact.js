@@ -88,7 +88,6 @@ class Contact extends Component {
             <h1>Contact Us</h1>
             
 
-
             <input className="input" onChange={(e) => {
               this.setState({
                 email: { ...this.state.email, name: e.target.value }
