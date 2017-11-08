@@ -16,6 +16,7 @@ ul {
 .navHome {
     margin-top: 80px;
     color: white;
+    z-index:10;
 }
 
 li {
