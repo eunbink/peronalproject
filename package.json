@@ -9,6 +9,7 @@
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "datatables.net-buttons": "^1.4.2",
+    "datatables.net-dt": "^1.10.16",
     "datatables.net-editor": "^1.6.5",
     "datatables.net-select": "^1.2.3",
     "dotenv": "^4.0.0",

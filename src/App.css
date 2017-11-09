@@ -70,12 +70,13 @@ body {
   color: white;
   transition:0.3s;
   border: none;
+  z-index:10;
   
 }
 
 .Admin_button:hover{
   color:white !important;
-  letter-spacing: 4px;
+  letter-spacing: 2.5px;
   background: none;
 }
 .facebook {

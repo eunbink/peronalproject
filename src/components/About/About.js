@@ -43,10 +43,11 @@ class About extends Component {
       showtradeshow: false,
       showmarketingproducts: false,
     }
-    // this.scrollProjects = this.scrollProjects.bind(this);
+    this.scrollAbout = this.scrollAbout.bind(this);
     this.showOneCarousel = this.showOneCarousel.bind(this);
     this.disappearScroll = this.disappearScroll.bind(this);
     this.showService = this.showService.bind(this);
+    this.scrollProjects = this.scrollProjects.bind(this);
     
   }
 
@@ -69,12 +70,21 @@ class About extends Component {
     })
   }
 
-  // scrollProjects(val) {
-  //   scrollToComponent(val, {     
-  //     align: 'middle',
-  //     duration: 1000
-  //   })
-  // }
+  scrollAbout(val) {
+    scrollToComponent(val, {     
+      align: 'bottom',
+      offset:1000,
+      duration: 500
+  
+    })
+  }
+  scrollProjects(val) {
+    scrollToComponent(val, {   
+      offset:-50,  
+      duration: 500
+  
+    })
+  }
 
   render() {
     return (
@@ -83,14 +93,15 @@ class About extends Component {
           <source src={Busy} type="video/mp4" />
         </video>
    
-          <div ref="pro" className="project_container">
+          <div  className="project_container">
        
          
-          <div className="wrap">
-              <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer1"><p id="apparel" >CLOTHING & ACCESSORIES</p></div>
-              <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer2"><p id="logo" >LOGOS</p></div>
-              <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer3"><p id="tradeshow">TRADE SHOW DISPLAYS</p></div>
-              <div onClick={(e) => { this.showOneCarousel(e.target.id) }} className="picturecontainer4"><p id="marketingproducts">MARKETING PRODUCTS</p></div>
+          <div ref="imgs"className="wrap">
+              <div onClick={(e) => { this.showOneCarousel(e.target.id); setTimeout(()=>{this.scrollProjects(this.refs.imgs)},10)}} className="picturecontainer1"><p id="apparel" >CLOTHING & ACCESSORIES</p></div>
+              <div onClick={(e) => { this.showOneCarousel(e.target.id); setTimeout(()=>{this.scrollProjects(this.refs.imgs)},10)}} className="picturecontainer2"><p id="logo" >LOGOS</p></div>
+              <div onClick= {()=>{ setTimeout(()=>{this.scrollAbout(this.refs.pro)},10)}}><p id="about" >ABOUT US</p></div>
+              <div onClick={(e) => { this.showOneCarousel(e.target.id); setTimeout(()=>{this.scrollProjects(this.refs.imgs)},10)}} className="picturecontainer3"><p id="tradeshow">TRADE SHOW DISPLAYS</p></div>
+              <div onClick={(e) => { this.showOneCarousel(e.target.id); setTimeout(()=>{this.scrollProjects(this.refs.imgs)},10)}} className="picturecontainer4"><p id="marketingproducts">MARKETING PRODUCTS</p></div>
             </div> 
            
             
@@ -223,7 +234,20 @@ class About extends Component {
             
             </div> 
            
+          <div className="AboutUs"ref="pro">
+            <img className="bluelogo"src={bluelogo}/>
+           
+            <div className="aboutexp">Creative Projects to fulfillment…
+              Big Fat Design & Sign, and DPMG Fulfillment. 
+              We’ve got everything under one roof from seasoned Graphic Designers, 
+              to Next-day Duplication and Printing, to Sign Shop and Quick Banners, 
+              to Fulfillment and Mailing so you can standout above your competitors, 
+              Make your creative product fast and save you money in the process.</div>
+            <div className="aboutexp2">Make it BIG! If you need to show off your product or service we also offer 
+              LOGO ADVERTISING with for one-stop business service for signs, digital color banners, 
+              vehicle wrap advertising, trade-show displays and Logo-promotion items. Click  <NavLink className="requestlink"activeClassName='active' to='/Request'>here</NavLink> to request.</div>
 
+          </div>
         <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
 
 

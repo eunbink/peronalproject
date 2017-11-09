@@ -11,7 +11,8 @@ const $ = require('jquery');
 // Create global aliases for jquery
 window.jQuery = window.$ = $;
 $.DataTable = require('datatables.net');
-require('datatables.net-editor');
+
+
 
 
 class Admin extends Component {

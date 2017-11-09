@@ -28,6 +28,7 @@
     width:600px !important;
     height:auto !important;
     opacity: 0.8;
+    
 }
 
 
@@ -49,12 +50,12 @@
     height:100vh!important;
   }
 
-#apparel, #logo, #tradeshow, #marketingproducts {
+#apparel, #logo,#about, #tradeshow, #marketingproducts {
     
     height:50px;
     display: inline-block;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    border-top:1px solid white !important;
+    border-bottom:1px solid white !important;
     color: white;
     font-size: 20px;
     padding:20px;
@@ -74,7 +75,7 @@
     background-size: cover;
   }
 .wrap {
-    background: rgba(81, 79, 79, 0.30);
+    background: rgba(81, 79, 79, 0.50);
     display:flex;
     justify-content: center;
     position:fixed;
@@ -101,11 +102,17 @@
     z-index: 1;
 }
 
-#apparel:hover, #logo:hover, #tradeshow:hover, #marketingproducts:hover{
+#apparel:hover, #logo:hover, #about:hover, #tradeshow:hover, #marketingproducts:hover{
     transform: translate(0,-4px) ;
     
 }
 
+#about {
+    color:white;
+    border-top:1px solid white !important;
+    border-bottom:1px solid white !important;
+
+}
 .carousel-indicators li {
     display: inline-block;
     width: 1%;
@@ -134,21 +141,8 @@
   }
 
 
-.colorlogo {
-    width:400px;
-    height:400px;
-    opacity:0.6;
-}
-.scroll {
-   width:80px;
-   height:80px; 
-   margin-top:-2%;
-   cursor: pointer;
-}
-.scroll-container{
-    margin-top:3%;
-    font-size:18px;
-}
+
+
 
 
 .scrollingicon {
@@ -159,3 +153,42 @@
     
 }
 
+.AboutUs {
+    font-size:22px;
+    
+}
+
+
+.aboutexp {
+    text-indent:60px;
+    margin-right: 6%;
+    margin-left:15%;
+    margin-bottom:2%;
+    margin-top:5%;
+    text-align:left;
+}
+.aboutexp2{
+    text-indent:60px;
+    margin-right: 6%;
+    margin-left:15%;
+    margin-bottom:4%;
+    text-align:left;
+}
+.bluelogo{
+    float: left;
+    margin-left:2%;
+    margin-top:-5%;
+    width:400px;
+    height:400px;
+    margin-right:3%;
+    opacity:0.8;
+}
+
+.requestlink{
+    color:darkgray;
+}
+
+.requestlink:hover{
+    color:darkgray;
+    opacity:0.7
+}
