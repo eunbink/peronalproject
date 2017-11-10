@@ -88,5 +88,57 @@ transform: translateX(-3px);
       opacity: 0; }
     100% {
       opacity: 1; } }
+
   
-  
+@media(max-width:1300px){
+    .home_quote{
+        font-size:50px;
+        
+    }
+    .Admin_button{
+        margin-top:4%;
+    }
+}
+@media(max-width:1170px){
+    .home_quote{
+        font-size:35px;
+        margin-top:20%;
+    }
+    .Admin_button{
+        margin-top:6%;
+    }
+}
+
+@media(max-width:650px){
+    .home_quote{
+        font-size:25px;
+        margin-top:30%;
+    }
+    .aboutusButton{
+        margin-top:3%;
+        font-size:18px
+    }
+    .Admin_button{
+        margin-top:8%;
+    }
+}
+
+
+@media(max-width:470px) {
+    .home_quote{
+        font-size:20px;
+        margin-top:60%;
+    
+    }
+    .aboutusButton{
+        margin-top:3%;
+        font-size:13px
+    }
+    .Admin_button{
+        margin-top:10%;
+        font-size:20px;
+        margin-right:3.5%;
+    }
+}
+
+

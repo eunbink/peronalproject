@@ -122,3 +122,41 @@ body {
  .formHorizontal{
    color:white !important;
  }
+
+@media(max-width:900px){
+  .follow{
+    display:none;
+  }
+}
+@media(max-width:650px){
+  .follow{
+    display:none;
+  }
+  }
+  
+
+@media(max-width:470px) {
+  .follow{
+    display:none;
+  }
+}
+
+
+/* @media(max-width:1300px){
+  
+}
+@media(max-width:1170px){
+
+}
+@media(max-width:900px){
+
+}
+
+@media(max-width:650px){
+
+}
+
+
+@media(max-width:470px) {
+
+} */

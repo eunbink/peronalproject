@@ -59,3 +59,11 @@ a:link, a:visited, a:hover, a:active {
 
 }
 
+
+  
+@media(max-width:470px) {
+    li {
+        font-size:18px;
+        padding:7px;
+   }
+}

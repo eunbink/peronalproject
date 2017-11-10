@@ -202,3 +202,41 @@ transform: translateX(-3px);
     color:darkgray ;
     font-family: 'Quicksand', sans-serif;
 }
+
+@media(max-width:1300px){
+    
+  }
+  @media(max-width:1170px){
+  
+  }
+  @media(max-width:900px){
+  
+  }
+  
+  @media(max-width:650px){
+    .ourservice {
+        display:none;
+    }
+    label{
+        display: none;
+    }
+  }
+  
+  
+  @media(max-width:551px) {
+    .form-control {
+        width:350px;
+    }
+    .requestsubmit {
+        margin-top:-1%;
+        margin-bottom:3%;
+    }
+    .contained-modal-title{
+        font-size:15px;
+    }
+  }
+  @media(max-width:380px) {
+    .form-control {
+        width:300px;
+    }
+  }
