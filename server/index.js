@@ -87,7 +87,7 @@ app.get('/auth/me', (req, res) => {   //if users are authenticated.
 
 app.get('/auth/logout', ( req, res ) => {
     req.logOut();
-    res.redirect(302, process.env.REACT_APP_LOGOUT )
+    res.redirect(302, process.env.LOGOUTREDIRECT )
 })
 
 

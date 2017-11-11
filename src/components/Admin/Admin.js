@@ -165,7 +165,7 @@ class Admin extends Component {
   render() {
     return (
       <div className="Admin_container">
-        <a href={process.env.REACT_APP_LOGOUT}> <div className="logout_button">LOG OUT</div></a>
+        <a href={process.env.LOGOUTREDIRECT}> <div className="logout_button">LOG OUT</div></a>
         <NavLink activeClassName='active' to='/Pay'><div className="paying_button">PAY</div></NavLink>
         <div className="Quote_Table">
           <Table id="table" className="table" bordered condensed>
