@@ -17,7 +17,7 @@ import limitless from '../../Images/limitless.JPG';
 import stentorian from '../../Images/stentorian.jpg';
 import scrollToComponent from 'react-scroll-to-component';
 import mtech from '../../Images/mtech.png'
-import bluelogo from '../../Images/bluelogo.png'
+import colorlogo from '../../Images/colorlogo.png'
 import scrolldown from '../../Images/scrolldown.gif';
 import scrolling from '../../Images/scrolling.gif';
 import bag from '../../Images/bag.JPG';
@@ -99,9 +99,9 @@ class About extends Component {
           <div ref="imgs"className="wrap">
               <div onClick={(e) => { this.showOneCarousel(e.target.id); setTimeout(()=>{this.scrollProjects(this.refs.imgs)},10)}} className="picturecontainer1"><p id="apparel" >CLOTHING & ACCESSORIES</p></div>
               <div onClick={(e) => { this.showOneCarousel(e.target.id); setTimeout(()=>{this.scrollProjects(this.refs.imgs)},10)}} className="picturecontainer2"><p id="logo" >LOGOS</p></div>
-              <div onClick= {()=>{ setTimeout(()=>{this.scrollAbout(this.refs.pro)},10)}}><p id="about" >ABOUT US</p></div>
               <div onClick={(e) => { this.showOneCarousel(e.target.id); setTimeout(()=>{this.scrollProjects(this.refs.imgs)},10)}} className="picturecontainer3"><p id="tradeshow">TRADE SHOW DISPLAYS</p></div>
               <div onClick={(e) => { this.showOneCarousel(e.target.id); setTimeout(()=>{this.scrollProjects(this.refs.imgs)},10)}} className="picturecontainer4"><p id="marketingproducts">MARKETING PRODUCTS</p></div>
+              <div onClick= {()=>{ setTimeout(()=>{this.scrollAbout(this.refs.pro)},10)}}><p id="about" >ABOUT US</p></div>
             </div> 
            
             
@@ -235,7 +235,7 @@ class About extends Component {
             </div> 
            
           <div className="AboutUs"ref="pro">
-            <img className="bluelogo"src={bluelogo}/>
+            <img className="bluelogo"src={colorlogo}/>
            
             <div className="aboutexp">Creative Projects to fulfillment…
               Big Fat Design & Sign, and DPMG Fulfillment. 
