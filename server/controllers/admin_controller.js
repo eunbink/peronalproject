@@ -22,9 +22,9 @@ module.exports = {
   
     //--------post-----//
     add_quote: (req, res, next) => {         //this happens when submitting modal form.
-    const { name, email, phonenumber, designtype, size, color, sides, sides2, quantity, duedate, comments, invoice, image } = req.body
+    const { name, email, phonenumber, designtype, size, color, sides, sides2, quantity, duedate, comments, decal, invoice, image } = req.body
     const db = req.app.get("db")
-    db.add_quote([name, email, phonenumber, designtype, size, color, sides, sides2, quantity, duedate, comments, invoice])
+    db.add_quote([name, email, phonenumber, designtype, size, color, sides, sides2, quantity, duedate, comments, decal, invoice])
     .then(response => {
         db.add_image([ image, response[0].id ])
       .then(response => res.status(200).send(response))

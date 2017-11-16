@@ -27,14 +27,14 @@ class Request extends Component {
         dueDate: "",
         comments: "",
         image: '',
-        invoice: ''
+        invoice: '',
+        decal:""
       }
     }
 
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
+
+    this.checkBeforeSubmit = this.checkBeforeSubmit.bind(this);
     this.send = this.send.bind(this);
-    this.close = this.close.bind(this);
     this.onSelect = this.onSelect.bind(this);
     this.submitQuotesToDatabase = this.submitQuotesToDatabase.bind(this);
   }
@@ -42,6 +42,23 @@ class Request extends Component {
     this.setState({
       select: ""
     });
+  }
+  checkBeforeSubmit() {
+    if (this.state.quote.name === "" || this.state.quote.email === "") {
+      swal({
+        icon: "error",
+        title: "Please Fill out the Form",
+        text: "Please Check Again"
+      })
+    } else {
+      swal({
+        icon: "success",
+        title: "Your Quote has been Submitted!",
+        text: "Thank You"
+      });
+      this.submitQuotesToDatabase();
+      this.send();
+    }
   }
 
   submitQuotesToDatabase() {
@@ -59,6 +76,7 @@ class Request extends Component {
       quantity: this.state.quote.quantity,
       comments: this.state.quote.comments,
       image: this.state.quote.image,
+      decal: this.state.quote.decal,
 
     }
     axios.post('api/quote/addquote', body)
@@ -78,29 +96,14 @@ class Request extends Component {
       email: this.state.quote.email,
       name: this.state.quote.name,
       image: this.state.quote.image,
+      decal: this.state.quote.decal,
       to: "kangeb1992@gmail.com",
       subject: "Request Quote"
     }
-    axios.post('/api/send_quote', body).then(response => {
-      swal({
-        icon: "success",
-        title: "Your Quote has been Submitted!",
-        text: "Thank You"
-      });
-    })
+    axios.post('/api/send_quote', body)
+
   }
 
-  close() {
-    this.setState({ show: false });
-  }
-
-  showModal() {
-    this.setState({ show: true });
-  }
-
-  hideModal() {
-    this.setState({ show: false });
-  }
 
 
   render() {
@@ -116,6 +119,7 @@ class Request extends Component {
         {     /* get a quote form */}
         <div className="quote-container">
           <Modal.Title id="contained-modal-title">Quote Form</Modal.Title>
+          <div className="subtitle">We will contact you with a quote within 24 hours.</div>
           <div className="contact_form">
             <Form horizontal className="Quote_Form">
 
@@ -180,6 +184,8 @@ class Request extends Component {
                     <option value="Posters">Posters</option>
                     <option value="Banners">Banners</option>
                     <option value="Logo Design">Logo Design</option>
+                    <option value="Decals">Decals</option>
+                    <option value="Others">Others</option>
                   </FormControl>
                 </Col>
               </FormGroup>
@@ -249,16 +255,16 @@ class Request extends Component {
                         this.setState({
                           quote: { ...this.state.quote, comments: e.target.value }
                         })
-                      }} type="text" placeholder="Write any comments here.." />
+                      }} type="text" placeholder="Write any Comments or Questions..." />
                     </Col>
                   </FormGroup>
 
 
                   <FormGroup >
                     <Col smOffset={1} sm={4}>
-                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                      <Button onClick={this.checkBeforeSubmit} className="requestsubmit" type="submit">
                         SUBMIT
-        </Button>
+                </Button>
                     </Col>
                   </FormGroup>
                 </div>
@@ -281,21 +287,24 @@ class Request extends Component {
                       }} type="text" placeholder="Size" />
                     </Col>
                   </FormGroup>
-
-                  {/* color */}
-                  <FormGroup controlId="formHorizontal">
+                    {/* printed shirts - front/back/both */}
+                    <FormGroup controlId="formHorizontal">
                     <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Color
+                      Sides
                  </Col>
                     <Col sm={8}>
-                      <FormControl className="inputtext" onChange={(e) => {
+                      <FormControl className="inputtext" componentClass="select" onChange={(e) => {
                         this.setState({
-                          quote: { ...this.state.quote, color: e.target.value }
+                          quote: { ...this.state.quote, sides: e.target.value }
                         })
-                      }} type="text" placeholder="Color" />
+                      }} >
+                        <option value="select">Sides</option>
+                        <option value="Front">Front</option>
+                        <option value="Back">Back</option>
+                        <option value="Both">Both</option>
+                      </FormControl>
                     </Col>
                   </FormGroup>
-
 
                   {/* how many */}
                   <FormGroup controlId="formHorizontal">
@@ -335,14 +344,14 @@ class Request extends Component {
                         this.setState({
                           quote: { ...this.state.quote, comments: e.target.value }
                         })
-                      }} type="text" placeholder="Write any comments here.." />
+                      }} type="text" placeholder="Write any Comments or Questions..." />
                     </Col>
                   </FormGroup>
 
 
                   <FormGroup >
                     <Col smOffset={1} sm={4}>
-                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                      <Button onClick={this.checkBeforeSubmit} className="requestsubmit" type="submit">
                         SUBMIT
                       </Button>
                     </Col>
@@ -386,24 +395,24 @@ class Request extends Component {
                     </Col>
                   </FormGroup>
 
-                  {/* single/double */}
-                  <FormGroup controlId="formHorizontal">
+                    {/* printed shirts - front/back/both */}
+                    <FormGroup controlId="formHorizontal">
                     <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Single/Double
-               </Col>
+                      Sides
+                 </Col>
                     <Col sm={8}>
                       <FormControl className="inputtext" componentClass="select" onChange={(e) => {
                         this.setState({
-                          quote: { ...this.state.quote, singleDouble: e.target.value }
+                          quote: { ...this.state.quote, sides: e.target.value }
                         })
-                      }}  >
+                      }} >
                         <option value="select">Sides</option>
-                        <option value="Singlet">Single</option>
-                        <option value="Double">Double</option>
+                        <option value="Front">Front</option>
+                        <option value="Back">Back</option>
+                        <option value="Both">Both</option>
                       </FormControl>
                     </Col>
                   </FormGroup>
-
 
                   {/* how many */}
                   <FormGroup controlId="formHorizontal">
@@ -443,16 +452,16 @@ class Request extends Component {
                         this.setState({
                           quote: { ...this.state.quote, comments: e.target.value }
                         })
-                      }} type="text" placeholder="Write any comments here.." />
+                      }} type="text" placeholder="Write any Comments or Questions..." />
                     </Col>
                   </FormGroup>
 
 
                   <FormGroup >
                     <Col smOffset={1} sm={4}>
-                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                      <Button onClick={this.checkBeforeSubmit} className="requestsubmit" type="submit">
                         SUBMIT
-        </Button>
+                 </Button>
                     </Col>
                   </FormGroup>
                 </div>
@@ -476,36 +485,33 @@ class Request extends Component {
 
                   {/* color */}
                   <FormGroup controlId="formHorizontal">
+                  <Col componentClass={ControlLabel} sm={2} className="title_input">
+                    Color
+               </Col>
+                  <Col sm={8}>
+                    <FormControl className="inputtext" onChange={(e) => {
+                      this.setState({
+                        quote: { ...this.state.quote, color: e.target.value }
+                      })
+                    }} type="text" placeholder="Color" />
+                  </Col>
+                </FormGroup>
+
+                    {/* printed shirts - front/back/both */}
+                    <FormGroup controlId="formHorizontal">
                     <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Color
+                      Sides
                  </Col>
                     <Col sm={8}>
                       <FormControl className="inputtext" componentClass="select" onChange={(e) => {
                         this.setState({
-                          quote: { ...this.state.quote, color: e.target.value }
-                        })
-                      }} type="text" placeholder="Color" >
-                        <option value="select">Sides</option>
-                        <option value="Singlet">Single</option>
-                        <option value="Double">Double</option>
-                      </FormControl>
-                    </Col>
-                  </FormGroup>
-
-                  {/* single/double */}
-                  <FormGroup controlId="formHorizontal">
-                    <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Single/Double
-               </Col>
-                    <Col sm={8}>
-                      <FormControl className="inputtext" componentClass="select" onChange={(e) => {
-                        this.setState({
-                          quote: { ...this.state.quote, singleDouble: e.target.value }
+                          quote: { ...this.state.quote, sides: e.target.value }
                         })
                       }} >
                         <option value="select">Sides</option>
-                        <option value="Singlet">Single</option>
-                        <option value="Double">Double</option>
+                        <option value="Front">Front</option>
+                        <option value="Back">Back</option>
+                        <option value="Both">Both</option>
                       </FormControl>
                     </Col>
                   </FormGroup>
@@ -549,14 +555,14 @@ class Request extends Component {
                         this.setState({
                           quote: { ...this.state.quote, comments: e.target.value }
                         })
-                      }} type="text" placeholder="Write any comments here.." />
+                      }} type="text" placeholder="Write any Comments or Questions..." />
                     </Col>
                   </FormGroup>
 
 
                   <FormGroup >
                     <Col smOffset={1} sm={4}>
-                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                      <Button onClick={this.checkBeforeSubmit} className="requestsubmit" type="submit">
                         SUBMIT
                </Button>
                     </Col>
@@ -594,24 +600,24 @@ class Request extends Component {
                     </Col>
                   </FormGroup>
 
-                  {/* single/double */}
-                  <FormGroup controlId="formHorizontal">
-                    <Col componentClass={ControlLabel} sm={2} className="title_input">
-                      Single/Double
-               </Col>
-                    <Col sm={8}>
-                      <FormControl className="inputtext" componentClass="select" onChange={(e) => {
-                        this.setState({
-                          quote: { ...this.state.quote, singleDouble: e.target.value }
-                        })
-                      }} >
-                        <option value="select">Sides</option>
-                        <option value="Singlet">Single</option>
-                        <option value="Double">Double</option>
-                      </FormControl>
-                    </Col>
-                  </FormGroup>
-
+                   {/* printed shirts - front/back/both */}
+                   <FormGroup controlId="formHorizontal">
+                   <Col componentClass={ControlLabel} sm={2} className="title_input">
+                     Sides
+                </Col>
+                   <Col sm={8}>
+                     <FormControl className="inputtext" componentClass="select" onChange={(e) => {
+                       this.setState({
+                         quote: { ...this.state.quote, sides: e.target.value }
+                       })
+                     }} >
+                       <option value="select">Sides</option>
+                       <option value="Front">Front</option>
+                       <option value="Back">Back</option>
+                       <option value="Both">Both</option>
+                     </FormControl>
+                   </Col>
+                 </FormGroup>
 
                   {/* how many */}
                   <FormGroup controlId="formHorizontal">
@@ -651,14 +657,14 @@ class Request extends Component {
                         this.setState({
                           quote: { ...this.state.quote, comments: e.target.value }
                         })
-                      }} type="text" placeholder="Write any comments here.." />
+                      }} type="text" placeholder="Write any Comments or Questions..." />
                     </Col>
                   </FormGroup>
 
 
                   <FormGroup >
                     <Col smOffset={1} sm={4}>
-                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                      <Button onClick={this.checkBeforeSubmit} className="requestsubmit" type="submit">
                         SUBMIT
                </Button>
                     </Col>
@@ -696,14 +702,118 @@ class Request extends Component {
                         this.setState({
                           quote: { ...this.state.quote, comments: e.target.value }
                         })
-                      }} type="text" placeholder="Write any comments here.." />
+                      }} type="text" placeholder="Write any Comments or Questions..." />
                     </Col>
                   </FormGroup>
 
 
                   <FormGroup >
                     <Col smOffset={1} sm={4}>
-                      <Button onClick={() => { this.send(this.state.email); this.close(); this.submitQuotesToDatabase() }} className="requestsubmit" type="submit">
+                      <Button onClick={this.checkBeforeSubmit} className="requestsubmit" type="submit">
+                        SUBMIT
+                 </Button>
+                    </Col>
+                  </FormGroup>
+                </div>
+                : null}
+
+                 {/* -----------Decals------------ */}
+
+              {this.state.select === "Decals" ?
+                <div>
+                <FormGroup controlId="formHorizontal">
+                   <Col componentClass={ControlLabel} sm={2} className="title_input">
+                     Decal Type
+                </Col>
+                   <Col sm={8}>
+                     <FormControl className="inputtext" componentClass="select" onChange={(e) => {
+                       this.setState({
+                         quote: { ...this.state.quote, decal: e.target.value }
+                       })
+                     }} >
+                       <option value="select">Decal Type</option>
+                       <option value="Car Decal">Car Decal</option>
+                       <option value="Wall Decal">Wall Decal</option>
+                       <option value="Glass Decal">Glass Decal</option>
+                     </FormControl>
+                   </Col>
+                 </FormGroup>
+                  {/* Due date */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Due Date
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, dueDate: e.target.value }
+                        })
+                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Comments */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Comments
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" className="comments" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, comments: e.target.value }
+                        })
+                      }} type="text" placeholder="Write any Comments or Questions..." />
+                    </Col>
+                  </FormGroup>
+
+
+                  <FormGroup >
+                    <Col smOffset={1} sm={4}>
+                      <Button onClick={this.checkBeforeSubmit} className="requestsubmit" type="submit">
+                        SUBMIT
+                 </Button>
+                    </Col>
+                  </FormGroup>
+                </div>
+                : null}
+
+                 {/* -----------Others------------ */}
+
+              {this.state.select === "Others" ?
+                <div>
+
+                  {/* Due date */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Due Date
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, dueDate: e.target.value }
+                        })
+                      }} type="date" placeholder="Due Date (Rushed job costs extra)" />
+                    </Col>
+                  </FormGroup>
+
+                  {/* Comments */}
+                  <FormGroup controlId="formHorizontal">
+                    <Col componentClass={ControlLabel} sm={2} className="title_input">
+                      Comments
+                 </Col>
+                    <Col sm={8}>
+                      <FormControl className="inputtext" className="comments" onChange={(e) => {
+                        this.setState({
+                          quote: { ...this.state.quote, comments: e.target.value }
+                        })
+                      }} type="text" placeholder="Write any Comments or Questions..." />
+                    </Col>
+                  </FormGroup>
+
+
+                  <FormGroup >
+                    <Col smOffset={1} sm={4}>
+                      <Button onClick={this.checkBeforeSubmit} className="requestsubmit" type="submit">
                         SUBMIT
                  </Button>
                     </Col>

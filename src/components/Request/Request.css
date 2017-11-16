@@ -52,10 +52,12 @@ transform: translateX(-3px);
     
 }
 
-
+#contained-modal-title {
+    font-size:45px !important;
+}
 .Quote_Form {
     margin-top:10%;
-
+    
 }
 
 .title_input {
@@ -80,6 +82,8 @@ transform: translateX(-3px);
 label {
     position: static!important;
     margin-top:-1% !important;
+    margin-left:-5%;
+    
 }
 .comments {
     height:200px;
@@ -178,17 +182,22 @@ transform: translateX(-3px);
     align-items:center;
 }
 .ourservice {
-    margin-top:13.5%;
+    margin-top:9.8%;
     bottom:0;
     left:0;
     background: rgba(255, 255, 255, 0.13);
     color: white;
-    font-size:35px;
+    font-size:30px;
     height:250px;
     width:100%;
     z-index:1;
 }
-
+.subtitle {
+    margin-top:1%;
+    font-size:18px;
+    color:#959292;
+    font-family: 'Quicksand', sans-serif;
+}
 .servicetype {
     display: flex;
     justify-content: space-between;
@@ -240,3 +249,4 @@ transform: translateX(-3px);
         width:300px;
     }
   }
+

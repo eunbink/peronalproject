@@ -50,11 +50,10 @@
     height:100vh!important;
   }
 
-#apparel, #logo,#about, #tradeshow, #marketingproducts {
+#apparel, #logo,#about, #tradeshow, #marketingproducts, #decal {
     
     height:50px;
     display: inline-block;
-    border-top:1px solid white !important;
     border-bottom:1px solid white !important;
     color: white;
     font-size: 20px;
@@ -74,6 +73,7 @@
     background: no-repeat center center scroll;
     background-size: cover;
   }
+  
 .wrap {
     background: rgba(81, 79, 79, 0.50);
     display:flex;
@@ -102,14 +102,14 @@
     z-index: 1;
 }
 
-#apparel:hover, #logo:hover, #about:hover, #tradeshow:hover, #marketingproducts:hover{
+#decal:hover, #apparel:hover, #logo:hover, #about:hover, #tradeshow:hover, #marketingproducts:hover{
     transform: translate(0,-4px) ;
     
 }
 
 #about {
     color:white;
-    border-top:1px solid white !important;
+  
     border-bottom:1px solid white !important;
 
 }
@@ -208,7 +208,7 @@
         margin-top:2.8%;
         
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         font-size:20px;
         padding:5px;
     }
@@ -218,7 +218,7 @@
         margin-top:3%;
         font-size:23px
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         font-size:18px;
         padding:5px;
     }
@@ -228,7 +228,7 @@
         margin-top:3.2%;
         font-size:22px
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         font-size:18px;
         padding:5px;
     }
@@ -238,7 +238,7 @@
         margin-top:3.3%;
         font-size:21px
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         font-size:17px;
         padding:3px;
     }
@@ -248,7 +248,7 @@
         margin-top:3.5%;
         font-size:20px
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         font-size:16px;
         padding:2px;
     }
@@ -258,7 +258,7 @@
         margin-top:3.65%;
         font-size:19px
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         font-size:15px;
         padding:2px;
     }
@@ -268,7 +268,7 @@
         margin-top:4.3%;
         font-size:18px
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         font-size:14px;
         padding:1px;
     }
@@ -277,7 +277,7 @@
     .Admin_button{
         display:none;
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         font-size:13px;
         padding:3px;
     }
@@ -287,7 +287,7 @@
         margin-top:4.8%;
         font-size:12px;
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         font-size:13px;
         padding:3px;
     }
@@ -295,7 +295,7 @@
   
   @media(max-width:780px){
     
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         display: none;
     }
     .img{
@@ -319,7 +319,7 @@
     .Admin_button{
         display:none;
     }
-    #apparel, #logo,#about, #tradeshow, #marketingproducts{
+    #apparel, #logo,#about, #tradeshow, #marketingproducts, #decal{
         display:none;
     }
     .img{
