@@ -85,14 +85,14 @@ class About extends Component {
     scrollToComponent(val, {
       align: 'bottom',
       offset: 1000,
-      duration: 500
+      duration: 1000
 
     })
   }
   scrollProjects(val) {
     scrollToComponent(val, {
-      offset: -50,
-      duration: 500
+      offset: -1000,
+      duration: 1500
 
     })
   }
