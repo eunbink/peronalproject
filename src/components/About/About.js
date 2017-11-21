@@ -34,6 +34,7 @@ import walldecal from '../../Images/walldecal.jpg';
 import bottle from '../../Images/Bottle.jpg';
 import christmas from '../../Images/christmas.jpg';
 import act from '../../Images/act.jpg';
+import usflag from '../../Images/usflag.png';
 
 
 
@@ -298,7 +299,48 @@ class About extends Component {
               vehicle wrap advertising, trade-show displays and Logo-promotion items. Click  <NavLink className="requestlink" activeClassName='active' to='/Request'>here</NavLink> to request.</div>
 
         </div>
-        <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
+        <div className="ourservice">
+          <div className="maintitle">Our Services</div>
+          <div className="servicetype">
+            <div>
+              <p className="servicetitle" >PRINTING</p>
+              <p className="servicelist">Ticekts/Brochures</p>
+              <p className="servicelist">Clothes</p>
+              <p className="servicelist">Backdrop/Banner</p>
+              <p className="servicelist">Labels/Stickers</p>
+            </div>
+            <div>
+              <p className="servicetitle" >DESIGNING</p>
+              <p className="servicelist">Web Design</p>
+              <p className="servicelist">Logo Branding</p>
+              <p className="servicelist">Packaging</p>
+              <p className="servicelist">Illustration</p>
+            </div>
+            <div>
+              <p className="servicetitle" >CREATING</p>
+              <p className="servicelist">Audio/Video Producing</p>
+              <p className="servicelist">Book Pusblishing</p>
+              <p className="servicelist">Logo Promotion</p>
+              <p className="servicelist">Show Displaying</p>
+            </div>
+            <div>
+              <p className="servicetitle" >GRAPHICS</p>
+              <p className="servicelist">Logo Graphic</p>
+              <p className="servicelist">Car Graphic</p>
+              <p className="servicelist">Sign Graphic</p>
+              <p className="servicelist">Glass/Window Graphic</p>
+            </div>
+          </div>
+          <div className="copyright-con">
+          <div className="copyright">
+            <div className="copyright-in">© Copyright 1998-2017 BigFatLogos. All Rights Reserved.</div>
+            <div className="copyright-in">Thank you for visiting!</div>
+            <div className="copyright-in"><img className="usflag"src={usflag}/>United States</div>
+            <div className="copyright-in"><a href={process.env.REACT_APP_LOGIN}><Button className="adminlogin">Admin Login</Button></a></div>
+          </div>
+        </div>
+        </div>
+       
 
 
       </div>

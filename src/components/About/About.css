@@ -60,7 +60,7 @@
     padding:20px;
     cursor: pointer;
     transition: 0.2s ease;
-    margin: 35px 15px 40px 25px; 
+    margin: 30px 25px 45px 30px; 
     font-family: 'Saira Condensed', sans-serif;
     display: flex;
     align-items: center;
@@ -120,15 +120,17 @@
     text-indent: 0;
     cursor: pointer;
     border: darkgray solid 1px;
-    border-radius: 30%;
+    border-radius: 40%;
     background-color: none;
+    z-index:0
     
 }
 .carousel-indicators .active {
     width:1%;
     height:1%;
     background-color: darkgray;
-    
+    opacity:0.8;
+    z-index:0
 }
 
 
@@ -156,18 +158,18 @@
 
 
 .aboutexp {
-    text-indent:60px;
+    
     margin-right: 6%;
     margin-left:15%;
     margin-bottom:2%;
-    margin-top:5%;
+    margin-top:7%;
     text-align:left;
 }
 .aboutexp2{
-    text-indent:60px;
+    
     margin-right: 6%;
     margin-left:15%;
-    margin-bottom:4%;
+    margin-bottom:9%;
     text-align:left;
 }
 .bluelogo{

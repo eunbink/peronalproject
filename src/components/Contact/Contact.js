@@ -16,6 +16,8 @@ import Map from '../Map.js'
 import scrollToComponent from 'react-scroll-to-component';
 import swal from 'sweetalert';
 import colorlogo from '../../Images/colorlogo.png';
+import usflag from '../../Images/usflag.png';
+
 
 class Contact extends Component {
   constructor() {
@@ -49,8 +51,10 @@ class Contact extends Component {
 
   scrollMap(val) {
     scrollToComponent(val, {
-      align: 'bottom',
-      duration: 1500
+      align:'bottom',
+      duration: 1000,
+      offset:1000
+
     })
   }
   showContact() {
@@ -84,7 +88,9 @@ class Contact extends Component {
           <source src={Busy} type="video/mp4" />
         </video>
         <div className='contact'>
+       
           <div className="form" >
+            
             <h1>Contact Us</h1>
             
 
@@ -154,10 +160,50 @@ class Contact extends Component {
               </div>
 
             </div>
-           <Map scrollMap={this.scrollMap} /> </div> : null}
-
-
-          <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
+           <Map scrollMap={this.scrollMap} /> </div> 
+           
+           : null} 
+           <div className="ourservice">
+          <div className="maintitle">Our Services</div>
+          <div className="servicetype">
+            <div>
+              <p className="servicetitle" >PRINTING</p>
+              <p className="servicelist">Ticekts/Brochures</p>
+              <p className="servicelist">Clothes</p>
+              <p className="servicelist">Backdrop/Banner</p>
+              <p className="servicelist">Labels/Stickers</p>
+            </div>
+            <div>
+              <p className="servicetitle" >DESIGNING</p>
+              <p className="servicelist">Web Design</p>
+              <p className="servicelist">Logo Branding</p>
+              <p className="servicelist">Packaging</p>
+              <p className="servicelist">Illustration</p>
+            </div>
+            <div>
+              <p className="servicetitle" >CREATING</p>
+              <p className="servicelist">Audio/Video Producing</p>
+              <p className="servicelist">Book Pusblishing</p>
+              <p className="servicelist">Logo Promotion</p>
+              <p className="servicelist">Show Displaying</p>
+            </div>
+            <div>
+              <p className="servicetitle" >GRAPHICS</p>
+              <p className="servicelist">Logo Graphic</p>
+              <p className="servicelist">Car Graphic</p>
+              <p className="servicelist">Sign Graphic</p>
+              <p className="servicelist">Glass/Window Graphic</p>
+            </div>
+          </div>
+          <div className="copyright-con">
+          <div className="copyright">
+            <div className="copyright-in">© Copyright 1998-2017 BigFatLogos. All Rights Reserved.</div>
+            <div className="copyright-in">Thank you for visiting!</div>
+            <div className="copyright-in"><img className="usflag"src={usflag}/>United States</div>
+            <div className="copyright-in"><a href={process.env.REACT_APP_LOGIN}><Button className="adminlogin">Admin Login</Button></a></div>
+          </div>
+        </div>
+        </div>
         </div>
 
       </div>

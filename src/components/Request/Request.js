@@ -6,6 +6,8 @@ import { NavLink } from 'react-router-dom';
 import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import Busy from '../../Images/Busy.mp4';
 import swal from 'sweetalert';
+import colorlogo from '../../Images/colorlogo.png';
+import usflag from '../../Images/usflag.png';
 
 class Request extends Component {
   constructor(props) {
@@ -825,40 +827,47 @@ class Request extends Component {
 
         </div>
         <div className="ourservice">
-          <p>Our Services</p>
+          <div className="maintitle">Our Services</div>
           <div className="servicetype">
             <div>
               <p className="servicetitle" >PRINTING</p>
-              <p>Ticekts/Brochures</p>
-              <p>Clothes</p>
-              <p>Backdrop/Banner</p>
-              <p>Labels/Stickers</p>
+              <p className="servicelist">Ticekts/Brochures</p>
+              <p className="servicelist">Clothes</p>
+              <p className="servicelist">Backdrop/Banner</p>
+              <p className="servicelist">Labels/Stickers</p>
             </div>
             <div>
               <p className="servicetitle" >DESIGNING</p>
-              <p>Web Design</p>
-              <p>Logo Branding</p>
-              <p>Packaging</p>
-              <p>Illustration</p>
+              <p className="servicelist">Web Design</p>
+              <p className="servicelist">Logo Branding</p>
+              <p className="servicelist">Packaging</p>
+              <p className="servicelist">Illustration</p>
             </div>
             <div>
               <p className="servicetitle" >CREATING</p>
-              <p>Audio/Video Producing</p>
-              <p>Book Pusblishing</p>
-              <p>Logo Promotion</p>
-              <p>Show Displaying</p>
+              <p className="servicelist">Audio/Video Producing</p>
+              <p className="servicelist">Book Pusblishing</p>
+              <p className="servicelist">Logo Promotion</p>
+              <p className="servicelist">Show Displaying</p>
             </div>
             <div>
               <p className="servicetitle" >GRAPHICS</p>
-              <p>Logo Graphic</p>
-              <p>Car Graphic</p>
-              <p>Sign Graphic</p>
-              <p>Glass/Window Graphic</p>
+              <p className="servicelist">Logo Graphic</p>
+              <p className="servicelist">Car Graphic</p>
+              <p className="servicelist">Sign Graphic</p>
+              <p className="servicelist">Glass/Window Graphic</p>
             </div>
           </div>
-
+          <div className="copyright-con">
+          <div className="copyright">
+            <div className="copyright-in">© Copyright 1998-2017 BigFatLogos. All Rights Reserved.</div>
+            <div className="copyright-in">Thank you for visiting!</div>
+            <div className="copyright-in"><img className="usflag"src={usflag}/>United States</div>
+            <div className="copyright-in"><a href={process.env.REACT_APP_LOGIN}><Button className="adminlogin">Admin Login</Button></a></div>
+          </div>
         </div>
-        <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
+        </div>
+        
       </div>
     );
   }

@@ -27,7 +27,7 @@ class Home extends Component {
           </Typist>
           <a href={process.env.REACT_APP_LOGIN}><Button className="Admin_button" >ADMIN LOGIN</Button></a>
         
-        <Flip x delay={500} duration={2000}><NavLink activeClassName='active' to='/About'><Button className="aboutusButton">Discover About Us</Button></NavLink></Flip>
+        <Fade x duration={2000}><NavLink activeClassName='active' to='/About'><Button className="aboutusButton">Discover About Us</Button></NavLink></Fade>
       </div>
         
       </div>
